@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modular Wardrobes | Living Style Wardrobe &amp; Kitchen Studio</title>
+<meta name="description" content="Premium modular kitchens crafted in our own Mumbai factory — Acrylic, Glass, Ceramic, PU Lacquer, Veneer, Fluted Glass, Leather and Master Craft shutters. Purchase offers on every order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2A1F16; --ink-soft:#5B4C3C; --cream:#F6F0E4; --cream-white:#FBF8F2;
+    --panel:#ECE1CB; --panel-line:#DACBA9; --brass:#A9793A; --brass-deep:#8A5F27;
+    --clay:#95502F; --sage:#59684B;
+    --shadow: 0 20px 50px -25px rgba(42,31,22,0.45); --radius: 2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{ font-family:'Manrope', sans-serif; background:var(--cream); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .eyebrow{ font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:0.16em; font-size:0.72rem; color:var(--brass-deep); font-weight:700; }
+  h1,h2,h3,h4{ font-family:'Fraunces', serif; font-weight:600; line-height:1.08; letter-spacing:-0.01em; color:var(--ink); }
+  .container{ max-width:1240px; margin:0 auto; padding:0 32px; }
+  .btn{ display:inline-flex; align-items:center; gap:10px; padding:15px 30px; font-family:'Manrope', sans-serif; font-weight:700; font-size:0.92rem; letter-spacing:0.01em; border-radius:var(--radius); cursor:pointer; border:1.5px solid transparent; transition:all .25s ease; white-space:nowrap; }
+  .btn-primary{ background:var(--ink); color:var(--cream-white); }
+  .btn-primary:hover{ background:var(--clay); transform:translateY(-2px); }
+  .btn-outline{ background:transparent; border-color:var(--ink); color:var(--ink); }
+  .btn-outline:hover{ background:var(--ink); color:var(--cream-white); }
+  .btn-light{ background:var(--cream-white); color:var(--ink); }
+  .btn-light:hover{ background:var(--brass); color:var(--cream-white); }
+
+  .topbar{ background:var(--ink); color:var(--cream); font-family:'Space Mono', monospace; font-size:0.75rem; letter-spacing:0.04em; }
+  .topbar .container{ display:flex; justify-content:space-between; align-items:center; padding-top:9px; padding-bottom:9px; }
+  .topbar a{ color:var(--brass); }
+  .topbar-links{ display:flex; gap:24px; }
+
+  header.site{ position:sticky; top:0; z-index:100; background:rgba(246,240,228,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--panel-line); }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; padding:18px 0; }
+  .logo{ font-family:'Fraunces', serif; font-weight:600; font-size:1.5rem; letter-spacing:-0.01em; display:flex; flex-direction:column; line-height:1; }
+  .logo span{ font-family:'Space Mono', monospace; font-size:0.62rem; letter-spacing:0.22em; color:var(--brass-deep); font-weight:700; margin-top:5px; }
+  nav.main-links{ display:flex; gap:34px; align-items:center; }
+  nav.main-links a{ font-size:0.88rem; font-weight:600; color:var(--ink-soft); position:relative; padding-bottom:4px; }
+  nav.main-links a:hover, nav.main-links a.active{ color:var(--clay); }
+  nav.main-links a.active{ border-bottom:2px solid var(--clay); }
+  .nav-cta{ display:flex; align-items:center; gap:16px; }
+  .nav-cta .phone{ font-family:'Space Mono',monospace; font-size:0.82rem; font-weight:700; }
+  .burger{ display:none; flex-direction:column; gap:5px; cursor:pointer; }
+  .burger span{ width:24px; height:2px; background:var(--ink); }
+
+  /* Page hero (shorter than homepage) */
+  .page-hero{ padding:56px 0 60px; position:relative; overflow:hidden; }
+  .page-hero .container{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  .page-hero h1{ font-size:clamp(2.2rem, 3.6vw, 3.2rem); margin:16px 0 20px; }
+  .page-hero h1 em{ font-style:italic; color:var(--clay); }
+  .page-hero p{ font-size:1.04rem; color:var(--ink-soft); max-width:460px; margin-bottom:28px; }
+  .page-hero-actions{ display:flex; gap:16px; flex-wrap:wrap; }
+  .page-hero-visual{ position:relative; }
+  .page-hero-visual img{ width:100%; height:420px; object-fit:cover; border-radius:var(--radius); box-shadow:var(--shadow); }
+  .factory-badge{ position:absolute; left:-24px; bottom:-24px; background:var(--ink); color:var(--cream-white); padding:18px 22px; box-shadow:var(--shadow); max-width:230px; border-left:3px solid var(--brass); }
+  .factory-badge strong{ font-family:'Fraunces', serif; font-size:1.05rem; display:block; margin-bottom:4px; }
+  .factory-badge span{ font-size:0.78rem; color:rgba(251,248,242,0.75); }
+
+  .section{ padding:88px 0; }
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-bottom:50px; flex-wrap:wrap; }
+  .section-head h2{ font-size:clamp(1.8rem, 2.8vw, 2.5rem); margin-top:12px; }
+  .section-head p{ color:var(--ink-soft); max-width:420px; }
+
+  /* Materials grid */
+  .materials{ background:var(--panel); }
+  .mat-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+  .mat-card{ background:var(--cream-white); padding:28px 26px; border-radius:var(--radius); border-top:3px solid var(--brass); }
+  .mat-card .mat-icon{ width:46px; height:46px; border-radius:50%; background:var(--ink); color:var(--brass); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-style:italic; font-weight:600; margin-bottom:18px; }
+  .mat-card h4{ font-size:1.1rem; margin-bottom:8px; }
+  .mat-card p{ font-size:0.86rem; color:var(--ink-soft); }
+  .mat-card.master{ background:var(--ink); border-top-color:var(--brass); }
+  .mat-card.master .mat-icon{ background:var(--brass); color:var(--ink); }
+  .mat-card.master h4, .mat-card.master p{ color:var(--cream-white); }
+  .mat-card.master p{ color:rgba(251,248,242,0.7); }
+
+  /* Layout types */
+  .layout-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:26px; }
+  .layout-card{ position:relative; height:400px; overflow:hidden; border-radius:var(--radius); box-shadow:var(--shadow); }
+  .layout-card img{ width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
+  .layout-card:hover img{ transform:scale(1.07); }
+  .layout-overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(42,31,22,0) 40%, rgba(42,31,22,0.88) 100%); display:flex; flex-direction:column; justify-content:flex-end; padding:28px; }
+  .layout-overlay .eyebrow{ color:var(--brass); margin-bottom:6px; }
+  .layout-overlay h3{ color:var(--cream-white); font-size:1.4rem; margin-bottom:8px; }
+  .layout-overlay p{ color:rgba(251,248,242,0.75); font-size:0.86rem; }
+
+  /* Offers */
+  .offers{ background:var(--ink); color:var(--cream-white); }
+  .offers .section-head h2{ color:var(--cream-white); }
+  .offers .section-head p{ color:rgba(251,248,242,0.7); }
+  .offers .eyebrow{ color:var(--brass); }
+  .offer-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  .offer-card{ background:rgba(251,248,242,0.05); border:1px solid rgba(251,248,242,0.15); padding:32px 28px; border-radius:var(--radius); position:relative; }
+  .offer-card.highlight{ border-color:var(--brass); background:rgba(169,121,58,0.1); }
+  .offer-tier{ font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-bottom:14px; display:block; }
+  .offer-card h4{ color:var(--cream-white); font-size:1.35rem; margin-bottom:14px; }
+  .offer-card ul{ list-style:none; }
+  .offer-card ul li{ font-size:0.9rem; color:rgba(251,248,242,0.78); margin-bottom:10px; padding-left:18px; position:relative; }
+  .offer-card ul li::before{ content:'—'; position:absolute; left:0; color:var(--brass); }
+  .offer-note{ margin-top:30px; text-align:center; font-size:0.88rem; color:rgba(251,248,242,0.65); }
+  .offer-note strong{ color:var(--brass); }
+
+  /* CTA */
+  .cta-strip{ background:var(--clay); color:var(--cream-white); text-align:center; padding:80px 0; }
+  .cta-strip .eyebrow{ color:rgba(251,248,242,0.75); }
+  .cta-strip h2{ color:var(--cream-white); font-size:clamp(1.8rem,3vw,2.7rem); margin:16px 0 30px; }
+
+  footer{ background:var(--ink); color:rgba(251,248,242,0.75); padding-top:70px; }
+  .footer-top{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr; gap:40px; padding-bottom:50px; border-bottom:1px solid rgba(251,248,242,0.12); }
+  footer .logo{ color:var(--cream-white); margin-bottom:16px; }
+  footer .logo span{ color:var(--brass); }
+  footer p.about{ font-size:0.88rem; max-width:260px; margin-bottom:20px; }
+  .foot-social{ display:flex; gap:12px; }
+  .foot-social a{ width:36px; height:36px; border:1px solid rgba(251,248,242,0.25); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; }
+  .foot-social a:hover{ background:var(--brass); border-color:var(--brass); }
+  footer h5{ font-family:'Space Mono',monospace; text-transform:uppercase; font-size:0.74rem; letter-spacing:0.1em; color:var(--cream-white); margin-bottom:20px; }
+  footer ul{ list-style:none; }
+  footer ul li{ margin-bottom:12px; font-size:0.88rem; }
+  footer ul li a:hover{ color:var(--brass); }
+  .foot-newsletter input{ width:100%; padding:12px 14px; margin-bottom:12px; background:rgba(251,248,242,0.06); border:1px solid rgba(251,248,242,0.2); color:var(--cream-white); border-radius:2px; }
+  .foot-bottom{ display:flex; justify-content:space-between; align-items:center; padding:26px 0; font-size:0.78rem; flex-wrap:wrap; gap:12px; }
+  .foot-bottom a{ margin-left:20px; }
+
+  @media (max-width: 980px){
+    nav.main-links{ display:none; }
+    .burger{ display:flex; }
+    .page-hero .container{ grid-template-columns:1fr; }
+    .page-hero-visual{ order:-1; }
+    .factory-badge{ left:14px; bottom:14px; }
+    .mat-grid{ grid-template-columns:1fr 1fr; }
+    .layout-grid{ grid-template-columns:1fr; }
+    .offer-grid{ grid-template-columns:1fr; }
+    .footer-top{ grid-template-columns:1fr 1fr; }
+    .section{ padding:60px 0; }
+    .topbar-links{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>Free in-home consultation across the city · Mon–Sat, 10am–7pm</span>
+    <div class="topbar-links">
+      <a href="tel:+911800000000">1800-000-000</a>
+      <a href="index.html#studio">Find a Studio</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container nav-row">
+    <a href="index.html" class="logo">Living&nbsp;Style<span>WARDROBE &amp; KITCHEN STUDIO</span></a>
+    <nav class="main-links">
+      <a href="kitchens.html">Kitchens</a>
+      <a href="wardrobes.html" class="active">Wardrobes</a>
+      <a href="index.html#process">Our Process</a>
+      <a href="index.html#styles">Design Ideas</a>
+      <a href="index.html#stories">Stories</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="phone">📞 1800-000-000</span>
+      <a href="index.html#estimate" class="btn btn-primary">Get Free Estimate</a>
+    </div>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div>
+      <span class="eyebrow">Own Factory · Mumbai</span>
+      <h1>Specialists in <em>Modular Wardrobe</em> design &amp; craft</h1>
+      <p>Every shutter, carcass and internal fitting is made in our own Mumbai factory — so the wardrobe you approve in the 3D design is exactly what gets installed.</p>
+      <div class="page-hero-actions">
+        <a href="index.html#estimate" class="btn btn-primary">Book a Free Consultation</a>
+        <a href="#materials" class="btn btn-outline">See Finish Options</a>
+      </div>
+    </div>
+    <div class="page-hero-visual">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop" alt="Premium modular wardrobe with leather and veneer shutters">
+      <div class="factory-badge">
+        <strong>Made in Mumbai</strong>
+        <span>Own manufacturing unit — full control over fit and finish.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section materials" id="materials">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Premium Shutter Range</span>
+        <h2>Nine finishes, all made in-house</h2>
+      </div>
+      <p>High-range, premium shutter materials — choose the one that fits your room's light, layout and daily use.</p>
+    </div>
+    <div class="mat-grid">
+      <div class="mat-card"><div class="mat-icon">Ac</div><h4>Acrylic Shutters</h4><p>High-gloss, mirror-like finish that makes small bedrooms feel brighter and larger.</p></div>
+      <div class="mat-card"><div class="mat-icon">Gl</div><h4>Glass Shutters</h4><p>Clean, reflective panels — a modern option for a light, open-feeling room.</p></div>
+      <div class="mat-card"><div class="mat-icon">Ce</div><h4>Ceramic Shutters</h4><p>Scratch- and stain-resistant surface, built for daily-use wardrobe fronts.</p></div>
+      <div class="mat-card"><div class="mat-icon">PU</div><h4>PU Lacquer Shutters</h4><p>A smooth, seamless matte or gloss coat that resists fingerprints and stays easy to clean.</p></div>
+      <div class="mat-card"><div class="mat-icon">Ve</div><h4>Veneer Shutters, Polished</h4><p>Real wood grain with a polished top coat — warm and natural without sacrificing durability.</p></div>
+      <div class="mat-card"><div class="mat-icon">Fg</div><h4>Fluted Glass Shutters</h4><p>Ribbed, textured glass that softens visibility while keeping the modern look.</p></div>
+      <div class="mat-card"><div class="mat-icon">Le</div><h4>Leather Shutters</h4><p>A tactile, upholstered-look finish for wardrobes that want to feel distinctly premium.</p></div>
+      <div class="mat-card"><div class="mat-icon">Fv</div><h4>Fluted Veneer Shutters</h4><p>Textured wood-grain panelling that adds depth and dimension to flat door fronts.</p></div>
+      <div class="mat-card master"><div class="mat-icon">M</div><h4>Master Craft Finish</h4><p>Our signature hand-finished detailing, reserved for feature panels and walk-in entries.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Types</span>
+        <h2>Built for what you actually own</h2>
+      </div>
+      <p>The right wardrobe system depends on room size and how you like to access things — we plan the interior layout, not just the shutter front.</p>
+    </div>
+    <div class="layout-grid">
+      <div class="layout-card">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop" alt="Sliding door modular wardrobe">
+        <div class="layout-overlay"><span class="eyebrow">Type</span><h3>Sliding</h3><p>Space-saving doors that don't swing into the room — ideal for smaller bedrooms.</p></div>
+      </div>
+      <div class="layout-card">
+        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop" alt="Hinged door modular wardrobe">
+        <div class="layout-overlay"><span class="eyebrow">Type</span><h3>Hinged</h3><p>Full-access swing doors with the widest range of shutter finish options.</p></div>
+      </div>
+      <div class="layout-card">
+        <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?q=80&w=800&auto=format&fit=crop" alt="Walk-in wardrobe closet">
+        <div class="layout-overlay"><span class="eyebrow">Type</span><h3>Walk-In</h3><p>An open dressing space with organised zones for a larger, dedicated area.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section offers">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Purchase Offers</span>
+        <h2>The more you build with us, the more you get back</h2>
+      </div>
+      <p>Live offers on every kitchen &amp; wardrobe order, valid at the time of booking.</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card">
+        <span class="offer-tier">Every Order</span>
+        <h4>Free Bajaj Kitchen Chimney</h4>
+        <ul>
+          <li>Included with every kitchen &amp; wardrobe purchase</li>
+          <li>No minimum order value required</li>
+        </ul>
+      </div>
+      <div class="offer-card">
+        <span class="offer-tier">Orders ₹5 Lakh+</span>
+        <h4>Free Gold Coin</h4>
+        <ul>
+          <li>On confirmed orders of ₹5 lakh and above</li>
+          <li>Applies to combined kitchen + wardrobe orders</li>
+        </ul>
+      </div>
+      <div class="offer-card highlight">
+        <span class="offer-tier">Orders ₹7 Lakh+</span>
+        <h4>Choose a Free Appliance</h4>
+        <ul>
+          <li>Siemens Dishwasher</li>
+          <li>Built-in Microwave Oven</li>
+          <li>Voltas 1.5-Ton AC</li>
+          <li>Godrej 200L Refrigerator</li>
+        </ul>
+      </div>
+    </div>
+    <p class="offer-note">Offers are indicative and subject to final confirmation at booking. <strong>Ask your design consultant for current terms.</strong></p>
+  </div>
+</section>
+
+<section class="cta-strip" id="estimate">
+  <div class="container">
+    <span class="eyebrow">Ready When You Are</span>
+    <h2>Let's design your wardrobe, no obligation.</h2>
+    <a href="tel:+911800000000" class="btn btn-light">Book a Free Consultation</a>
+  </div>
+</section>
+
+<footer id="studio">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo">Living&nbsp;Style<span>WARDROBE &amp; KITCHEN STUDIO</span></a>
+        <p class="about">Bespoke modular kitchens and wardrobes, crafted in our own Mumbai factory and built to a 10-year warranty.</p>
+        <div class="foot-social"><a href="#">IG</a><a href="#">FB</a><a href="#">IN</a></div>
+      </div>
+      <div>
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="index.html#process">Our Process</a></li>
+          <li><a href="index.html#studio">Find a Studio</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Products</h5>
+        <ul>
+          <li><a href="kitchens.html">Modular Kitchens</a></li>
+          <li><a href="wardrobes.html">Modular Wardrobes</a></li>
+          <li><a href="index.html">Full Home Interiors</a></li>
+          <li><a href="index.html#calculator">Cost Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Support</h5>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Stay Updated</h5>
+        <div class="foot-newsletter">
+          <input type="email" placeholder="Your email address">
+          <a href="#" class="btn btn-light" style="width:100%; justify-content:center;">Subscribe</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Living Style Wardrobe &amp; Kitchen Studio. All rights reserved.</span>
+      <div><a href="#">Terms of Service</a><a href="#">Privacy Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.main-links');
+  burger.addEventListener('click', () => {
+    const open = nav.style.display === 'flex';
+    nav.style.display = open ? 'none' : 'flex';
+    nav.style.flexDirection = 'column';
+    nav.style.position = 'absolute';
+    nav.style.top = '72px';
+    nav.style.left = '0';
+    nav.style.right = '0';
+    nav.style.background = 'var(--cream)';
+    nav.style.padding = '24px 32px';
+    nav.style.borderBottom = '1px solid var(--panel-line)';
+    nav.style.gap = '18px';
+  });
+</script>
+
+</body>
+</html>

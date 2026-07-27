@@ -395,6 +395,22 @@
   .stat strong{ font-family:'Fraunces',serif; font-size:2.6rem; font-weight:600; display:block; }
   .stat span{ font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; color:rgba(251,248,242,0.75); }
 
+  /* ===== OFFERS ===== */
+  .offers{ background:var(--ink); color:var(--cream-white); }
+  .offers .section-head h2{ color:var(--cream-white); }
+  .offers .section-head p{ color:rgba(251,248,242,0.7); }
+  .offers .eyebrow{ color:var(--brass); }
+  .offer-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  .offer-card{ background:rgba(251,248,242,0.05); border:1px solid rgba(251,248,242,0.15); padding:32px 28px; border-radius:var(--radius); position:relative; }
+  .offer-card.highlight{ border-color:var(--brass); background:rgba(169,121,58,0.1); }
+  .offer-tier{ font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-bottom:14px; display:block; }
+  .offer-card h4{ color:var(--cream-white); font-size:1.35rem; margin-bottom:14px; }
+  .offer-card ul{ list-style:none; }
+  .offer-card ul li{ font-size:0.9rem; color:rgba(251,248,242,0.78); margin-bottom:10px; padding-left:18px; position:relative; }
+  .offer-card ul li::before{ content:'—'; position:absolute; left:0; color:var(--brass); }
+  .offer-note{ margin-top:30px; text-align:center; font-size:0.88rem; color:rgba(251,248,242,0.65); }
+  .offer-note strong{ color:var(--brass); }
+
   /* ===== BLOG ===== */
   .blog-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
   .blog-card img{ height:230px; width:100%; object-fit:cover; border-radius:var(--radius); margin-bottom:20px; }
@@ -462,6 +478,7 @@
     .calc-banner{ grid-template-columns:1fr; padding:40px 26px; }
     .style-grid{ grid-template-columns:1fr 1fr; }
     .testi-grid{ grid-template-columns:1fr; }
+    .offer-grid{ grid-template-columns:1fr; }
     .stats-grid{ grid-template-columns:1fr 1fr; }
     .stat{ border-bottom:1px solid rgba(251,248,242,0.18); }
     .blog-grid{ grid-template-columns:1fr; }
@@ -487,8 +504,8 @@
   <div class="container nav-row">
     <a href="#" class="logo">Living&nbsp;Style<span>WARDROBE &amp; KITCHEN STUDIO</span></a>
     <nav class="main-links">
-      <a href="#kitchens">Kitchens</a>
-      <a href="#wardrobes">Wardrobes</a>
+      <a href="kitchens.html">Kitchens</a>
+      <a href="wardrobes.html">Wardrobes</a>
       <a href="#process">Our Process</a>
       <a href="#styles">Design Ideas</a>
       <a href="#stories">Stories</a>
@@ -504,9 +521,9 @@
 <section class="hero">
   <div class="container">
     <div class="hero-copy">
-      <span class="eyebrow">Modular Kitchens &amp; Wardrobes</span>
+      <span class="eyebrow">Own Factory, Mumbai · Modular Kitchens &amp; Wardrobes</span>
       <h1>Spaces built around <em>how you actually live</em></h1>
-      <p>Living Style designs and builds modular kitchens and wardrobes tailored to your routines, not just your room dimensions — from first sketch to final handover.</p>
+      <p>Living Style designs and builds modular kitchens and wardrobes tailored to your routines, not just your room dimensions — manufactured in our own Mumbai factory, from first sketch to final handover.</p>
       <div class="hero-actions">
         <a href="#estimate" class="btn btn-primary">Book a Free Consultation</a>
         <a href="#calculator" class="btn btn-outline">Calculate Your Cost</a>
@@ -515,14 +532,14 @@
         <div><strong>12+ yrs</strong><span>In business</span></div>
         <div><strong>4,200+</strong><span>Homes designed</span></div>
         <div><strong>10-yr</strong><span>Warranty</span></div>
-        <div><strong>16</strong><span>Finish options</span></div>
+        <div><strong>9</strong><span>Premium finishes</span></div>
       </div>
     </div>
     <div class="hero-visual">
       <div class="frame">
         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" alt="Warm modern modular kitchen with wood cabinetry">
       </div>
-      <div class="hero-tag">Featured Studio Project</div>
+      <div class="hero-tag">Made in Our Mumbai Factory</div>
       <div class="hero-badge">
         <strong>Handover in 6–8 wks</strong>
         <span>From final measurement to move-in ready.</span>
@@ -551,7 +568,7 @@
           <span class="eyebrow">01 — Kitchens</span>
           <h3>Modular Kitchens</h3>
           <p>L-shaped, parallel and island layouts built to your cooking habits, not a showroom floor plan.</p>
-          <a href="#" class="cat-link">Explore Kitchens →</a>
+          <a href="kitchens.html" class="cat-link">Explore Kitchens →</a>
         </div>
       </div>
       <div class="cat-card" id="wardrobes">
@@ -560,7 +577,7 @@
           <span class="eyebrow">02 — Wardrobes</span>
           <h3>Modular Wardrobes</h3>
           <p>Sliding, hinged and walk-in systems with internal layouts planned around what you actually own.</p>
-          <a href="#" class="cat-link">Explore Wardrobes →</a>
+          <a href="wardrobes.html" class="cat-link">Explore Wardrobes →</a>
         </div>
       </div>
       <div class="cat-card">
@@ -755,6 +772,47 @@
   </div>
 </section>
 
+<section class="section offers">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Purchase Offers</span>
+        <h2>The more you build with us, the more you get back</h2>
+      </div>
+      <p>Live offers on every kitchen &amp; wardrobe order, valid at the time of booking.</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card">
+        <span class="offer-tier">Every Order</span>
+        <h4>Free Bajaj Kitchen Chimney</h4>
+        <ul>
+          <li>Included with every kitchen &amp; wardrobe purchase</li>
+          <li>No minimum order value required</li>
+        </ul>
+      </div>
+      <div class="offer-card">
+        <span class="offer-tier">Orders ₹5 Lakh+</span>
+        <h4>Free Gold Coin</h4>
+        <ul>
+          <li>On confirmed orders of ₹5 lakh and above</li>
+          <li>Applies to combined kitchen + wardrobe orders</li>
+        </ul>
+      </div>
+      <div class="offer-card highlight">
+        <span class="offer-tier">Orders ₹7 Lakh+</span>
+        <h4>Choose a Free Appliance</h4>
+        <ul>
+          <li>Siemens Dishwasher</li>
+          <li>Built-in Microwave Oven</li>
+          <li>Voltas 1.5-Ton AC</li>
+          <li>Godrej 200L Refrigerator</li>
+        </ul>
+      </div>
+    </div>
+    <p class="offer-note">Offers are indicative and subject to final confirmation at booking. <strong>Ask your design consultant for current terms.</strong></p>
+  </div>
+</section>
+
 <section class="cta-strip" id="estimate">
   <div class="container">
     <span class="eyebrow">Ready When You Are</span>
@@ -787,8 +845,8 @@
       <div>
         <h5>Products</h5>
         <ul>
-          <li><a href="#kitchens">Modular Kitchens</a></li>
-          <li><a href="#wardrobes">Modular Wardrobes</a></li>
+          <li><a href="kitchens.html">Modular Kitchens</a></li>
+          <li><a href="wardrobes.html">Modular Wardrobes</a></li>
           <li><a href="#">Full Home Interiors</a></li>
           <li><a href="#calculator">Cost Calculator</a></li>
         </ul>
@@ -823,14 +881,15 @@
 <script>
   // Build the finish-swatch signature strip
   const finishes = [
-    {name:"Matte Walnut", spec:"Laminate · Wood grain", color:"#5A3A22"},
-    {name:"Brushed Brass", spec:"Hardware finish", color:"#A9793A"},
-    {name:"Ivory Lacquer", spec:"PU · High gloss", color:"#EFE7D6"},
-    {name:"Charcoal Acrylic", spec:"High gloss", color:"#302823"},
-    {name:"Sage Veneer", spec:"Natural wood", color:"#59684B"},
-    {name:"Clay Terracotta", spec:"Matte finish", color:"#95502F"},
-    {name:"Smoked Oak", spec:"Laminate · Wood grain", color:"#3C2B1E"},
-    {name:"Warm Linen", spec:"Matte laminate", color:"#D9C9A8"},
+    {name:"Acrylic Shutters", spec:"High-gloss finish", color:"#302823"},
+    {name:"Glass Shutters", spec:"Reflective panels", color:"#8FA3A6"},
+    {name:"Ceramic Shutters", spec:"Scratch-resistant", color:"#DACBA9"},
+    {name:"PU Lacquer Shutters", spec:"Matte or gloss coat", color:"#EFE7D6"},
+    {name:"Veneer Shutters", spec:"Polished wood grain", color:"#5A3A22"},
+    {name:"Fluted Glass Shutters", spec:"Ribbed, textured", color:"#B9C4C6"},
+    {name:"Leather Shutters", spec:"Upholstered look", color:"#5B3A2A"},
+    {name:"Fluted Veneer Shutters", spec:"Textured wood grain", color:"#3C2B1E"},
+    {name:"Master Craft Finish", spec:"Hand-finished detail", color:"#A9793A"},
   ];
   const track = document.getElementById('swatchTrack');
   const renderSet = () => finishes.map(f => `
