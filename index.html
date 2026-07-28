@@ -418,8 +418,8 @@
   .offer-card.highlight .offer-icon svg{ stroke:var(--ink); }
   .offer-card .ribbon{ position:absolute; top:18px; right:-38px; background:var(--brass); color:var(--ink); font-family:'Space Mono',monospace; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:5px 42px; transform:rotate(40deg); box-shadow:0 4px 10px rgba(0,0,0,0.3); }
 
-  .reward-ladder{ display:flex; justify-content:space-between; position:relative; margin:6px 0 54px; }
-  .reward-ladder::before{ content:''; position:absolute; top:26px; left:8%; right:8%; height:2px; background:linear-gradient(90deg, rgba(169,121,58,0.15), var(--brass) 50%, rgba(169,121,58,0.15)); }
+  .reward-ladder{ display:flex; justify-content:space-between; align-items:flex-end; position:relative; margin:6px 0 54px; }
+  .reward-ladder::before{ content:''; position:absolute; bottom:72px; left:8%; right:8%; height:2px; background:linear-gradient(90deg, rgba(169,121,58,0.15), var(--brass) 50%, rgba(169,121,58,0.15)); }
   .ladder-node{ position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; width:33%; text-align:center; }
   .ladder-dot{ width:52px; height:52px; border-radius:50%; background:var(--ink); border:2px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
   .ladder-dot svg{ width:24px; height:24px; stroke:var(--brass); }
@@ -427,6 +427,21 @@
   .ladder-dot-highlight svg{ stroke:var(--ink); }
   .ladder-value{ font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; color:var(--cream-white); }
   .ladder-tag{ font-family:'Space Mono',monospace; font-size:0.66rem; color:var(--brass); text-transform:uppercase; letter-spacing:0.06em; margin-top:5px; }
+
+  /* Offers section — textured background + ascending reward staircase */
+  .offers{ position:relative; overflow:hidden; }
+  .offers::before{ content:''; position:absolute; inset:0; background-image: repeating-linear-gradient(135deg, rgba(169,121,58,0.055) 0px, rgba(169,121,58,0.055) 1px, transparent 1px, transparent 40px); pointer-events:none; }
+  .offers::after{ content:''; position:absolute; top:-140px; right:-100px; width:440px; height:440px; background:radial-gradient(circle, rgba(169,121,58,0.16), transparent 70%); pointer-events:none; }
+  .offers .container{ position:relative; z-index:2; }
+  .ladder-node:nth-child(1) .ladder-dot{ width:48px; height:48px; }
+  .ladder-node:nth-child(1) .ladder-dot svg{ width:20px; height:20px; }
+  .ladder-node:nth-child(2) .ladder-dot{ width:58px; height:58px; }
+  .ladder-node:nth-child(2) .ladder-dot svg{ width:24px; height:24px; }
+  .ladder-node:nth-child(3) .ladder-dot{ width:70px; height:70px; box-shadow:0 0 0 7px rgba(169,121,58,0.16); }
+  .ladder-node:nth-child(3) .ladder-dot svg{ width:28px; height:28px; }
+  .ladder-node:nth-child(3) .ladder-value{ font-size:1.2rem; }
+  .ladder-node:nth-child(3) .ladder-tag{ background:var(--brass); color:var(--ink); padding:4px 12px; border-radius:20px; font-weight:700; }
+
 
 
   /* ===== BLOG ===== */

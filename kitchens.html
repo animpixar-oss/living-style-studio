@@ -69,13 +69,19 @@
 
   /* Materials grid */
   .materials{ background:var(--panel); }
-  .mat-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
-  .mat-card{ background:var(--cream-white); padding:28px 26px; border-radius:var(--radius); border-top:3px solid var(--brass); }
-  .mat-card .mat-icon{ width:46px; height:46px; border-radius:50%; background:var(--ink); color:var(--brass); display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-style:italic; font-weight:600; margin-bottom:18px; }
-  .mat-card h4{ font-size:1.1rem; margin-bottom:8px; }
-  .mat-card p{ font-size:0.86rem; color:var(--ink-soft); }
-  .mat-card.master{ background:var(--ink); border-top-color:var(--brass); }
-  .mat-card.master .mat-icon{ background:var(--brass); color:var(--ink); }
+  .mat-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:22px; }
+  .mat-card{ background:var(--cream-white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:transform .35s ease, box-shadow .35s ease; }
+  .mat-card:hover{ transform:translateY(-7px); }
+  .mat-thumb{ position:relative; height:180px; overflow:hidden; }
+  .mat-thumb img{ width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1); }
+  .mat-card:hover .mat-thumb img{ transform:scale(1.09); }
+  .mat-thumb::after{ content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(42,31,22,0) 55%, rgba(42,31,22,0.5) 100%); }
+  .mat-code{ position:absolute; top:14px; left:14px; z-index:2; font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; color:var(--cream-white); background:rgba(42,31,22,0.55); border:1px solid rgba(251,248,242,0.35); padding:4px 10px; border-radius:20px; }
+  .mat-body{ padding:24px 24px 28px; }
+  .mat-card h4{ font-size:1.08rem; margin-bottom:8px; }
+  .mat-card p{ font-size:0.85rem; color:var(--ink-soft); }
+  .mat-card.master{ background:var(--ink); }
+  .mat-card.master .mat-code{ background:rgba(169,121,58,0.25); border-color:var(--brass); color:var(--brass); }
   .mat-card.master h4, .mat-card.master p{ color:var(--cream-white); }
   .mat-card.master p{ color:rgba(251,248,242,0.7); }
 
@@ -112,8 +118,8 @@
   .offer-card.highlight .offer-icon svg{ stroke:var(--ink); }
   .offer-card .ribbon{ position:absolute; top:18px; right:-38px; background:var(--brass); color:var(--ink); font-family:'Space Mono',monospace; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:5px 42px; transform:rotate(40deg); box-shadow:0 4px 10px rgba(0,0,0,0.3); }
 
-  .reward-ladder{ display:flex; justify-content:space-between; position:relative; margin:6px 0 54px; }
-  .reward-ladder::before{ content:''; position:absolute; top:26px; left:8%; right:8%; height:2px; background:linear-gradient(90deg, rgba(169,121,58,0.15), var(--brass) 50%, rgba(169,121,58,0.15)); }
+  .reward-ladder{ display:flex; justify-content:space-between; align-items:flex-end; position:relative; margin:6px 0 54px; }
+  .reward-ladder::before{ content:''; position:absolute; bottom:72px; left:8%; right:8%; height:2px; background:linear-gradient(90deg, rgba(169,121,58,0.15), var(--brass) 50%, rgba(169,121,58,0.15)); }
   .ladder-node{ position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; width:33%; text-align:center; }
   .ladder-dot{ width:52px; height:52px; border-radius:50%; background:var(--ink); border:2px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
   .ladder-dot svg{ width:24px; height:24px; stroke:var(--brass); }
@@ -121,6 +127,21 @@
   .ladder-dot-highlight svg{ stroke:var(--ink); }
   .ladder-value{ font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; color:var(--cream-white); }
   .ladder-tag{ font-family:'Space Mono',monospace; font-size:0.66rem; color:var(--brass); text-transform:uppercase; letter-spacing:0.06em; margin-top:5px; }
+
+  /* Offers section — textured background + ascending reward staircase */
+  .offers{ position:relative; overflow:hidden; }
+  .offers::before{ content:''; position:absolute; inset:0; background-image: repeating-linear-gradient(135deg, rgba(169,121,58,0.055) 0px, rgba(169,121,58,0.055) 1px, transparent 1px, transparent 40px); pointer-events:none; }
+  .offers::after{ content:''; position:absolute; top:-140px; right:-100px; width:440px; height:440px; background:radial-gradient(circle, rgba(169,121,58,0.16), transparent 70%); pointer-events:none; }
+  .offers .container{ position:relative; z-index:2; }
+  .ladder-node:nth-child(1) .ladder-dot{ width:48px; height:48px; }
+  .ladder-node:nth-child(1) .ladder-dot svg{ width:20px; height:20px; }
+  .ladder-node:nth-child(2) .ladder-dot{ width:58px; height:58px; }
+  .ladder-node:nth-child(2) .ladder-dot svg{ width:24px; height:24px; }
+  .ladder-node:nth-child(3) .ladder-dot{ width:70px; height:70px; box-shadow:0 0 0 7px rgba(169,121,58,0.16); }
+  .ladder-node:nth-child(3) .ladder-dot svg{ width:28px; height:28px; }
+  .ladder-node:nth-child(3) .ladder-value{ font-size:1.2rem; }
+  .ladder-node:nth-child(3) .ladder-tag{ background:var(--brass); color:var(--ink); padding:4px 12px; border-radius:20px; font-weight:700; }
+
 
 
   /* CTA */
@@ -224,15 +245,42 @@
       <p>High-range, premium shutter materials — choose the one that fits your kitchen's light, layout and maintenance routine.</p>
     </div>
     <div class="mat-grid">
-      <div class="mat-card"><div class="mat-icon">Ac</div><h4>Acrylic Shutters</h4><p>High-gloss, mirror-like finish that makes small kitchens feel brighter and larger.</p></div>
-      <div class="mat-card"><div class="mat-icon">Gl</div><h4>Glass Shutters</h4><p>Clean, reflective panels — a modern option for a light, open-feeling kitchen.</p></div>
-      <div class="mat-card"><div class="mat-icon">Ce</div><h4>Ceramic Shutters</h4><p>Scratch- and heat-resistant surface, built for kitchens that see heavy daily use.</p></div>
-      <div class="mat-card"><div class="mat-icon">PU</div><h4>PU Lacquer Shutters</h4><p>A smooth, seamless matte or gloss coat that resists fingerprints and stays easy to clean.</p></div>
-      <div class="mat-card"><div class="mat-icon">Ve</div><h4>Veneer Shutters, Polished</h4><p>Real wood grain with a polished top coat — warm and natural without sacrificing durability.</p></div>
-      <div class="mat-card"><div class="mat-icon">Fg</div><h4>Fluted Glass Shutters</h4><p>Ribbed, textured glass that softens visibility while keeping the modern look.</p></div>
-      <div class="mat-card"><div class="mat-icon">Le</div><h4>Leather Shutters</h4><p>A tactile, upholstered-look finish for kitchens that want to feel distinctly premium.</p></div>
-      <div class="mat-card"><div class="mat-icon">Fv</div><h4>Fluted Veneer Shutters</h4><p>Textured wood-grain panelling that adds depth and dimension to flat cabinet fronts.</p></div>
-      <div class="mat-card master"><div class="mat-icon">M</div><h4>Master Craft Finish</h4><p>Our signature hand-finished detailing, reserved for feature panels and island fronts.</p></div>
+      <div class="mat-card">
+        <div class="mat-thumb"><span class="mat-code">01</span><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=500&auto=format&fit=crop" alt="Acrylic Shutters finish sample"></div>
+        <div class="mat-body"><h4>Acrylic Shutters</h4><p>High-gloss, mirror-like finish that makes small kitchens feel brighter and larger.</p></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-thumb"><span class="mat-code">02</span><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?q=80&w=500&auto=format&fit=crop" alt="Glass Shutters finish sample"></div>
+        <div class="mat-body"><h4>Glass Shutters</h4><p>Clean, reflective panels — a modern option for a light, open-feeling kitchen.</p></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-thumb"><span class="mat-code">03</span><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=500&auto=format&fit=crop" alt="Ceramic Shutters finish sample"></div>
+        <div class="mat-body"><h4>Ceramic Shutters</h4><p>Scratch- and heat-resistant surface, built for kitchens that see heavy daily use.</p></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-thumb"><span class="mat-code">04</span><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=500&auto=format&fit=crop" alt="PU Lacquer Shutters finish sample"></div>
+        <div class="mat-body"><h4>PU Lacquer Shutters</h4><p>A smooth, seamless matte or gloss coat that resists fingerprints and stays easy to clean.</p></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-thumb"><span class="mat-code">05</span><img src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=500&auto=format&fit=crop" alt="Veneer Shutters, Polished finish sample"></div>
+        <div class="mat-body"><h4>Veneer Shutters, Polished</h4><p>Real wood grain with a polished top coat — warm and natural without sacrificing durability.</p></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-thumb"><span class="mat-code">06</span><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=500&auto=format&fit=crop" alt="Fluted Glass Shutters finish sample"></div>
+        <div class="mat-body"><h4>Fluted Glass Shutters</h4><p>Ribbed, textured glass that softens visibility while keeping the modern look.</p></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-thumb"><span class="mat-code">07</span><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=500&auto=format&fit=crop" alt="Leather Shutters finish sample"></div>
+        <div class="mat-body"><h4>Leather Shutters</h4><p>A tactile, upholstered-look finish for kitchens that want to feel distinctly premium.</p></div>
+      </div>
+      <div class="mat-card">
+        <div class="mat-thumb"><span class="mat-code">08</span><img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=500&auto=format&fit=crop" alt="Fluted Veneer Shutters finish sample"></div>
+        <div class="mat-body"><h4>Fluted Veneer Shutters</h4><p>Textured wood-grain panelling that adds depth and dimension to flat cabinet fronts.</p></div>
+      </div>
+      <div class="mat-card master">
+        <div class="mat-thumb"><span class="mat-code">09</span><img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?q=80&w=500&auto=format&fit=crop" alt="Master Craft Finish finish sample"></div>
+        <div class="mat-body"><h4>Master Craft Finish</h4><p>Our signature hand-finished detailing, reserved for feature panels and island fronts.</p></div>
+      </div>
     </div>
   </div>
 </section>
