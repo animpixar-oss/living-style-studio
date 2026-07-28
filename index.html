@@ -498,6 +498,29 @@
   .foot-bottom a{ margin-left:20px; }
 
   /* ===== RESPONSIVE ===== */
+  
+  /* ===== DEPTH PASS — softer shadows, gradients, lifted cards ===== */
+  .btn-primary{ box-shadow:0 14px 30px -14px rgba(42,31,22,0.55); }
+  .btn-primary:hover{ box-shadow:0 18px 34px -12px rgba(42,31,22,0.6); }
+  .btn-outline:hover{ box-shadow:0 14px 30px -14px rgba(42,31,22,0.3); }
+  .btn-light{ box-shadow:0 10px 24px -12px rgba(42,31,22,0.35); }
+  .hero-visual .frame{ border-radius:10px; }
+  .hero-badge{ border-radius:4px; }
+  .cat-card{ border-radius:10px; box-shadow:0 26px 50px -26px rgba(42,31,22,0.55); }
+  .style-card{ border-radius:10px; box-shadow:0 20px 40px -22px rgba(42,31,22,0.45); }
+  .testi-card{ border-radius:8px; box-shadow:0 18px 40px -26px rgba(42,31,22,0.3); transition:transform .3s ease, box-shadow .3s ease; }
+  .testi-card:hover{ transform:translateY(-5px); box-shadow:0 24px 46px -22px rgba(42,31,22,0.38); }
+  .blog-card img{ border-radius:8px; box-shadow:0 16px 34px -20px rgba(42,31,22,0.4); }
+  .mat-card, .offer-card{ border-radius:8px; }
+  .stats-strip{ background:linear-gradient(135deg, var(--sage), #47543b); position:relative; overflow:hidden; }
+  .stats-strip::before{ content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(251,248,242,0.05) 0px, rgba(251,248,242,0.05) 1px, transparent 1px, transparent 34px); pointer-events:none; }
+  .stats-strip .container{ position:relative; z-index:2; }
+  .cta-strip{ background:linear-gradient(135deg, var(--clay), #7a3f24); position:relative; overflow:hidden; }
+  .cta-strip::before{ content:''; position:absolute; top:-110px; left:-90px; width:360px; height:360px; background:radial-gradient(circle, rgba(251,248,242,0.14), transparent 70%); pointer-events:none; }
+  .cta-strip .container{ position:relative; z-index:2; }
+  .calc-banner{ background:linear-gradient(155deg, var(--ink), #1c130c); border-radius:8px; }
+  .swatch-strip{ box-shadow:inset 0 12px 24px -18px rgba(0,0,0,0.5); }
+
   @media (max-width: 980px){
     nav.main-links{ display:none; }
     .burger{ display:flex; }

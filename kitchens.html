@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Modular Kitchens | Living Style Wardrobe &amp; Kitchen Studio</title>
-<meta name="description" content="Premium modular kitchens crafted in our own Mumbai factory — Acrylic, Glass, Ceramic, PU Lacquer, Veneer, Fluted Glass, Leather and Master Craft shutters. Purchase offers on every order.">
+<meta name="description" content="Premium modular kitchens crafted in our own Mumbai factory — Acrylic, Glass, Ceramic, PU Lacquer, Veneer, Fluted Glass, Leather and Fluted Veneer shutters, built on Master Ply carcasses. Purchase offers on every order.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -80,10 +80,7 @@
   .mat-body{ padding:24px 24px 28px; }
   .mat-card h4{ font-size:1.08rem; margin-bottom:8px; }
   .mat-card p{ font-size:0.85rem; color:var(--ink-soft); }
-  .mat-card.master{ background:var(--ink); }
-  .mat-card.master .mat-code{ background:rgba(169,121,58,0.25); border-color:var(--brass); color:var(--brass); }
-  .mat-card.master h4, .mat-card.master p{ color:var(--cream-white); }
-  .mat-card.master p{ color:rgba(251,248,242,0.7); }
+
 
   /* Layout types */
   .layout-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:26px; }
@@ -165,6 +162,20 @@
   .foot-bottom{ display:flex; justify-content:space-between; align-items:center; padding:26px 0; font-size:0.78rem; flex-wrap:wrap; gap:12px; }
   .foot-bottom a{ margin-left:20px; }
 
+  
+  /* ===== DEPTH PASS — softer shadows, gradients, lifted cards ===== */
+  .btn-primary{ box-shadow:0 14px 30px -14px rgba(42,31,22,0.55); }
+  .btn-primary:hover{ box-shadow:0 18px 34px -12px rgba(42,31,22,0.6); }
+  .btn-outline:hover{ box-shadow:0 14px 30px -14px rgba(42,31,22,0.3); }
+  .btn-light{ box-shadow:0 10px 24px -12px rgba(42,31,22,0.35); }
+  .page-hero-visual img{ border-radius:10px; }
+  .factory-badge{ border-radius:4px; }
+  .layout-card{ border-radius:10px; }
+  .mat-card, .offer-card{ border-radius:8px; }
+  .cta-strip{ background:linear-gradient(135deg, var(--clay), #7a3f24); position:relative; overflow:hidden; }
+  .cta-strip::before{ content:''; position:absolute; top:-110px; left:-90px; width:360px; height:360px; background:radial-gradient(circle, rgba(251,248,242,0.14), transparent 70%); pointer-events:none; }
+  .cta-strip .container{ position:relative; z-index:2; }
+
   @media (max-width: 980px){
     nav.main-links{ display:none; }
     .burger{ display:flex; }
@@ -240,7 +251,7 @@
     <div class="section-head">
       <div>
         <span class="eyebrow">Premium Shutter Range</span>
-        <h2>Nine finishes, all made in-house</h2>
+        <h2>Eight finishes, built on one solid carcass</h2>
       </div>
       <p>High-range, premium shutter materials — choose the one that fits your kitchen's light, layout and maintenance routine.</p>
     </div>
@@ -277,9 +288,9 @@
         <div class="mat-thumb"><span class="mat-code">08</span><img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=500&auto=format&fit=crop" alt="Fluted Veneer Shutters finish sample"></div>
         <div class="mat-body"><h4>Fluted Veneer Shutters</h4><p>Textured wood-grain panelling that adds depth and dimension to flat cabinet fronts.</p></div>
       </div>
-      <div class="mat-card master">
-        <div class="mat-thumb"><span class="mat-code">09</span><img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?q=80&w=500&auto=format&fit=crop" alt="Master Craft Finish finish sample"></div>
-        <div class="mat-body"><h4>Master Craft Finish</h4><p>Our signature hand-finished detailing, reserved for feature panels and island fronts.</p></div>
+      <div class="mat-card">
+        <div class="mat-thumb"><span class="mat-code">09</span><img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=500&auto=format&fit=crop" alt="Master Ply carcass material sample"></div>
+        <div class="mat-body"><h4>Master Ply Carcass</h4><p>Every cabinet box is built on branded Master Ply — the structural material behind all eight shutter finishes above.</p></div>
       </div>
     </div>
   </div>
