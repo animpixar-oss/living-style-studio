@@ -17,7 +17,15 @@
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
-  body{ font-family:'Manrope', sans-serif; background:var(--cream); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  body{
+    font-family:'Manrope', sans-serif;
+    background:
+      radial-gradient(1100px 550px at 12% -8%, rgba(169,121,58,0.07), transparent 60%),
+      radial-gradient(900px 500px at 108% 18%, rgba(89,104,75,0.06), transparent 60%),
+      radial-gradient(800px 500px at 50% 100%, rgba(149,80,47,0.05), transparent 60%),
+      var(--cream);
+    color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
   img{max-width:100%; display:block;}
   a{color:inherit; text-decoration:none;}
   .eyebrow{ font-family:'Space Mono', monospace; text-transform:uppercase; letter-spacing:0.16em; font-size:0.72rem; color:var(--brass-deep); font-weight:700; }
@@ -51,6 +59,9 @@
 
   /* Page hero (shorter than homepage) */
   .page-hero{ padding:56px 0 60px; position:relative; overflow:hidden; }
+  .page-hero::before{ content:''; position:absolute; top:-130px; left:-150px; width:420px; height:420px; background:radial-gradient(circle, rgba(169,121,58,0.16), transparent 70%); pointer-events:none; z-index:0; }
+  .page-hero::after{ content:''; position:absolute; bottom:-100px; right:-160px; width:380px; height:380px; background:radial-gradient(circle, rgba(89,104,75,0.13), transparent 70%); pointer-events:none; z-index:0; }
+  .page-hero .container{ position:relative; z-index:1; }
   .page-hero .container{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
   .page-hero h1{ font-size:clamp(2.2rem, 3.6vw, 3.2rem); margin:16px 0 20px; }
   .page-hero h1 em{ font-style:italic; color:var(--clay); }
@@ -176,6 +187,22 @@
   .cta-strip::before{ content:''; position:absolute; top:-110px; left:-90px; width:360px; height:360px; background:radial-gradient(circle, rgba(251,248,242,0.14), transparent 70%); pointer-events:none; }
   .cta-strip .container{ position:relative; z-index:2; }
 
+  
+  /* ===== SCROLL REVEAL ===== */
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  .cat-grid > .reveal:nth-child(2), .layout-grid > .reveal:nth-child(2), .style-grid > .reveal:nth-child(2),
+  .mat-grid > .reveal:nth-child(2), .testi-grid > .reveal:nth-child(2), .blog-grid > .reveal:nth-child(2),
+  .offer-grid > .reveal:nth-child(2), .stats-grid > .reveal:nth-child(2), .process-row > .reveal:nth-child(2){ transition-delay:.1s; }
+  .cat-grid > .reveal:nth-child(3), .layout-grid > .reveal:nth-child(3), .style-grid > .reveal:nth-child(3),
+  .mat-grid > .reveal:nth-child(3), .testi-grid > .reveal:nth-child(3), .blog-grid > .reveal:nth-child(3),
+  .offer-grid > .reveal:nth-child(3), .stats-grid > .reveal:nth-child(3), .process-row > .reveal:nth-child(3){ transition-delay:.2s; }
+  .style-grid > .reveal:nth-child(4), .stats-grid > .reveal:nth-child(4), .process-row > .reveal:nth-child(4){ transition-delay:.3s; }
+  .process-row > .reveal:nth-child(5){ transition-delay:.4s; }
+  .mat-grid > .reveal:nth-child(4){ transition-delay:.3s; }
+  .mat-grid > .reveal:nth-child(5){ transition-delay:.36s; }
+  .mat-grid > .reveal:nth-child(6){ transition-delay:.42s; }
+
   @media (max-width: 980px){
     nav.main-links{ display:none; }
     .burger{ display:flex; }
@@ -248,7 +275,7 @@
 
 <section class="section materials" id="materials">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">Premium Shutter Range</span>
         <h2>Eight finishes, built on one solid carcass</h2>
@@ -256,39 +283,39 @@
       <p>High-range, premium shutter materials — choose the one that fits your kitchen's light, layout and maintenance routine.</p>
     </div>
     <div class="mat-grid">
-      <div class="mat-card">
+      <div class="mat-card reveal">
         <div class="mat-thumb"><span class="mat-code">01</span><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=500&auto=format&fit=crop" alt="Acrylic Shutters finish sample"></div>
         <div class="mat-body"><h4>Acrylic Shutters</h4><p>High-gloss, mirror-like finish that makes small kitchens feel brighter and larger.</p></div>
       </div>
-      <div class="mat-card">
+      <div class="mat-card reveal">
         <div class="mat-thumb"><span class="mat-code">02</span><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?q=80&w=500&auto=format&fit=crop" alt="Glass Shutters finish sample"></div>
         <div class="mat-body"><h4>Glass Shutters</h4><p>Clean, reflective panels — a modern option for a light, open-feeling kitchen.</p></div>
       </div>
-      <div class="mat-card">
+      <div class="mat-card reveal">
         <div class="mat-thumb"><span class="mat-code">03</span><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=500&auto=format&fit=crop" alt="Ceramic Shutters finish sample"></div>
         <div class="mat-body"><h4>Ceramic Shutters</h4><p>Scratch- and heat-resistant surface, built for kitchens that see heavy daily use.</p></div>
       </div>
-      <div class="mat-card">
+      <div class="mat-card reveal">
         <div class="mat-thumb"><span class="mat-code">04</span><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=500&auto=format&fit=crop" alt="PU Lacquer Shutters finish sample"></div>
         <div class="mat-body"><h4>PU Lacquer Shutters</h4><p>A smooth, seamless matte or gloss coat that resists fingerprints and stays easy to clean.</p></div>
       </div>
-      <div class="mat-card">
+      <div class="mat-card reveal">
         <div class="mat-thumb"><span class="mat-code">05</span><img src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=500&auto=format&fit=crop" alt="Veneer Shutters, Polished finish sample"></div>
         <div class="mat-body"><h4>Veneer Shutters, Polished</h4><p>Real wood grain with a polished top coat — warm and natural without sacrificing durability.</p></div>
       </div>
-      <div class="mat-card">
+      <div class="mat-card reveal">
         <div class="mat-thumb"><span class="mat-code">06</span><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=500&auto=format&fit=crop" alt="Fluted Glass Shutters finish sample"></div>
         <div class="mat-body"><h4>Fluted Glass Shutters</h4><p>Ribbed, textured glass that softens visibility while keeping the modern look.</p></div>
       </div>
-      <div class="mat-card">
+      <div class="mat-card reveal">
         <div class="mat-thumb"><span class="mat-code">07</span><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=500&auto=format&fit=crop" alt="Leather Shutters finish sample"></div>
         <div class="mat-body"><h4>Leather Shutters</h4><p>A tactile, upholstered-look finish for kitchens that want to feel distinctly premium.</p></div>
       </div>
-      <div class="mat-card">
+      <div class="mat-card reveal">
         <div class="mat-thumb"><span class="mat-code">08</span><img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=500&auto=format&fit=crop" alt="Fluted Veneer Shutters finish sample"></div>
         <div class="mat-body"><h4>Fluted Veneer Shutters</h4><p>Textured wood-grain panelling that adds depth and dimension to flat cabinet fronts.</p></div>
       </div>
-      <div class="mat-card">
+      <div class="mat-card reveal">
         <div class="mat-thumb"><span class="mat-code">09</span><img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=500&auto=format&fit=crop" alt="Master Ply carcass material sample"></div>
         <div class="mat-body"><h4>Master Ply Carcass</h4><p>Every cabinet box is built on branded Master Ply — the structural material behind all eight shutter finishes above.</p></div>
       </div>
@@ -298,7 +325,7 @@
 
 <section class="section">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">Layouts</span>
         <h2>Built for how your kitchen is actually used</h2>
@@ -306,15 +333,15 @@
       <p>The right layout depends on your room shape and cooking style — we help you choose, not just install.</p>
     </div>
     <div class="layout-grid">
-      <div class="layout-card">
+      <div class="layout-card reveal">
         <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" alt="L-shaped modular kitchen">
         <div class="layout-overlay"><span class="eyebrow">Layout</span><h3>L-Shape</h3><p>Efficient corner-use layout, ideal for small to mid-sized kitchens.</p></div>
       </div>
-      <div class="layout-card">
+      <div class="layout-card reveal">
         <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800&auto=format&fit=crop" alt="Parallel modular kitchen">
         <div class="layout-overlay"><span class="eyebrow">Layout</span><h3>Parallel</h3><p>Two facing counters that maximise workspace in narrow kitchens.</p></div>
       </div>
-      <div class="layout-card">
+      <div class="layout-card reveal">
         <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?q=80&w=800&auto=format&fit=crop" alt="Island modular kitchen">
         <div class="layout-overlay"><span class="eyebrow">Layout</span><h3>Island</h3><p>A freestanding centre counter for open-plan kitchens with room to spare.</p></div>
       </div>
@@ -324,7 +351,7 @@
 
 <section class="section offers">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">Purchase Offers</span>
         <h2>The more you build with us, the more you get back</h2>
@@ -351,7 +378,7 @@
     </div>
 
     <div class="offer-grid">
-      <div class="offer-card">
+      <div class="offer-card reveal">
         <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-3 6H7L4 8z"/><line x1="12" y1="14" x2="12" y2="19"/><line x1="8" y1="19" x2="16" y2="19"/></svg></div>
         <span class="offer-tier">Every Order</span>
         <h4>Free Bajaj Kitchen Chimney</h4>
@@ -360,7 +387,7 @@
           <li>No minimum order value required</li>
         </ul>
       </div>
-      <div class="offer-card">
+      <div class="offer-card reveal">
         <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><path d="M12 8.2v7.6M10.3 9.6h3.2M10.3 14.4h3.2"/></svg></div>
         <span class="offer-tier">Orders ₹5 Lakh+</span>
         <h4>Free Gold Coin</h4>
@@ -369,7 +396,7 @@
           <li>Applies to combined kitchen + wardrobe orders</li>
         </ul>
       </div>
-      <div class="offer-card highlight">
+      <div class="offer-card highlight reveal">
         <span class="ribbon">Best Value</span>
         <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="10" rx="1"/><line x1="4" y1="13" x2="20" y2="13"/><line x1="12" y1="9" x2="12" y2="19"/><path d="M12 9c-1.5 0-3-1-3-2.5S10 4 12 6c0-2 1.5-3.5 3-2.5S13.5 9 12 9z"/></svg></div>
         <span class="offer-tier">Orders ₹7 Lakh+</span>
@@ -460,6 +487,18 @@
     nav.style.borderBottom = '1px solid var(--panel-line)';
     nav.style.gap = '18px';
   });
+
+  // Scroll-reveal animation
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
 </script>
 
 </body>

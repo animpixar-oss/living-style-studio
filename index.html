@@ -27,7 +27,11 @@
   html{scroll-behavior:smooth;}
   body{
     font-family:'Manrope', sans-serif;
-    background:var(--cream);
+    background:
+      radial-gradient(1100px 550px at 12% -8%, rgba(169,121,58,0.07), transparent 60%),
+      radial-gradient(900px 500px at 108% 18%, rgba(89,104,75,0.06), transparent 60%),
+      radial-gradient(800px 500px at 50% 100%, rgba(149,80,47,0.05), transparent 60%),
+      var(--cream);
     color:var(--ink);
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
@@ -136,6 +140,9 @@
     padding:64px 0 0;
     overflow:hidden;
   }
+  .hero::before{ content:''; position:absolute; top:-140px; left:-160px; width:440px; height:440px; background:radial-gradient(circle, rgba(169,121,58,0.16), transparent 70%); pointer-events:none; z-index:0; }
+  .hero::after{ content:''; position:absolute; bottom:60px; right:-180px; width:420px; height:420px; background:radial-gradient(circle, rgba(89,104,75,0.14), transparent 70%); pointer-events:none; z-index:0; }
+  .hero .container{ position:relative; z-index:1; }
   .hero .container{
     display:grid;
     grid-template-columns:1.05fr 0.95fr;
@@ -237,15 +244,18 @@
   .section-head h2{ font-size:clamp(1.9rem, 3vw, 2.7rem); margin-top:12px; }
   .section-head p{ color:var(--ink-soft); max-width:420px; }
 
-  /* ===== CATEGORY GRID ===== */
+  /* ===== CATEGORY GRID (bento layout) ===== */
   .cat-grid{
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:1.4fr 1fr;
+    grid-template-rows:repeat(2, 1fr);
     gap:26px;
+    height:560px;
   }
+  .cat-card:first-child{ grid-row:1 / span 2; }
   .cat-card{
     position:relative;
-    height:440px;
+    height:100%;
     overflow:hidden;
     border-radius:var(--radius);
     box-shadow:var(--shadow);
@@ -521,6 +531,22 @@
   .calc-banner{ background:linear-gradient(155deg, var(--ink), #1c130c); border-radius:8px; }
   .swatch-strip{ box-shadow:inset 0 12px 24px -18px rgba(0,0,0,0.5); }
 
+  
+  /* ===== SCROLL REVEAL ===== */
+  .reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  .cat-grid > .reveal:nth-child(2), .layout-grid > .reveal:nth-child(2), .style-grid > .reveal:nth-child(2),
+  .mat-grid > .reveal:nth-child(2), .testi-grid > .reveal:nth-child(2), .blog-grid > .reveal:nth-child(2),
+  .offer-grid > .reveal:nth-child(2), .stats-grid > .reveal:nth-child(2), .process-row > .reveal:nth-child(2){ transition-delay:.1s; }
+  .cat-grid > .reveal:nth-child(3), .layout-grid > .reveal:nth-child(3), .style-grid > .reveal:nth-child(3),
+  .mat-grid > .reveal:nth-child(3), .testi-grid > .reveal:nth-child(3), .blog-grid > .reveal:nth-child(3),
+  .offer-grid > .reveal:nth-child(3), .stats-grid > .reveal:nth-child(3), .process-row > .reveal:nth-child(3){ transition-delay:.2s; }
+  .style-grid > .reveal:nth-child(4), .stats-grid > .reveal:nth-child(4), .process-row > .reveal:nth-child(4){ transition-delay:.3s; }
+  .process-row > .reveal:nth-child(5){ transition-delay:.4s; }
+  .mat-grid > .reveal:nth-child(4){ transition-delay:.3s; }
+  .mat-grid > .reveal:nth-child(5){ transition-delay:.36s; }
+  .mat-grid > .reveal:nth-child(6){ transition-delay:.42s; }
+
   @media (max-width: 980px){
     nav.main-links{ display:none; }
     .burger{ display:flex; }
@@ -528,7 +554,9 @@
     .hero-visual{ order:-1; }
     .hero-badge{ left:14px; }
     .hero-tag{ right:14px; }
-    .cat-grid{ grid-template-columns:1fr; }
+    .cat-grid{ grid-template-columns:1fr; grid-template-rows:auto; height:auto; }
+    .cat-card{ height:320px; }
+    .cat-card:first-child{ grid-row:auto; }
     .process-row{ grid-template-columns:1fr 1fr; gap:30px; }
     .process-row::before{ display:none; }
     .calc-banner{ grid-template-columns:1fr; padding:40px 26px; }
@@ -614,7 +642,7 @@
 
 <section class="section" id="kitchens">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">What We Build</span>
         <h2>Every corner of storage, considered</h2>
@@ -622,7 +650,7 @@
       <p>Three studio specialities, each engineered for durability first, styled second.</p>
     </div>
     <div class="cat-grid">
-      <div class="cat-card">
+      <div class="cat-card reveal">
         <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=900&auto=format&fit=crop" alt="Modular kitchen">
         <div class="cat-overlay">
           <span class="eyebrow">01 — Kitchens</span>
@@ -631,7 +659,7 @@
           <a href="kitchens.html" class="cat-link">Explore Kitchens →</a>
         </div>
       </div>
-      <div class="cat-card" id="wardrobes">
+      <div class="cat-card reveal" id="wardrobes">
         <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=900&auto=format&fit=crop" alt="Modular wardrobe interior">
         <div class="cat-overlay">
           <span class="eyebrow">02 — Wardrobes</span>
@@ -640,7 +668,7 @@
           <a href="wardrobes.html" class="cat-link">Explore Wardrobes →</a>
         </div>
       </div>
-      <div class="cat-card">
+      <div class="cat-card reveal">
         <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=900&auto=format&fit=crop" alt="Full home interior living room">
         <div class="cat-overlay">
           <span class="eyebrow">03 — Full Home</span>
@@ -655,7 +683,7 @@
 
 <section class="section process" id="process">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">How It Works</span>
         <h2>From first call to final handover</h2>
@@ -663,27 +691,27 @@
       <p>Five stages, the same for every project — so you always know what's next.</p>
     </div>
     <div class="process-row">
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-num">01</div>
         <h4>Consult</h4>
         <p>A designer visits your home to understand your routines, storage habits and budget.</p>
       </div>
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-num">02</div>
         <h4>Measure</h4>
         <p>Precise on-site measurements so every panel is cut for your actual space, not an average one.</p>
       </div>
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-num">03</div>
         <h4>Design</h4>
         <p>A 3D layout and finish palette you can review and revise before anything is manufactured.</p>
       </div>
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-num">04</div>
         <h4>Craft</h4>
         <p>Factory-made carcasses and shutters, checked for fit before they ever leave the workshop.</p>
       </div>
-      <div class="process-step">
+      <div class="process-step reveal">
         <div class="process-num">05</div>
         <h4>Install</h4>
         <p>Clean, dust-managed installation with a walkthrough before we call the project done.</p>
@@ -724,7 +752,7 @@
 
 <section class="section" id="styles">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">Design Ideas</span>
         <h2>Find the style that speaks to you</h2>
@@ -732,19 +760,19 @@
       <p>Every project starts with a direction — pick the one closest to yours and we'll shape it from there.</p>
     </div>
     <div class="style-grid">
-      <div class="style-card">
+      <div class="style-card reveal">
         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=700&auto=format&fit=crop" alt="Contemporary style kitchen">
         <div class="style-tag"><span class="eyebrow">Style</span><h4>Contempo</h4></div>
       </div>
-      <div class="style-card">
+      <div class="style-card reveal">
         <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=700&auto=format&fit=crop" alt="Heritage style interior">
         <div class="style-tag"><span class="eyebrow">Style</span><h4>Heritage</h4></div>
       </div>
-      <div class="style-card">
+      <div class="style-card reveal">
         <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?q=80&w=700&auto=format&fit=crop" alt="Minimal style kitchen">
         <div class="style-tag"><span class="eyebrow">Style</span><h4>Minimal</h4></div>
       </div>
-      <div class="style-card">
+      <div class="style-card reveal">
         <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=700&auto=format&fit=crop" alt="Vibrant style kitchen">
         <div class="style-tag"><span class="eyebrow">Style</span><h4>Vibrant</h4></div>
       </div>
@@ -755,24 +783,24 @@
 <section class="section stats-strip">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat"><strong>4,200+</strong><span>Homes Designed</span></div>
-      <div class="stat"><strong>12</strong><span>Years of Service</span></div>
-      <div class="stat"><strong>16</strong><span>Finishes</span></div>
-      <div class="stat"><strong>10-yr</strong><span>Warranty</span></div>
+      <div class="stat reveal"><strong>4,200+</strong><span>Homes Designed</span></div>
+      <div class="stat reveal"><strong>12</strong><span>Years of Service</span></div>
+      <div class="stat reveal"><strong>16</strong><span>Finishes</span></div>
+      <div class="stat reveal"><strong>10-yr</strong><span>Warranty</span></div>
     </div>
   </div>
 </section>
 
 <section class="section testi-wrap" id="stories">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">Client Stories</span>
         <h2>What it's like working with us</h2>
       </div>
     </div>
     <div class="testi-grid">
-      <div class="testi-card">
+      <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
         <p>"They measured everything twice before the design was final — no surprises on installation day. Our kitchen fits like it was built for the space, because it was."</p>
         <div class="testi-person">
@@ -780,7 +808,7 @@
           <div><strong>Rhea Kapoor</strong><span>Wardrobe &amp; Kitchen, 3BHK</span></div>
         </div>
       </div>
-      <div class="testi-card">
+      <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
         <p>"We changed our finish choice twice mid-project and the team just adjusted the quote and timeline — no drama, no extra charges hidden later."</p>
         <div class="testi-person">
@@ -788,7 +816,7 @@
           <div><strong>Arjun Mehta</strong><span>Full Home Interior</span></div>
         </div>
       </div>
-      <div class="testi-card">
+      <div class="testi-card reveal">
         <div class="stars">★★★★★</div>
         <p>"The 3D design review saved us from a layout mistake we wouldn't have caught until it was built. Worth doing the walkthrough before you sign off."</p>
         <div class="testi-person">
@@ -802,7 +830,7 @@
 
 <section class="section">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">From the Studio Journal</span>
         <h2>Ideas &amp; guides worth reading</h2>
@@ -810,19 +838,19 @@
       <a href="#" class="btn btn-outline">View All Stories</a>
     </div>
     <div class="blog-grid">
-      <div class="blog-card">
+      <div class="blog-card reveal">
         <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=700&auto=format&fit=crop" alt="White kitchen design">
         <span class="eyebrow">Kitchens</span>
         <h4>Choosing between laminate, acrylic and PU finishes</h4>
         <p>A practical breakdown of cost, upkeep and how each finish actually wears over five years.</p>
       </div>
-      <div class="blog-card">
+      <div class="blog-card reveal">
         <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=700&auto=format&fit=crop" alt="Wardrobe interior storage">
         <span class="eyebrow">Wardrobes</span>
         <h4>Planning wardrobe storage for a small bedroom</h4>
         <p>How to fit real storage capacity into a compact footprint without it feeling cramped.</p>
       </div>
-      <div class="blog-card">
+      <div class="blog-card reveal">
         <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=700&auto=format&fit=crop" alt="Modular kitchen island layout">
         <span class="eyebrow">Kitchens</span>
         <h4>Parallel vs. island layouts: what actually suits Indian kitchens</h4>
@@ -834,7 +862,7 @@
 
 <section class="section offers">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div>
         <span class="eyebrow">Purchase Offers</span>
         <h2>The more you build with us, the more you get back</h2>
@@ -861,7 +889,7 @@
     </div>
 
     <div class="offer-grid">
-      <div class="offer-card">
+      <div class="offer-card reveal">
         <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-3 6H7L4 8z"/><line x1="12" y1="14" x2="12" y2="19"/><line x1="8" y1="19" x2="16" y2="19"/></svg></div>
         <span class="offer-tier">Every Order</span>
         <h4>Free Bajaj Kitchen Chimney</h4>
@@ -870,7 +898,7 @@
           <li>No minimum order value required</li>
         </ul>
       </div>
-      <div class="offer-card">
+      <div class="offer-card reveal">
         <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><path d="M12 8.2v7.6M10.3 9.6h3.2M10.3 14.4h3.2"/></svg></div>
         <span class="offer-tier">Orders ₹5 Lakh+</span>
         <h4>Free Gold Coin</h4>
@@ -879,7 +907,7 @@
           <li>Applies to combined kitchen + wardrobe orders</li>
         </ul>
       </div>
-      <div class="offer-card highlight">
+      <div class="offer-card highlight reveal">
         <span class="ribbon">Best Value</span>
         <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="10" rx="1"/><line x1="4" y1="13" x2="20" y2="13"/><line x1="12" y1="9" x2="12" y2="19"/><path d="M12 9c-1.5 0-3-1-3-2.5S10 4 12 6c0-2 1.5-3.5 3-2.5S13.5 9 12 9z"/></svg></div>
         <span class="offer-tier">Orders ₹7 Lakh+</span>
@@ -998,6 +1026,18 @@
     nav.style.borderBottom = '1px solid var(--panel-line)';
     nav.style.gap = '18px';
   });
+
+  // Scroll-reveal animation
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
 </script>
 
 </body>
