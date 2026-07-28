@@ -410,6 +410,24 @@
   .offer-card ul li::before{ content:'—'; position:absolute; left:0; color:var(--brass); }
   .offer-note{ margin-top:30px; text-align:center; font-size:0.88rem; color:rgba(251,248,242,0.65); }
   .offer-note strong{ color:var(--brass); }
+  .offer-card{ transition: transform .25s ease, border-color .25s ease; }
+  .offer-card:hover{ transform:translateY(-6px); border-color:var(--brass); }
+  .offer-icon{ width:54px; height:54px; border-radius:50%; background:rgba(169,121,58,0.12); border:1.5px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
+  .offer-icon svg{ width:26px; height:26px; stroke:var(--brass); }
+  .offer-card.highlight .offer-icon{ background:var(--brass); }
+  .offer-card.highlight .offer-icon svg{ stroke:var(--ink); }
+  .offer-card .ribbon{ position:absolute; top:18px; right:-38px; background:var(--brass); color:var(--ink); font-family:'Space Mono',monospace; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:5px 42px; transform:rotate(40deg); box-shadow:0 4px 10px rgba(0,0,0,0.3); }
+
+  .reward-ladder{ display:flex; justify-content:space-between; position:relative; margin:6px 0 54px; }
+  .reward-ladder::before{ content:''; position:absolute; top:26px; left:8%; right:8%; height:2px; background:linear-gradient(90deg, rgba(169,121,58,0.15), var(--brass) 50%, rgba(169,121,58,0.15)); }
+  .ladder-node{ position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; width:33%; text-align:center; }
+  .ladder-dot{ width:52px; height:52px; border-radius:50%; background:var(--ink); border:2px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+  .ladder-dot svg{ width:24px; height:24px; stroke:var(--brass); }
+  .ladder-dot-highlight{ background:var(--brass); }
+  .ladder-dot-highlight svg{ stroke:var(--ink); }
+  .ladder-value{ font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; color:var(--cream-white); }
+  .ladder-tag{ font-family:'Space Mono',monospace; font-size:0.66rem; color:var(--brass); text-transform:uppercase; letter-spacing:0.06em; margin-top:5px; }
+
 
   /* ===== BLOG ===== */
   .blog-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
@@ -479,6 +497,10 @@
     .style-grid{ grid-template-columns:1fr 1fr; }
     .testi-grid{ grid-template-columns:1fr; }
     .offer-grid{ grid-template-columns:1fr; }
+    .reward-ladder{ flex-direction:column; gap:26px; align-items:flex-start; margin-bottom:40px; }
+    .reward-ladder::before{ display:none; }
+    .ladder-node{ width:100%; flex-direction:row; justify-content:flex-start; gap:16px; text-align:left; }
+    .ladder-dot{ margin-bottom:0; flex-shrink:0; }
     .stats-grid{ grid-template-columns:1fr 1fr; }
     .stat{ border-bottom:1px solid rgba(251,248,242,0.18); }
     .blog-grid{ grid-template-columns:1fr; }
@@ -781,8 +803,28 @@
       </div>
       <p>Live offers on every kitchen &amp; wardrobe order, valid at the time of booking.</p>
     </div>
+
+    <div class="reward-ladder">
+      <div class="ladder-node">
+        <div class="ladder-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18"/><path d="M6 4h10l-3 4 3 4H6"/></svg></div>
+        <span class="ladder-value">Every Order</span>
+        <span class="ladder-tag">Free Chimney</span>
+      </div>
+      <div class="ladder-node">
+        <div class="ladder-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><path d="M12 8.2v7.6M10.3 9.6h3.2M10.3 14.4h3.2"/></svg></div>
+        <span class="ladder-value">₹5 Lakh+</span>
+        <span class="ladder-tag">Free Gold Coin</span>
+      </div>
+      <div class="ladder-node">
+        <div class="ladder-dot ladder-dot-highlight"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="10" rx="1"/><line x1="4" y1="13" x2="20" y2="13"/><line x1="12" y1="9" x2="12" y2="19"/><path d="M12 9c-1.5 0-3-1-3-2.5S10 4 12 6c0-2 1.5-3.5 3-2.5S13.5 9 12 9z"/></svg></div>
+        <span class="ladder-value">₹7 Lakh+</span>
+        <span class="ladder-tag">Free Appliance</span>
+      </div>
+    </div>
+
     <div class="offer-grid">
       <div class="offer-card">
+        <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-3 6H7L4 8z"/><line x1="12" y1="14" x2="12" y2="19"/><line x1="8" y1="19" x2="16" y2="19"/></svg></div>
         <span class="offer-tier">Every Order</span>
         <h4>Free Bajaj Kitchen Chimney</h4>
         <ul>
@@ -791,6 +833,7 @@
         </ul>
       </div>
       <div class="offer-card">
+        <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><path d="M12 8.2v7.6M10.3 9.6h3.2M10.3 14.4h3.2"/></svg></div>
         <span class="offer-tier">Orders ₹5 Lakh+</span>
         <h4>Free Gold Coin</h4>
         <ul>
@@ -799,6 +842,8 @@
         </ul>
       </div>
       <div class="offer-card highlight">
+        <span class="ribbon">Best Value</span>
+        <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="10" rx="1"/><line x1="4" y1="13" x2="20" y2="13"/><line x1="12" y1="9" x2="12" y2="19"/><path d="M12 9c-1.5 0-3-1-3-2.5S10 4 12 6c0-2 1.5-3.5 3-2.5S13.5 9 12 9z"/></svg></div>
         <span class="offer-tier">Orders ₹7 Lakh+</span>
         <h4>Choose a Free Appliance</h4>
         <ul>
