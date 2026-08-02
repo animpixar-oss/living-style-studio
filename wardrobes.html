@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Modular Wardrobes | Living Style Wardrobe &amp; Kitchen Studio</title>
-<meta name="description" content="Premium modular kitchens crafted in our own Mumbai factory — Acrylic, Glass, Ceramic, PU Lacquer, Veneer, Fluted Glass, Leather and Fluted Veneer shutters, built on Master Ply carcasses. Purchase offers on every order.">
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="apple-touch-icon" href="favicon.jpg">
+<meta name="description" content="Premium modular wardrobes crafted in our own Mumbai factory — Acrylic, Glass, Ceramic, PU Lacquer, Veneer, Fluted Glass, Leather and Fluted Veneer shutters, built on Master Ply carcasses. Purchase offers on every order.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -46,8 +48,10 @@
 
   header.site{ position:sticky; top:0; z-index:100; background:rgba(246,240,228,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--panel-line); }
   .nav-row{ display:flex; align-items:center; justify-content:space-between; padding:18px 0; }
-  .logo{ font-family:'Fraunces', serif; font-weight:600; font-size:1.5rem; letter-spacing:-0.01em; display:flex; flex-direction:column; line-height:1; }
-  .logo span{ font-family:'Space Mono', monospace; font-size:0.62rem; letter-spacing:0.22em; color:var(--brass-deep); font-weight:700; margin-top:5px; }
+  .logo{ display:flex; align-items:center; gap:12px; }
+  .logo-mark{ width:46px; height:46px; border-radius:9px; object-fit:cover; box-shadow:0 8px 18px -8px rgba(42,31,22,0.5); flex-shrink:0; }
+  .logo-text{ font-family:'Fraunces', serif; font-weight:600; font-size:1.5rem; letter-spacing:-0.01em; display:flex; flex-direction:column; line-height:1; }
+  .logo-text .logo-sub{ font-family:'Space Mono', monospace; font-size:0.62rem; letter-spacing:0.22em; color:var(--brass-deep); font-weight:700; margin-top:5px; }
   nav.main-links{ display:flex; gap:34px; align-items:center; }
   nav.main-links a{ font-size:0.88rem; font-weight:600; color:var(--ink-soft); position:relative; padding-bottom:4px; }
   nav.main-links a:hover, nav.main-links a.active{ color:var(--clay); }
@@ -159,8 +163,8 @@
 
   footer{ background:var(--ink); color:rgba(251,248,242,0.75); padding-top:70px; }
   .footer-top{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr; gap:40px; padding-bottom:50px; border-bottom:1px solid rgba(251,248,242,0.12); }
-  footer .logo{ color:var(--cream-white); margin-bottom:16px; }
-  footer .logo span{ color:var(--brass); }
+  .footer-logo-link{ display:inline-block; margin-bottom:20px; }
+  .footer-logo-full{ width:230px; max-width:60%; border-radius:8px; box-shadow:0 20px 40px -20px rgba(0,0,0,0.6); }
   footer p.about{ font-size:0.88rem; max-width:260px; margin-bottom:20px; }
   .foot-social{ display:flex; gap:12px; }
   .foot-social a{ width:36px; height:36px; border:1px solid rgba(251,248,242,0.25); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.78rem; }
@@ -236,7 +240,7 @@
 
 <header class="site">
   <div class="container nav-row">
-    <a href="index.html" class="logo">Living&nbsp;Style<span>WARDROBE &amp; KITCHEN STUDIO</span></a>
+    <a href="index.html" class="logo"><img src="logo-mark.jpg" alt="Living Style Wardrobe & Kitchen Studio logo" class="logo-mark"><span class="logo-text">Living&nbsp;Style<span class="logo-sub">WARDROBE &amp; KITCHEN STUDIO</span></span></a>
     <nav class="main-links">
       <a href="kitchens.html">Kitchens</a>
       <a href="wardrobes.html" class="active">Wardrobes</a>
@@ -361,9 +365,9 @@
 
     <div class="reward-ladder">
       <div class="ladder-node">
-        <div class="ladder-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18"/><path d="M6 4h10l-3 4 3 4H6"/></svg></div>
+        <div class="ladder-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1.2a1.6 1.6 0 0 0 0 3.2V13.6a1.6 1.6 0 0 0 0 3.2V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1.2a1.6 1.6 0 0 0 0-3.2v-1.2a1.6 1.6 0 0 0 0-3.2V8z"/><line x1="9" y1="7" x2="9" y2="17" stroke-dasharray="1.5 2.2"/></svg></div>
         <span class="ladder-value">Every Order</span>
-        <span class="ladder-tag">Free Chimney</span>
+        <span class="ladder-tag">Free Coupon</span>
       </div>
       <div class="ladder-node">
         <div class="ladder-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><path d="M12 8.2v7.6M10.3 9.6h3.2M10.3 14.4h3.2"/></svg></div>
@@ -379,12 +383,12 @@
 
     <div class="offer-grid">
       <div class="offer-card reveal">
-        <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-3 6H7L4 8z"/><line x1="12" y1="14" x2="12" y2="19"/><line x1="8" y1="19" x2="16" y2="19"/></svg></div>
+        <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1.2a1.6 1.6 0 0 0 0 3.2V13.6a1.6 1.6 0 0 0 0 3.2V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1.2a1.6 1.6 0 0 0 0-3.2v-1.2a1.6 1.6 0 0 0 0-3.2V8z"/><line x1="9" y1="7" x2="9" y2="17" stroke-dasharray="1.5 2.2"/></svg></div>
         <span class="offer-tier">Every Order</span>
-        <h4>Free Bajaj Kitchen Chimney</h4>
+        <h4>Free Shopping Coupon</h4>
         <ul>
-          <li>Included with every kitchen &amp; wardrobe purchase</li>
-          <li>No minimum order value required</li>
+          <li>Redeemable on your next purchase or accessory add-on</li>
+          <li>Included with every kitchen &amp; wardrobe order</li>
         </ul>
       </div>
       <div class="offer-card reveal">
@@ -425,7 +429,7 @@
   <div class="container">
     <div class="footer-top">
       <div>
-        <a href="index.html" class="logo">Living&nbsp;Style<span>WARDROBE &amp; KITCHEN STUDIO</span></a>
+        <a href="index.html" class="footer-logo-link"><img src="logo-full.jpg" alt="Living Style Wardrobe & Kitchen Studio" class="footer-logo-full"></a>
         <p class="about">Bespoke modular kitchens and wardrobes, crafted in our own Mumbai factory and built to a 10-year warranty.</p>
         <div class="foot-social"><a href="#">IG</a><a href="#">FB</a><a href="#">IN</a></div>
       </div>
