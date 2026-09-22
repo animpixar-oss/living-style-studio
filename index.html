@@ -203,7 +203,7 @@
     padding:10px 16px;
   }
 
-  /* ===== FINISH SWATCH STRIP (signature element) ===== */
+  /* ===== FINISH SWATCH STRIP ===== */
   .swatch-strip{
     margin-top:78px;
     background:var(--ink);
@@ -248,7 +248,7 @@
   .section-head h2{ font-size:clamp(1.9rem, 3vw, 2.7rem); margin-top:12px; }
   .section-head p{ color:var(--ink-soft); max-width:420px; }
 
-  /* ===== CATEGORY GRID (bento layout) ===== */
+  /* ===== CATEGORY GRID ===== */
   .cat-grid{
     display:grid;
     grid-template-columns:1.4fr 1fr;
@@ -410,43 +410,17 @@
   .stat span{ font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; color:rgba(251,248,242,0.75); }
 
   /* ===== OFFERS ===== */
-  .offers{ background:var(--ink); color:var(--cream-white); }
+  .offers{ background:var(--ink); color:var(--cream-white); position:relative; overflow:hidden; }
+  .offers::before{ content:''; position:absolute; inset:0; background-image: repeating-linear-gradient(135deg, rgba(169,121,58,0.055) 0px, rgba(169,121,58,0.055) 1px, transparent 1px, transparent 40px); pointer-events:none; }
+  .offers::after{ content:''; position:absolute; top:-140px; right:-100px; width:440px; height:440px; background:radial-gradient(circle, rgba(169,121,58,0.16), transparent 70%); pointer-events:none; }
+  .offers .container{ position:relative; z-index:2; }
   .offers .section-head h2{ color:var(--cream-white); }
   .offers .section-head p{ color:rgba(251,248,242,0.7); }
   .offers .eyebrow{ color:var(--brass); }
-  .offer-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
-  .offer-card{ background:rgba(251,248,242,0.05); border:1px solid rgba(251,248,242,0.15); padding:32px 28px; border-radius:var(--radius); position:relative; }
-  .offer-card.highlight{ border-color:var(--brass); background:rgba(169,121,58,0.1); }
-  .offer-tier{ font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-bottom:14px; display:block; }
-  .offer-card h4{ color:var(--cream-white); font-size:1.35rem; margin-bottom:14px; }
-  .offer-card ul{ list-style:none; }
-  .offer-card ul li{ font-size:0.9rem; color:rgba(251,248,242,0.78); margin-bottom:10px; padding-left:18px; position:relative; }
-  .offer-card ul li::before{ content:'—'; position:absolute; left:0; color:var(--brass); }
-  .offer-note{ margin-top:30px; text-align:center; font-size:0.88rem; color:rgba(251,248,242,0.65); }
-  .offer-note strong{ color:var(--brass); }
-  .offer-card{ transition: transform .25s ease, border-color .25s ease; }
-  .offer-card:hover{ transform:translateY(-6px); border-color:var(--brass); }
-  .offer-icon{ width:54px; height:54px; border-radius:50%; background:rgba(169,121,58,0.12); border:1.5px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
-  .offer-icon svg{ width:26px; height:26px; stroke:var(--brass); }
-  .offer-card.highlight .offer-icon{ background:var(--brass); }
-  .offer-card.highlight .offer-icon svg{ stroke:var(--ink); }
-  .offer-card .ribbon{ position:absolute; top:18px; right:-38px; background:var(--brass); color:var(--ink); font-family:'Space Mono',monospace; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:5px 42px; transform:rotate(40deg); box-shadow:0 4px 10px rgba(0,0,0,0.3); }
 
   .reward-ladder{ display:flex; justify-content:space-between; align-items:flex-end; position:relative; margin:6px 0 54px; }
   .reward-ladder::before{ content:''; position:absolute; bottom:72px; left:8%; right:8%; height:2px; background:linear-gradient(90deg, rgba(169,121,58,0.15), var(--brass) 50%, rgba(169,121,58,0.15)); }
   .ladder-node{ position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; width:33%; text-align:center; }
-  .ladder-dot{ width:52px; height:52px; border-radius:50%; background:var(--ink); border:2px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
-  .ladder-dot svg{ width:24px; height:24px; stroke:var(--brass); }
-  .ladder-dot-highlight{ background:var(--brass); }
-  .ladder-dot-highlight svg{ stroke:var(--ink); }
-  .ladder-value{ font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; color:var(--cream-white); }
-  .ladder-tag{ font-family:'Space Mono',monospace; font-size:0.66rem; color:var(--brass); text-transform:uppercase; letter-spacing:0.06em; margin-top:5px; }
-
-  /* Offers section — textured background + ascending reward staircase */
-  .offers{ position:relative; overflow:hidden; }
-  .offers::before{ content:''; position:absolute; inset:0; background-image: repeating-linear-gradient(135deg, rgba(169,121,58,0.055) 0px, rgba(169,121,58,0.055) 1px, transparent 1px, transparent 40px); pointer-events:none; }
-  .offers::after{ content:''; position:absolute; top:-140px; right:-100px; width:440px; height:440px; background:radial-gradient(circle, rgba(169,121,58,0.16), transparent 70%); pointer-events:none; }
-  .offers .container{ position:relative; z-index:2; }
   .ladder-node:nth-child(1) .ladder-dot{ width:48px; height:48px; }
   .ladder-node:nth-child(1) .ladder-dot svg{ width:20px; height:20px; }
   .ladder-node:nth-child(2) .ladder-dot{ width:58px; height:58px; }
@@ -455,6 +429,29 @@
   .ladder-node:nth-child(3) .ladder-dot svg{ width:28px; height:28px; }
   .ladder-node:nth-child(3) .ladder-value{ font-size:1.2rem; }
   .ladder-node:nth-child(3) .ladder-tag{ background:var(--brass); color:var(--ink); padding:4px 12px; border-radius:20px; font-weight:700; }
+  .ladder-dot{ width:52px; height:52px; border-radius:50%; background:var(--ink); border:2px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+  .ladder-dot svg{ width:24px; height:24px; stroke:var(--brass); }
+  .ladder-dot-highlight{ background:var(--brass); }
+  .ladder-dot-highlight svg{ stroke:var(--ink); }
+  .ladder-value{ font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; color:var(--cream-white); }
+  .ladder-tag{ font-family:'Space Mono',monospace; font-size:0.66rem; color:var(--brass); text-transform:uppercase; letter-spacing:0.06em; margin-top:5px; }
+
+  .offer-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  .offer-card{ background:rgba(251,248,242,0.05); border:1px solid rgba(251,248,242,0.15); padding:32px 28px; border-radius:var(--radius); position:relative; transition: transform .25s ease, border-color .25s ease; }
+  .offer-card:hover{ transform:translateY(-6px); border-color:var(--brass); }
+  .offer-card.highlight{ border-color:var(--brass); background:rgba(169,121,58,0.1); }
+  .offer-tier{ font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-bottom:14px; display:block; }
+  .offer-card h4{ color:var(--cream-white); font-size:1.35rem; margin-bottom:14px; }
+  .offer-card ul{ list-style:none; }
+  .offer-card ul li{ font-size:0.9rem; color:rgba(251,248,242,0.78); margin-bottom:10px; padding-left:18px; position:relative; }
+  .offer-card ul li::before{ content:'—'; position:absolute; left:0; color:var(--brass); }
+  .offer-note{ margin-top:30px; text-align:center; font-size:0.88rem; color:rgba(251,248,242,0.65); }
+  .offer-note strong{ color:var(--brass); }
+  .offer-icon{ width:54px; height:54px; border-radius:50%; background:rgba(169,121,58,0.12); border:1.5px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
+  .offer-icon svg{ width:26px; height:26px; stroke:var(--brass); }
+  .offer-card.highlight .offer-icon{ background:var(--brass); }
+  .offer-card.highlight .offer-icon svg{ stroke:var(--ink); }
+  .offer-card .ribbon{ position:absolute; top:18px; right:-38px; background:var(--brass); color:var(--ink); font-family:'Space Mono',monospace; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:5px 42px; transform:rotate(40deg); box-shadow:0 4px 10px rgba(0,0,0,0.3); }
 
   /* ===== WHY CHOOSE ===== */
   .why-choose{ background:var(--ink); color:var(--cream-white); position:relative; overflow:hidden; }
@@ -540,9 +537,7 @@
   }
   .foot-bottom a{ margin-left:20px; }
 
-  /* ===== RESPONSIVE ===== */
-  
-  /* ===== DEPTH PASS — softer shadows, gradients, lifted cards ===== */
+  /* ===== DEPTH PASS ===== */
   .btn-primary{ box-shadow:0 14px 30px -14px rgba(42,31,22,0.55); }
   .btn-primary:hover{ box-shadow:0 18px 34px -12px rgba(42,31,22,0.6); }
   .btn-outline:hover{ box-shadow:0 14px 30px -14px rgba(42,31,22,0.3); }
@@ -564,7 +559,6 @@
   .calc-banner{ background:linear-gradient(155deg, var(--ink), #1c130c); border-radius:8px; }
   .swatch-strip{ box-shadow:inset 0 12px 24px -18px rgba(0,0,0,0.5); }
 
-  
   /* ===== SCROLL REVEAL ===== */
   .reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
   .reveal.is-visible{ opacity:1; transform:translateY(0); }
@@ -617,7 +611,7 @@
   <div class="container">
     <span>Free in-home consultation across the city · Mon–Sat, 10am–7pm</span>
     <div class="topbar-links">
-      <a href="tel:+918108301261">+918108301261</a>
+      <a href="tel:+918108301261">+91 81083 01261</a>
       <a href="#studio-locations">Find a Studio</a>
     </div>
   </div>
@@ -634,7 +628,7 @@
       <a href="#stories">Stories</a>
     </nav>
     <div class="nav-cta">
-      <span class="phone">📞 +918108301261</span>
+      <a href="tel:+918108301261" class="phone">📞 +91 81083 01261</a>
       <a href="#estimate" class="btn btn-primary">Get Free Estimate</a>
     </div>
     <div class="burger"><span></span><span></span><span></span></div>
@@ -855,7 +849,7 @@
         </ul>
       </div>
       <div class="why-card">
-        <div class="why-icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <div class="why-icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
         <h4>Service You Can Trust</h4>
         <ul>
           <li>Fast turnaround, from measurement to installation</li>
@@ -1058,7 +1052,7 @@
         <ul>
           <li><a href="#">About Us</a></li>
           <li><a href="#process">Our Process</a></li>
-          <li><a href="#">Find a Studio</a></li>
+          <li><a href="#studio-locations">Find a Studio</a></li>
           <li><a href="#">Careers</a></li>
         </ul>
       </div>
