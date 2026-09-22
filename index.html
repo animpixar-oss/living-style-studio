@@ -3,841 +3,687 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Living Style Wardrobe &amp; Kitchen Studio | Kitchens &amp; Wardrobes Designed Around You</title>
+<title>Living Style Wardrobe &amp; Kitchen Studio | Bespoke Architectural Interiors</title>
 <link rel="icon" type="image/jpeg" href="favicon.jpg">
 <link rel="apple-touch-icon" href="favicon.jpg">
-<meta name="description" content="Living Style Wardrobe & Kitchen Studio — bespoke modular kitchens and wardrobes, designed around how you actually live. Free consultation, 10-year warranty.">
+<meta name="description" content="Living Style Wardrobe & Kitchen Studio — bespoke modular kitchens and wardrobes engineered with 100% Master Ply in our own Mumbai factory. 10-year warranty.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;0,9..144,700;1,9..144,450&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
   :root{
-    --ink:#2A1F16;
-    --ink-soft:#5B4C3C;
-    --cream:#F6F0E4;
-    --cream-white:#FBF8F2;
-    --panel:#ECE1CB;
-    --panel-line:#DACBA9;
-    --brass:#A9793A;
-    --brass-deep:#8A5F27;
-    --clay:#95502F;
-    --sage:#59684B;
-    --shadow: 0 20px 50px -25px rgba(42,31,22,0.45);
-    --radius: 2px;
+    --ink: #1F1710;
+    --ink-surface: #292018;
+    --ink-soft: #635343;
+    --cream: #F6F1E6;
+    --cream-card: #FAF6EE;
+    --cream-white: #FCFAF6;
+    --panel: #EAE0CB;
+    --panel-line: #DACBB0;
+    --brass: #B68541;
+    --brass-deep: #8E6023;
+    --brass-glow: rgba(182, 133, 65, 0.22);
+    --clay: #964F2E;
+    --sage: #536345;
+    --shadow-soft: 0 16px 40px -20px rgba(31, 23, 16, 0.18);
+    --shadow-elevated: 0 28px 64px -24px rgba(31, 23, 16, 0.38);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
+
+  *{ box-sizing: border-box; margin: 0; padding: 0; }
+  html{ scroll-behavior: smooth; }
   body{
-    font-family:'Manrope', sans-serif;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
     background:
-      radial-gradient(1100px 550px at 12% -8%, rgba(169,121,58,0.07), transparent 60%),
-      radial-gradient(900px 500px at 108% 18%, rgba(89,104,75,0.06), transparent 60%),
-      radial-gradient(800px 500px at 50% 100%, rgba(149,80,47,0.05), transparent 60%),
+      radial-gradient(1200px 600px at 8% -6%, rgba(182, 133, 65, 0.08), transparent 60%),
+      radial-gradient(900px 500px at 104% 20%, rgba(83, 99, 69, 0.07), transparent 60%),
+      radial-gradient(900px 600px at 50% 100%, rgba(150, 79, 46, 0.05), transparent 60%),
       var(--cream);
-    color:var(--ink);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
+    color: var(--ink);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
-  img{max-width:100%; display:block;}
-  a{color:inherit; text-decoration:none;}
+
+  img{ max-width: 100%; display: block; }
+  a{ color: inherit; text-decoration: none; }
+  
+  .container{ max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+  
   .eyebrow{
-    font-family:'Space Mono', monospace;
-    text-transform:uppercase;
-    letter-spacing:0.16em;
-    font-size:0.72rem;
-    color:var(--brass-deep);
-    font-weight:700;
-  }
-  h1,h2,h3,h4{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    line-height:1.08;
-    letter-spacing:-0.01em;
-    color:var(--ink);
-  }
-  .container{ max-width:1240px; margin:0 auto; padding:0 32px; }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:15px 30px;
-    font-family:'Manrope', sans-serif;
-    font-weight:700;
-    font-size:0.92rem;
-    letter-spacing:0.01em;
-    border-radius:var(--radius);
-    cursor:pointer;
-    border:1.5px solid transparent;
-    transition:all .25s ease;
-    white-space:nowrap;
-  }
-  .btn-primary{ background:var(--ink); color:var(--cream-white); }
-  .btn-primary:hover{ background:var(--clay); transform:translateY(-2px); }
-  .btn-outline{ background:transparent; border-color:var(--ink); color:var(--ink); }
-  .btn-outline:hover{ background:var(--ink); color:var(--cream-white); }
-  .btn-light{ background:var(--cream-white); color:var(--ink); }
-  .btn-light:hover{ background:var(--brass); color:var(--cream-white); }
-
-  /* ===== TOP BAR ===== */
-  .topbar{
-    background:var(--ink);
-    color:var(--cream);
-    font-family:'Space Mono', monospace;
-    font-size:0.75rem;
-    letter-spacing:0.04em;
-  }
-  .topbar .container{
-    display:flex; justify-content:space-between; align-items:center;
-    padding-top:9px; padding-bottom:9px;
-  }
-  .topbar a{ color:var(--brass); }
-  .topbar-links{ display:flex; gap:24px; }
-
-  /* ===== HEADER ===== */
-  header.site{
-    position:sticky; top:0; z-index:100;
-    background:rgba(246,240,228,0.92);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--panel-line);
-  }
-  .nav-row{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:18px 0;
-  }
-  .logo{ display:flex; align-items:center; gap:12px; }
-  .logo-mark{ width:46px; height:46px; border-radius:9px; object-fit:cover; box-shadow:0 8px 18px -8px rgba(42,31,22,0.5); flex-shrink:0; }
-  .logo-text{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    font-size:1.5rem;
-    letter-spacing:-0.01em;
-    display:flex;
-    flex-direction:column;
-    line-height:1;
-  }
-  .logo-text .logo-sub{
-    font-family:'Space Mono', monospace;
-    font-size:0.62rem;
-    letter-spacing:0.22em;
-    color:var(--brass-deep);
-    font-weight:700;
-    margin-top:5px;
-  }
-  nav.main-links{ display:flex; gap:34px; align-items:center; }
-  nav.main-links a{
-    font-size:0.88rem;
-    font-weight:600;
-    color:var(--ink-soft);
-    position:relative;
-    padding-bottom:4px;
-  }
-  nav.main-links a:hover{ color:var(--clay); }
-  .nav-cta{ display:flex; align-items:center; gap:16px; }
-  .nav-cta .phone{ font-family:'Space Mono',monospace; font-size:0.82rem; font-weight:700; }
-  .burger{ display:none; flex-direction:column; gap:5px; cursor:pointer; }
-  .burger span{ width:24px; height:2px; background:var(--ink); }
-
-  /* ===== HERO (MODERN ARCHITECTURAL EDITION) ===== */
-  .hero {
-    position: relative;
-    padding: 48px 0 0;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -160px;
-    left: -120px;
-    width: 580px;
-    height: 580px;
-    background: radial-gradient(circle, rgba(169, 121, 58, 0.18), transparent 70%);
-    pointer-events: none;
-    z-index: 0;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: 20%;
-    right: -150px;
-    width: 520px;
-    height: 520px;
-    background: radial-gradient(circle, rgba(89, 104, 75, 0.12), transparent 70%);
-    pointer-events: none;
-    z-index: 0;
-  }
-  .hero .container {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1.08fr 0.92fr;
-    gap: 64px;
-    align-items: center;
-  }
-
-  .hero-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 7px 16px;
-    border-radius: 999px;
-    background: rgba(169, 121, 58, 0.1);
-    border: 1px solid rgba(169, 121, 58, 0.28);
     font-family: 'Space Mono', monospace;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--brass-deep);
-    letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-bottom: 22px;
-  }
-  .pulse-dot {
-    width: 7px;
-    height: 7px;
-    background: #25D366;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    letter-spacing: 0.16em;
+    font-size: 0.72rem;
+    color: var(--brass-deep);
+    font-weight: 700;
   }
 
-  .hero-copy h1 {
-    font-size: clamp(2.6rem, 4.4vw, 4.1rem);
-    line-height: 1.06;
-    letter-spacing: -0.02em;
-    margin-bottom: 22px;
+  h1, h2, h3, h4{
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
     color: var(--ink);
   }
-  .hero-copy h1 em {
-    font-style: italic;
-    color: var(--clay);
-    font-weight: 400;
-  }
-  .hero-copy p.hero-subtitle {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: var(--ink-soft);
-    max-width: 520px;
-    margin-bottom: 34px;
-  }
 
-  .hero-actions {
-    display: flex;
-    gap: 14px;
+  /* BUTTON SYSTEM */
+  .btn{
+    display: inline-flex;
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+    white-space: nowrap;
   }
-  .btn-whatsapp {
+  .btn-primary{ 
+    background: var(--ink); 
+    color: var(--cream-white); 
+    box-shadow: 0 12px 24px -10px rgba(31, 23, 16, 0.5); 
+  }
+  .btn-primary:hover{ 
+    background: var(--clay); 
+    transform: translateY(-2px); 
+    box-shadow: 0 16px 30px -10px rgba(150, 79, 46, 0.55); 
+  }
+  .btn-outline{ 
+    background: transparent; 
+    border-color: var(--ink); 
+    color: var(--ink); 
+  }
+  .btn-outline:hover{ 
+    background: var(--ink); 
+    color: var(--cream-white); 
+    transform: translateY(-2px); 
+  }
+  .btn-light{ 
+    background: var(--cream-white); 
+    color: var(--ink); 
+    box-shadow: 0 10px 24px -10px rgba(0,0,0,0.15); 
+  }
+  .btn-light:hover{ 
+    background: var(--brass); 
+    color: #fff; 
+    transform: translateY(-2px); 
+  }
+  .btn-whatsapp{
     background: rgba(37, 211, 102, 0.12);
-    border: 1px solid rgba(37, 211, 102, 0.4);
-    color: #128C7E;
+    border: 1px solid rgba(37, 211, 102, 0.45);
+    color: #0E7341;
   }
-  .btn-whatsapp:hover {
+  .btn-whatsapp:hover{
     background: #25D366;
     color: #ffffff;
     border-color: #25D366;
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px -10px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 14px 26px -8px rgba(37, 211, 102, 0.5);
   }
-  .btn-whatsapp svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-  }
-  .hero-guarantee {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    font-size: 0.78rem;
-    color: var(--ink-soft);
-    margin-bottom: 38px;
-    font-weight: 500;
-  }
-  .hero-guarantee span {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .hero-guarantee svg {
-    width: 14px;
-    height: 14px;
-    stroke: var(--brass-deep);
-    stroke-width: 2.5;
-    fill: none;
-  }
+  .btn-whatsapp svg{ width: 17px; height: 17px; fill: currentColor; }
 
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    padding: 22px 0 0;
-    border-top: 1px solid var(--panel-line);
-  }
-  .stat-card {
-    display: flex;
-    flex-direction: column;
-  }
-  .stat-card strong {
-    font-family: 'Fraunces', serif;
-    font-size: 1.65rem;
-    font-weight: 600;
-    color: var(--ink);
-    line-height: 1.1;
-  }
-  .stat-card span {
-    font-size: 0.74rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--ink-soft);
-    margin-top: 4px;
-  }
-
-  /* Video Stage Wrapper */
-  .hero-visual-wrapper {
-    position: relative;
-    padding: 18px;
-  }
-  .visual-frame {
-    position: relative;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 28px 60px -20px rgba(42, 31, 22, 0.4);
-    border: 1px solid rgba(169, 121, 58, 0.2);
+  /* TOP ANNOUNCEMENT */
+  .topbar{
     background: var(--ink);
-  }
-  .visual-frame video {
-    width: 100%;
-    height: 570px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .visual-frame:hover video {
-    transform: scale(1.02);
-  }
-  .video-ambient-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(42,31,22,0.2) 0%, rgba(42,31,22,0.05) 50%, rgba(42,31,22,0.65) 100%);
-    pointer-events: none;
-  }
-  .visual-factory-tag {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(42, 31, 22, 0.88);
-    backdrop-filter: blur(10px);
-    color: var(--cream-white);
-    padding: 8px 16px;
-    border-radius: 6px;
+    color: var(--cream);
     font-family: 'Space Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border: 1px solid rgba(251, 248, 242, 0.15);
-    z-index: 2;
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
   }
-  .video-ctrl-btn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 3;
-    background: rgba(42, 31, 22, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(251, 248, 242, 0.2);
-    color: var(--cream-white);
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  .topbar .container{
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 8px; padding-bottom: 8px;
   }
-  .video-ctrl-btn:hover {
-    background: var(--brass);
-    transform: scale(1.08);
-  }
-  .video-ctrl-btn svg {
-    width: 14px;
-    height: 14px;
-    fill: currentColor;
-  }
+  .topbar a{ color: var(--brass); transition: opacity 0.2s; }
+  .topbar a:hover{ opacity: 0.85; text-decoration: underline; }
+  .topbar-links{ display: flex; gap: 24px; align-items: center; }
 
-  /* Floating Frosted Cards */
-  .glass-card {
-    position: absolute;
-    background: rgba(251, 248, 242, 0.92);
+  /* NAVIGATION */
+  header.site{
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(246, 241, 230, 0.94);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 12px;
-    padding: 16px 20px;
-    box-shadow: 0 20px 40px -15px rgba(42, 31, 22, 0.28);
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    z-index: 4;
-    animation: floatCard 6s ease-in-out infinite alternate;
+    border-bottom: 1px solid var(--panel-line);
   }
-  .glass-card-bottom {
-    bottom: -15px;
-    left: -18px;
-    max-width: 270px;
+  .nav-row{
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0;
   }
-  .glass-card-top {
-    top: 40px;
-    left: -28px;
-    animation-delay: -3s;
+  .logo{ display: flex; align-items: center; gap: 12px; }
+  .logo-mark{ 
+    width: 44px; height: 44px; border-radius: 8px; object-fit: cover; 
+    box-shadow: 0 6px 16px -6px rgba(31,23,16,0.4); flex-shrink: 0; 
   }
-  @keyframes floatCard {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-8px); }
+  .logo-text{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.45rem;
+    letter-spacing: -0.01em;
+    display: flex; flex-direction: column; line-height: 1;
   }
-
-  .card-icon-wrap {
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    background: var(--ink);
-    color: var(--cream-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    flex-shrink: 0;
-  }
-  .glass-card strong {
-    display: block;
-    font-size: 0.94rem;
+  .logo-text .logo-sub{
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.24em;
+    color: var(--brass-deep);
     font-weight: 700;
-    color: var(--ink);
-    line-height: 1.25;
+    margin-top: 4px;
   }
-  .glass-card span {
-    display: block;
-    font-size: 0.74rem;
+  nav.main-links{ display: flex; gap: 32px; align-items: center; }
+  nav.main-links a{
+    font-size: 0.88rem;
+    font-weight: 600;
     color: var(--ink-soft);
-    margin-top: 3px;
-    line-height: 1.35;
+    transition: color 0.2s ease;
+    position: relative;
+    padding: 4px 0;
+  }
+  nav.main-links a::after{
+    content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1.5px;
+    background: var(--brass); transition: width 0.25s ease;
+  }
+  nav.main-links a:hover{ color: var(--ink); }
+  nav.main-links a:hover::after{ width: 100%; }
+  
+  .nav-cta{ display: flex; align-items: center; gap: 18px; }
+  .nav-cta .phone{ 
+    font-family: 'Space Mono', monospace; font-size: 0.82rem; font-weight: 700; 
+    color: var(--ink); display: flex; align-items: center; gap: 6px;
+    transition: color 0.2s;
+  }
+  .nav-cta .phone:hover{ color: var(--brass-deep); }
+  .burger{ display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
+  .burger span{ width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: all 0.3s ease; }
+
+  /* MOBILE SLIDE-OVER DRAWER */
+  .mobile-drawer-overlay{
+    position: fixed; inset: 0; background: rgba(31, 23, 16, 0.6);
+    backdrop-filter: blur(6px); z-index: 998; opacity: 0; pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .mobile-drawer{
+    position: fixed; top: 0; right: -320px; width: 300px; height: 100vh;
+    background: var(--cream-card); z-index: 999; box-shadow: -10px 0 30px rgba(0,0,0,0.25);
+    padding: 32px 24px; display: flex; flex-direction: column; justify-content: space-between;
+    transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .mobile-drawer.is-open{ right: 0; }
+  .mobile-drawer-overlay.is-open{ opacity: 1; pointer-events: auto; }
+  .drawer-head{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+  .drawer-close{ background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--ink); }
+  .drawer-links{ display: flex; flex-direction: column; gap: 18px; }
+  .drawer-links a{ font-size: 1.1rem; font-weight: 600; color: var(--ink); }
+
+  /* HERO SECTION */
+  .hero{ position: relative; padding: 44px 0 20px; overflow: hidden; }
+  .hero-grid{
+    display: grid; grid-template-columns: 1.05fr 0.95fr;
+    gap: 60px; align-items: center; position: relative; z-index: 2;
+  }
+  .hero-pill{
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 7px 16px; border-radius: 999px;
+    background: rgba(182, 133, 65, 0.12);
+    border: 1px solid rgba(182, 133, 65, 0.32);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem; font-weight: 700; color: var(--brass-deep);
+    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px;
+  }
+  .pulse-dot{
+    width: 7px; height: 7px; background: #25D366; border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); animation: pulse 2s infinite;
+  }
+  @keyframes pulse{
+    0%{ box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70%{ box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
+    100%{ box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  }
+  .hero-copy h1{
+    font-size: clamp(2.5rem, 4.2vw, 3.9rem);
+    letter-spacing: -0.025em; line-height: 1.05; margin-bottom: 20px;
+  }
+  .hero-copy h1 em{ font-style: italic; color: var(--clay); font-weight: 400; }
+  .hero-subtitle{
+    font-size: 1.08rem; line-height: 1.68; color: var(--ink-soft);
+    max-width: 510px; margin-bottom: 32px;
+  }
+  .hero-actions{ display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; }
+  .hero-guarantee{
+    display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.8rem;
+    color: var(--ink-soft); font-weight: 500; margin-bottom: 34px;
+  }
+  .hero-guarantee span{ display: inline-flex; align-items: center; gap: 6px; }
+  .hero-guarantee svg{ width: 14px; height: 14px; stroke: var(--brass-deep); stroke-width: 2.5; fill: none; }
+  .hero-stats{
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 16px; padding-top: 24px; border-top: 1px solid var(--panel-line);
+  }
+  .stat-item strong{
+    font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 600;
+    color: var(--ink); line-height: 1.1; display: block;
+  }
+  .stat-item span{
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--ink-soft); margin-top: 4px; display: block;
   }
 
-  /* ===== FINISH SWATCH STRIP ===== */
+  /* VIDEO REEL FRAME */
+  .hero-visual{ position: relative; padding: 12px; }
+  .video-container{
+    position: relative; border-radius: var(--radius-md); overflow: hidden;
+    box-shadow: var(--shadow-elevated); border: 1px solid rgba(182, 133, 65, 0.25);
+    background: var(--ink);
+  }
+  .video-container video{
+    width: 100%; height: 550px; object-fit: cover; display: block;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .video-container:hover video{ transform: scale(1.02); }
+  .video-ambient-overlay{
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(31,23,16,0.15) 0%, rgba(31,23,16,0.02) 50%, rgba(31,23,16,0.65) 100%);
+    pointer-events: none;
+  }
+  .factory-badge{
+    position: absolute; top: 20px; right: 20px;
+    background: rgba(31, 23, 16, 0.88); backdrop-filter: blur(10px);
+    color: var(--cream-white); padding: 8px 16px; border-radius: 6px;
+    font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em;
+    text-transform: uppercase; border: 1px solid rgba(255,255,255,0.16); z-index: 3;
+  }
+  .video-toggle-btn{
+    position: absolute; bottom: 20px; right: 20px; z-index: 4;
+    background: rgba(31, 23, 16, 0.75); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.22); color: #fff;
+    width: 38px; height: 38px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: all 0.2s ease;
+  }
+  .video-toggle-btn:hover{ background: var(--brass); transform: scale(1.08); }
+  .video-toggle-btn svg{ width: 14px; height: 14px; fill: currentColor; }
+
+  /* FLOATING GLASS CARDS */
+  .floating-glass-card{
+    position: absolute; background: rgba(252, 250, 246, 0.94);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 12px;
+    padding: 14px 18px; box-shadow: var(--shadow-elevated);
+    display: flex; align-items: center; gap: 14px; z-index: 4;
+    animation: floatAnim 6s ease-in-out infinite alternate;
+  }
+  .glass-card-top{ top: 36px; left: -26px; animation-delay: -3s; }
+  .glass-card-bottom{ bottom: -14px; left: -16px; max-width: 270px; }
+  @keyframes floatAnim{
+    0%{ transform: translateY(0px); }
+    100%{ transform: translateY(-7px); }
+  }
+  .glass-icon{
+    width: 40px; height: 40px; border-radius: 8px; background: var(--ink);
+    color: var(--cream-white); display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; flex-shrink: 0;
+  }
+  .floating-glass-card strong{ display: block; font-size: 0.92rem; font-weight: 700; color: var(--ink); }
+  .floating-glass-card span{ display: block; font-size: 0.74rem; color: var(--ink-soft); margin-top: 2px; }
+
+  /* SWATCH MARQUEE STRIP */
   .swatch-strip{
-    margin-top:78px;
-    background:var(--ink);
-    overflow:hidden;
-    position:relative;
+    margin-top: 64px; background: var(--ink); overflow: hidden;
+    position: relative; box-shadow: inset 0 12px 24px -18px rgba(0,0,0,0.6);
   }
   .swatch-track{
-    display:flex;
-    width:max-content;
-    animation:scrollSwatch 38s linear infinite;
+    display: flex; width: max-content;
+    animation: scrollMarquee 36s linear infinite;
   }
-  .swatch-strip:hover .swatch-track{ animation-play-state:paused; }
-  .swatch{
-    display:flex; align-items:center; gap:14px;
-    padding:22px 36px;
-    border-right:1px solid rgba(246,240,228,0.12);
-    white-space:nowrap;
+  .swatch-strip:hover .swatch-track{ animation-play-state: paused; }
+  .swatch-item{
+    display: flex; align-items: center; gap: 14px; padding: 20px 34px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1); white-space: nowrap;
   }
-  .swatch .chip{
-    width:34px; height:34px;
-    border-radius:50%;
-    border:2px solid rgba(246,240,228,0.35);
-    flex-shrink:0;
+  .swatch-item .chip{
+    width: 32px; height: 32px; border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.35); flex-shrink: 0;
   }
-  .swatch .label{ color:var(--cream); }
-  .swatch .label b{ display:block; font-size:0.86rem; font-weight:700; }
-  .swatch .label small{
-    font-family:'Space Mono',monospace; font-size:0.66rem;
-    color:rgba(246,240,228,0.55); letter-spacing:0.04em;
+  .swatch-item .label b{ display: block; font-size: 0.86rem; font-weight: 700; color: var(--cream); }
+  .swatch-item .label small{
+    font-family: 'Space Mono', monospace; font-size: 0.66rem;
+    color: rgba(255, 255, 255, 0.55); letter-spacing: 0.04em;
   }
-  @keyframes scrollSwatch{
-    from{ transform:translateX(0); }
-    to{ transform:translateX(-50%); }
+  @keyframes scrollMarquee{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
   }
 
-  /* ===== SECTION HEADERS ===== */
-  .section{ padding:100px 0; }
+  /* SECTION HEADERS */
+  .section{ padding: 94px 0; }
   .section-head{
-    display:flex; justify-content:space-between; align-items:flex-end;
-    gap:40px; margin-bottom:54px; flex-wrap:wrap;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    gap: 40px; margin-bottom: 50px; flex-wrap: wrap;
   }
-  .section-head h2{ font-size:clamp(1.9rem, 3vw, 2.7rem); margin-top:12px; }
-  .section-head p{ color:var(--ink-soft); max-width:420px; }
+  .section-head h2{ font-size: clamp(1.9rem, 3.2vw, 2.75rem); margin-top: 10px; }
+  .section-head p{ color: var(--ink-soft); max-width: 440px; font-size: 0.98rem; }
 
-  /* ===== CATEGORY GRID ===== */
+  /* CATEGORY BENTO GRID */
   .cat-grid{
-    display:grid;
-    grid-template-columns:1.4fr 1fr;
-    grid-template-rows:repeat(2, 1fr);
-    gap:26px;
-    height:560px;
+    display: grid; grid-template-columns: 1.35fr 1fr;
+    grid-template-rows: repeat(2, 280px); gap: 24px;
   }
-  .cat-card:first-child{ grid-row:1 / span 2; }
+  .cat-card:first-child{ grid-row: 1 / span 2; }
   .cat-card{
-    position:relative;
-    height:100%;
-    overflow:hidden;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
+    position: relative; height: 100%; border-radius: var(--radius-md);
+    overflow: hidden; box-shadow: var(--shadow-soft);
   }
   .cat-card img{
-    width:100%; height:100%; object-fit:cover;
-    transition:transform .6s cubic-bezier(.2,.7,.2,1);
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .cat-card:hover img{ transform:scale(1.07); }
+  .cat-card:hover img{ transform: scale(1.06); }
   .cat-overlay{
-    position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(42,31,22,0) 40%, rgba(42,31,22,0.88) 100%);
-    display:flex; flex-direction:column; justify-content:flex-end;
-    padding:32px;
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(31,23,16,0) 35%, rgba(31,23,16,0.88) 100%);
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 32px;
   }
-  .cat-overlay .eyebrow{ color:var(--brass); margin-bottom:8px; }
-  .cat-overlay h3{ color:var(--cream-white); font-size:1.55rem; margin-bottom:10px; }
-  .cat-overlay p{ color:rgba(251,248,242,0.75); font-size:0.9rem; margin-bottom:18px; max-width:280px; }
+  .cat-overlay .eyebrow{ color: var(--brass); margin-bottom: 6px; }
+  .cat-overlay h3{ color: var(--cream-white); font-size: 1.55rem; margin-bottom: 8px; }
+  .cat-overlay p{ color: rgba(255,255,255,0.78); font-size: 0.9rem; margin-bottom: 16px; max-width: 320px; }
   .cat-link{
-    color:var(--cream-white); font-weight:700; font-size:0.85rem;
-    display:inline-flex; align-items:center; gap:8px;
-    border-bottom:1.5px solid var(--brass); padding-bottom:3px; width:max-content;
+    color: var(--cream-white); font-weight: 700; font-size: 0.86rem;
+    display: inline-flex; align-items: center; gap: 8px;
+    border-bottom: 1.5px solid var(--brass); padding-bottom: 2px; width: max-content;
+    transition: gap 0.2s;
+  }
+  .cat-card:hover .cat-link{ gap: 12px; }
+
+  /* PROCESS SECTION */
+  .process{ background: var(--panel); }
+  .process-grid{
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 16px; position: relative; margin-top: 24px;
+  }
+  .process-grid::before{
+    content: ''; position: absolute; top: 26px; left: 8%; right: 8%;
+    height: 1px; background: var(--panel-line); z-index: 0;
+  }
+  .process-node{
+    position: relative; z-index: 2; padding: 0 10px;
+    transition: transform 0.25s ease;
+  }
+  .process-node:hover{ transform: translateY(-4px); }
+  .process-badge{
+    font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem;
+    color: var(--brass-deep); background: var(--cream-card);
+    width: 52px; height: 52px; border: 1.5px solid var(--brass);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+  }
+  .process-node h4{ font-size: 1.1rem; margin-bottom: 8px; }
+  .process-node p{ font-size: 0.86rem; color: var(--ink-soft); line-height: 1.5; }
+
+  /* DYNAMIC COST ESTIMATOR ENGINE */
+  .calc-wrapper{
+    background: linear-gradient(155deg, var(--ink), #18110B);
+    color: var(--cream-white); border-radius: var(--radius-lg);
+    padding: 60px; display: grid; grid-template-columns: 1.05fr 1.15fr;
+    gap: 48px; align-items: center; position: relative; overflow: hidden;
+    box-shadow: var(--shadow-elevated);
+  }
+  .calc-wrapper::before{
+    content: ''; position: absolute; top: -80px; right: -80px;
+    width: 320px; height: 320px; border-radius: 50%;
+    border: 1px solid rgba(182, 133, 65, 0.25); pointer-events: none;
+  }
+  .calc-info h2{ color: var(--cream-white); font-size: clamp(1.8rem, 2.7vw, 2.4rem); margin: 12px 0 16px; }
+  .calc-info p{ color: rgba(255,255,255,0.72); font-size: 0.95rem; line-height: 1.6; margin-bottom: 28px; }
+  
+  .calc-ui{
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.14);
+    border-radius: var(--radius-md); padding: 32px; backdrop-filter: blur(10px);
+  }
+  .calc-control-group{ margin-bottom: 20px; }
+  .calc-control-group label{
+    display: flex; justify-content: space-between; font-size: 0.78rem;
+    font-family: 'Space Mono', monospace; text-transform: uppercase;
+    letter-spacing: 0.05em; color: rgba(255,255,255,0.7); margin-bottom: 8px;
+  }
+  .calc-select, .calc-range{
+    width: 100%; padding: 12px 14px; background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2); color: #fff;
+    border-radius: var(--radius-sm); font-family: 'Manrope', sans-serif; font-size: 0.92rem;
+  }
+  .calc-select option{ background: var(--ink); color: #fff; }
+  .calc-output-box{
+    margin-top: 28px; padding-top: 24px; border-top: 1px dashed rgba(255,255,255,0.2);
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .calc-price-row{ display: flex; justify-content: space-between; align-items: baseline; }
+  .calc-price-row span{ font-size: 0.85rem; color: rgba(255,255,255,0.75); }
+  .calc-price-row strong{
+    font-family: 'Fraunces', serif; font-size: 1.9rem; color: var(--brass);
   }
 
-  /* ===== PROCESS ===== */
-  .process{ background:var(--panel); }
-  .process-row{
-    display:grid;
-    grid-template-columns:repeat(5, 1fr);
-    gap:0;
-    position:relative;
-    margin-top:20px;
+  /* FILTERABLE STYLE SHOWCASE */
+  .style-filter-nav{
+    display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 34px;
   }
-  .process-row::before{
-    content:'';
-    position:absolute; top:26px; left:6%; right:6%;
-    height:1px; background:var(--panel-line);
+  .filter-pill{
+    background: rgba(31, 23, 16, 0.06); border: 1px solid var(--panel-line);
+    padding: 8px 20px; border-radius: 999px; font-size: 0.84rem; font-weight: 600;
+    cursor: pointer; color: var(--ink-soft); transition: all 0.25s ease;
   }
-  .process-step{ padding:0 18px; position:relative; }
-  .process-num{
-    font-family:'Fraunces', serif; font-style:italic;
-    font-size:1.1rem; color:var(--brass-deep);
-    background:var(--panel);
-    width:52px; height:52px;
-    border:1.5px solid var(--brass);
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
-    margin-bottom:22px; position:relative; z-index:2;
+  .filter-pill.is-active, .filter-pill:hover{
+    background: var(--ink); color: var(--cream-white); border-color: var(--ink);
   }
-  .process-step h4{ font-size:1.08rem; margin-bottom:10px; }
-  .process-step p{ font-size:0.87rem; color:var(--ink-soft); }
-
-  /* ===== CALCULATOR BANNER ===== */
-  .calc-banner{
-    background:var(--ink);
-    color:var(--cream-white);
-    border-radius:var(--radius);
-    padding:64px 60px;
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:40px;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-  }
-  .calc-banner::after{
-    content:'';
-    position:absolute; right:-60px; top:-60px;
-    width:260px; height:260px;
-    border:1px solid rgba(169,121,58,0.35);
-    border-radius:50%;
-  }
-  .calc-banner .eyebrow{ color:var(--brass); }
-  .calc-banner h2{ color:var(--cream-white); font-size:clamp(1.7rem,2.6vw,2.3rem); margin:14px 0 16px; }
-  .calc-banner p{ color:rgba(251,248,242,0.72); max-width:440px; }
-  .calc-fields{
-    background:rgba(251,248,242,0.06);
-    border:1px solid rgba(251,248,242,0.16);
-    padding:28px;
-  }
-  .calc-fields label{ font-size:0.78rem; color:rgba(251,248,242,0.65); display:block; margin-bottom:6px; }
-  .calc-fields select, .calc-fields input{
-    width:100%; padding:12px 14px; margin-bottom:16px;
-    background:rgba(251,248,242,0.08); border:1px solid rgba(251,248,242,0.2);
-    color:var(--cream-white); font-family:'Manrope',sans-serif; border-radius:2px;
-  }
-  .calc-fields .btn-light{ width:100%; justify-content:center; }
-
-  /* ===== STYLE FINDER ===== */
   .style-grid{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:20px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
   }
   .style-card{
-    position:relative;
-    height:340px;
-    border-radius:var(--radius);
-    overflow:hidden;
-    cursor:pointer;
+    position: relative; height: 350px; border-radius: var(--radius-md);
+    overflow: hidden; cursor: pointer; box-shadow: var(--shadow-soft);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
-  .style-card img{ width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
-  .style-card:hover img{ transform:scale(1.06); }
-  .style-tag{
-    position:absolute; left:0; bottom:0; right:0;
-    background:linear-gradient(180deg, transparent, rgba(42,31,22,0.92));
-    padding:26px 20px 20px;
-    color:var(--cream-white);
+  .style-card img{
+    width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;
   }
-  .style-tag .eyebrow{ color:var(--brass); }
-  .style-tag h4{ color:var(--cream-white); font-size:1.3rem; margin-top:6px; }
+  .style-card:hover img{ transform: scale(1.08); }
+  .style-card-overlay{
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(31, 23, 16, 0.92) 100%);
+    padding: 24px 20px; display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .style-card-overlay .eyebrow{ color: var(--brass); margin-bottom: 4px; }
+  .style-card-overlay h4{ color: #fff; font-size: 1.3rem; }
 
-  /* ===== TESTIMONIALS ===== */
-  .testi-wrap{ background:var(--cream-white); }
-  .testi-grid{
-    display:grid; grid-template-columns:repeat(3,1fr); gap:26px;
-  }
-  .testi-card{
-    background:var(--panel);
-    padding:34px;
-    border-radius:var(--radius);
-    border-top:3px solid var(--brass);
-  }
-  .testi-card .stars{ color:var(--brass); letter-spacing:2px; margin-bottom:16px; font-size:0.9rem;}
-  .testi-card p{ font-size:0.96rem; color:var(--ink-soft); margin-bottom:22px; }
-  .testi-person{ display:flex; align-items:center; gap:12px; }
-  .testi-avatar{
-    width:44px; height:44px; border-radius:50%;
-    background:var(--brass); color:var(--cream-white);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Fraunces',serif; font-weight:600;
-  }
-  .testi-person strong{ display:block; font-size:0.92rem; }
-  .testi-person span{ font-size:0.76rem; color:var(--ink-soft); }
-
-  /* ===== STATS ===== */
-  .stats-strip{
-    background:var(--sage);
-    color:var(--cream-white);
+  /* METRIC STATS STRIP */
+  .stats-banner{
+    background: linear-gradient(135deg, var(--sage), #445237);
+    color: var(--cream-white); position: relative; overflow: hidden;
   }
   .stats-grid{
-    display:grid; grid-template-columns:repeat(4,1fr);
-    text-align:center;
+    display: grid; grid-template-columns: repeat(4, 1fr); text-align: center;
   }
-  .stat{ padding:52px 20px; border-right:1px solid rgba(251,248,242,0.18); }
-  .stat:last-child{ border-right:none; }
-  .stat strong{ font-family:'Fraunces',serif; font-size:2.6rem; font-weight:600; display:block; }
-  .stat span{ font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; color:rgba(251,248,242,0.75); }
+  .stat-block{
+    padding: 56px 20px; border-right: 1px solid rgba(255,255,255,0.16);
+  }
+  .stat-block:last-child{ border-right: none; }
+  .stat-block strong{
+    font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 600;
+    line-height: 1; margin-bottom: 6px; display: block;
+  }
+  .stat-block span{
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.8);
+  }
 
-  /* ===== OFFERS ===== */
-  .offers{ background:var(--ink); color:var(--cream-white); position:relative; overflow:hidden; }
-  .offers::before{ content:''; position:absolute; inset:0; background-image: repeating-linear-gradient(135deg, rgba(169,121,58,0.055) 0px, rgba(169,121,58,0.055) 1px, transparent 1px, transparent 40px); pointer-events:none; }
-  .offers::after{ content:''; position:absolute; top:-140px; right:-100px; width:440px; height:440px; background:radial-gradient(circle, rgba(169,121,58,0.16), transparent 70%); pointer-events:none; }
-  .offers .container{ position:relative; z-index:2; }
-  .offers .section-head h2{ color:var(--cream-white); }
-  .offers .section-head p{ color:rgba(251,248,242,0.7); }
-  .offers .eyebrow{ color:var(--brass); }
+  /* WHY CHOOSE US */
+  .why-choose{
+    background: var(--ink); color: var(--cream-white); position: relative; overflow: hidden;
+  }
+  .why-choose .section-head h2{ color: #fff; }
+  .why-choose .section-head p{ color: rgba(255,255,255,0.7); }
+  .why-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .why-card{
+    background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md); padding: 36px 32px;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  }
+  .why-card:hover{
+    transform: translateY(-6px); border-color: var(--brass); background: rgba(255, 255, 255, 0.07);
+  }
+  .why-icon{
+    width: 54px; height: 54px; border-radius: 50%;
+    background: rgba(182, 133, 65, 0.15); border: 1.5px solid var(--brass);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 22px;
+  }
+  .why-icon svg{ width: 24px; height: 24px; stroke: var(--brass); fill: none; }
+  .why-card h4{ color: #fff; font-size: 1.25rem; margin-bottom: 16px; }
+  .why-card ul{ list-style: none; }
+  .why-card li{
+    display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem;
+    color: rgba(255,255,255,0.76); padding: 8px 0; border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .why-card li:first-child{ border-top: none; }
+  .why-card li::before{ content: '—'; color: var(--brass); flex-shrink: 0; }
 
-  .reward-ladder{ display:flex; justify-content:space-between; align-items:flex-end; position:relative; margin:6px 0 54px; }
-  .reward-ladder::before{ content:''; position:absolute; bottom:72px; left:8%; right:8%; height:2px; background:linear-gradient(90deg, rgba(169,121,58,0.15), var(--brass) 50%, rgba(169,121,58,0.15)); }
-  .ladder-node{ position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; width:33%; text-align:center; }
-  .ladder-node:nth-child(1) .ladder-dot{ width:48px; height:48px; }
-  .ladder-node:nth-child(1) .ladder-dot svg{ width:20px; height:20px; }
-  .ladder-node:nth-child(2) .ladder-dot{ width:58px; height:58px; }
-  .ladder-node:nth-child(2) .ladder-dot svg{ width:24px; height:24px; }
-  .ladder-node:nth-child(3) .ladder-dot{ width:70px; height:70px; box-shadow:0 0 0 7px rgba(169,121,58,0.16); }
-  .ladder-node:nth-child(3) .ladder-dot svg{ width:28px; height:28px; }
-  .ladder-node:nth-child(3) .ladder-value{ font-size:1.2rem; }
-  .ladder-node:nth-child(3) .ladder-tag{ background:var(--brass); color:var(--ink); padding:4px 12px; border-radius:20px; font-weight:700; }
-  .ladder-dot{ width:52px; height:52px; border-radius:50%; background:var(--ink); border:2px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
-  .ladder-dot svg{ width:24px; height:24px; stroke:var(--brass); }
-  .ladder-dot-highlight{ background:var(--brass); }
-  .ladder-dot-highlight svg{ stroke:var(--ink); }
-  .ladder-value{ font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; color:var(--cream-white); }
-  .ladder-tag{ font-family:'Space Mono',monospace; font-size:0.66rem; color:var(--brass); text-transform:uppercase; letter-spacing:0.06em; margin-top:5px; }
+  /* TESTIMONIALS */
+  .testi-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .testi-card{
+    background: var(--cream-card); padding: 36px; border-radius: var(--radius-md);
+    border-top: 3px solid var(--brass); box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease;
+  }
+  .testi-card:hover{ transform: translateY(-5px); }
+  .testi-stars{ color: var(--brass); letter-spacing: 2px; font-size: 0.95rem; margin-bottom: 14px; }
+  .testi-card p{ font-size: 0.96rem; color: var(--ink-soft); margin-bottom: 22px; line-height: 1.65; }
+  .testi-profile{ display: flex; align-items: center; gap: 12px; }
+  .testi-avatar{
+    width: 44px; height: 44px; border-radius: 50%; background: var(--brass);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.1rem;
+  }
 
-  .offer-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
-  .offer-card{ background:rgba(251,248,242,0.05); border:1px solid rgba(251,248,242,0.15); padding:32px 28px; border-radius:var(--radius); position:relative; transition: transform .25s ease, border-color .25s ease; }
-  .offer-card:hover{ transform:translateY(-6px); border-color:var(--brass); }
-  .offer-card.highlight{ border-color:var(--brass); background:rgba(169,121,58,0.1); }
-  .offer-tier{ font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-bottom:14px; display:block; }
-  .offer-card h4{ color:var(--cream-white); font-size:1.35rem; margin-bottom:14px; }
-  .offer-card ul{ list-style:none; }
-  .offer-card ul li{ font-size:0.9rem; color:rgba(251,248,242,0.78); margin-bottom:10px; padding-left:18px; position:relative; }
-  .offer-card ul li::before{ content:'—'; position:absolute; left:0; color:var(--brass); }
-  .offer-note{ margin-top:30px; text-align:center; font-size:0.88rem; color:rgba(251,248,242,0.65); }
-  .offer-note strong{ color:var(--brass); }
-  .offer-icon{ width:54px; height:54px; border-radius:50%; background:rgba(169,121,58,0.12); border:1.5px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
-  .offer-icon svg{ width:26px; height:26px; stroke:var(--brass); }
-  .offer-card.highlight .offer-icon{ background:var(--brass); }
-  .offer-card.highlight .offer-icon svg{ stroke:var(--ink); }
-  .offer-card .ribbon{ position:absolute; top:18px; right:-38px; background:var(--brass); color:var(--ink); font-family:'Space Mono',monospace; font-size:0.6rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:5px 42px; transform:rotate(40deg); box-shadow:0 4px 10px rgba(0,0,0,0.3); }
+  /* OFFERS & REWARD LADDER */
+  .offers-section{ background: var(--ink); color: #fff; position: relative; }
+  .offers-section .section-head h2{ color: #fff; }
+  .offers-section .section-head p{ color: rgba(255,255,255,0.7); }
+  .offer-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; }
+  .offer-card{
+    background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 34px 28px; border-radius: var(--radius-md); position: relative;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+  .offer-card:hover{ transform: translateY(-5px); border-color: var(--brass); }
+  .offer-card.highlight{ border-color: var(--brass); background: rgba(182, 133, 65, 0.1); }
+  .offer-tier-tag{
+    font-family: 'Space Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--brass); margin-bottom: 12px; display: block;
+  }
+  .offer-card h4{ color: #fff; font-size: 1.35rem; margin-bottom: 12px; }
+  .offer-card ul{ list-style: none; }
+  .offer-card li{
+    font-size: 0.9rem; color: rgba(255,255,255,0.78); margin-bottom: 10px;
+    padding-left: 18px; position: relative;
+  }
+  .offer-card li::before{ content: '—'; position: absolute; left: 0; color: var(--brass); }
 
-  /* ===== WHY CHOOSE ===== */
-  .why-choose{ background:var(--ink); color:var(--cream-white); position:relative; overflow:hidden; }
-  .why-choose::before{ content:''; position:absolute; top:-120px; right:-100px; width:420px; height:420px; background:radial-gradient(circle, rgba(169,121,58,0.18), transparent 70%); pointer-events:none; }
-  .why-choose::after{ content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(169,121,58,0.05) 0px, rgba(169,121,58,0.05) 1px, transparent 1px, transparent 40px); pointer-events:none; }
-  .why-choose .container{ position:relative; z-index:1; }
-  .why-choose .eyebrow{ color:var(--brass); }
-  .why-choose .section-head h2{ color:var(--cream-white); }
-  .why-choose .section-head p{ color:rgba(251,248,242,0.7); }
+  /* LOCATIONS */
+  .locations{ background: var(--panel); }
+  .loc-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .loc-card{
+    background: var(--cream-card); padding: 34px 28px; border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft); border-top: 3px solid var(--brass);
+  }
+  .loc-card h4{ font-size: 1.2rem; margin: 8px 0 12px; }
+  .loc-card p{ font-size: 0.88rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 16px; }
+  .loc-contacts{ border-top: 1px solid var(--panel-line); padding-top: 16px; }
+  .loc-contacts div{ font-size: 0.88rem; margin-bottom: 6px; }
+  .loc-contacts a{ color: var(--brass-deep); font-weight: 700; }
+  .loc-contacts a:hover{ text-decoration: underline; }
 
-  .why-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
-  .why-card{ background:rgba(251,248,242,0.045); border:1px solid rgba(251,248,242,0.14); border-radius:10px; padding:34px 30px; transition:transform .3s ease, border-color .3s ease, background .3s ease; }
-  .why-card:hover{ transform:translateY(-6px); border-color:var(--brass); background:rgba(251,248,242,0.07); }
-  .why-icon{ width:56px; height:56px; border-radius:50%; background:rgba(169,121,58,0.15); border:1.5px solid var(--brass); display:flex; align-items:center; justify-content:center; margin-bottom:22px; }
-  .why-icon svg{ width:26px; height:26px; stroke:var(--brass); fill:none; }
-  .why-card h4{ color:var(--cream-white); font-size:1.2rem; margin-bottom:16px; }
-  .why-card ul{ list-style:none; }
-  .why-card li{ display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:rgba(251,248,242,0.75); padding:8px 0; border-top:1px solid rgba(251,248,242,0.1); }
-  .why-card li:first-child{ border-top:none; padding-top:0; }
-  .why-card li::before{ content:'—'; color:var(--brass); flex-shrink:0; }
-
-  /* ===== LOCATIONS ===== */
-  .locations{ background:var(--panel); }
-  .loc-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
-  .loc-card{ background:var(--cream-white); padding:30px 28px; border-radius:8px; box-shadow:var(--shadow); border-top:3px solid var(--brass); }
-  .loc-card .eyebrow{ margin-bottom:10px; display:block; }
-  .loc-card h4{ font-size:1.15rem; margin-bottom:14px; }
-  .loc-card p{ font-size:0.88rem; color:var(--ink-soft); line-height:1.65; margin-bottom:14px; }
-  .loc-contacts{ border-top:1px solid var(--panel-line); padding-top:14px; }
-  .loc-contacts div{ font-size:0.86rem; color:var(--ink); margin-bottom:6px; }
-  .loc-contacts a{ color:var(--brass-deep); font-weight:700; }
-
-  /* ===== BLOG ===== */
-  .blog-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
-  .blog-card img{ height:230px; width:100%; object-fit:cover; border-radius:var(--radius); margin-bottom:20px; }
-  .blog-card .eyebrow{ margin-bottom:10px; display:block;}
-  .blog-card h4{ font-size:1.18rem; margin-bottom:10px; }
-  .blog-card p{ font-size:0.88rem; color:var(--ink-soft); }
-
-  /* ===== CTA STRIP ===== */
+  /* CTA BANNER */
   .cta-strip{
-    background:var(--clay);
-    color:var(--cream-white);
-    text-align:center;
-    padding:90px 0;
+    background: linear-gradient(135deg, var(--clay), #79381C);
+    color: #fff; text-align: center; padding: 84px 0;
   }
-  .cta-strip .eyebrow{ color:rgba(251,248,242,0.75); }
-  .cta-strip h2{ color:var(--cream-white); font-size:clamp(1.9rem,3.4vw,3rem); margin:16px 0 30px; }
-  .cta-strip .btn-light:hover{ background:var(--ink); color:var(--cream-white); }
+  .cta-strip h2{ color: #fff; font-size: clamp(2rem, 3.5vw, 3rem); margin: 14px 0 26px; }
 
-  /* ===== FOOTER ===== */
-  footer{ background:var(--ink); color:rgba(251,248,242,0.75); padding-top:80px; }
-  .footer-top{
-    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;
-    gap:40px; padding-bottom:60px; border-bottom:1px solid rgba(251,248,242,0.12);
+  /* FOOTER */
+  footer{ background: var(--ink); color: rgba(255,255,255,0.72); padding-top: 76px; }
+  .footer-grid{
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1.2fr;
+    gap: 40px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.1);
   }
-  .footer-logo-link{ display:inline-block; margin-bottom:20px; }
-  .footer-logo-full{ width:230px; max-width:60%; border-radius:8px; box-shadow:0 20px 40px -20px rgba(0,0,0,0.6); }
-  footer p.about{ font-size:0.88rem; max-width:260px; margin-bottom:20px; }
-  .foot-social{ display:flex; gap:12px; }
-  .foot-social a{
-    width:36px; height:36px; border:1px solid rgba(251,248,242,0.25);
-    border-radius:50%; display:flex; align-items:center; justify-content:center;
-    font-size:0.78rem;
-  }
-  .foot-social a:hover{ background:var(--brass); border-color:var(--brass); }
+  .footer-logo-full{ width: 220px; max-width: 60%; border-radius: 6px; margin-bottom: 18px; }
   footer h5{
-    font-family:'Space Mono',monospace; text-transform:uppercase;
-    font-size:0.74rem; letter-spacing:0.1em; color:var(--cream-white);
-    margin-bottom:20px;
+    font-family: 'Space Mono', monospace; text-transform: uppercase;
+    font-size: 0.74rem; letter-spacing: 0.1em; color: #fff; margin-bottom: 18px;
   }
-  footer ul{ list-style:none; }
-  footer ul li{ margin-bottom:12px; font-size:0.88rem; }
-  footer ul li a:hover{ color:var(--brass); }
-  .foot-newsletter input{
-    width:100%; padding:12px 14px; margin-bottom:12px;
-    background:rgba(251,248,242,0.06); border:1px solid rgba(251,248,242,0.2);
-    color:var(--cream-white); border-radius:2px;
+  footer ul{ list-style: none; }
+  footer ul li{ margin-bottom: 10px; font-size: 0.88rem; }
+  footer ul li a:hover{ color: var(--brass); }
+  .footer-bottom{
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 0; font-size: 0.78rem; flex-wrap: wrap; gap: 12px;
   }
-  .foot-bottom{
-    display:flex; justify-content:space-between; align-items:center;
-    padding:26px 0; font-size:0.78rem; flex-wrap:wrap; gap:12px;
+
+  /* FLOATING WHATSAPP BUTTON */
+  .floating-wa-btn{
+    position: fixed; bottom: 26px; right: 26px; z-index: 997;
+    background: #25D366; color: #fff; width: 56px; height: 56px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
-  .foot-bottom a{ margin-left:20px; }
+  .floating-wa-btn:hover{ transform: scale(1.08); box-shadow: 0 14px 32px rgba(37, 211, 102, 0.6); }
+  .floating-wa-btn svg{ width: 30px; height: 30px; fill: #fff; }
 
-  /* ===== DEPTH PASS ===== */
-  .btn-primary{ box-shadow:0 14px 30px -14px rgba(42,31,22,0.55); }
-  .btn-primary:hover{ box-shadow:0 18px 34px -12px rgba(42,31,22,0.6); }
-  .btn-outline:hover{ box-shadow:0 14px 30px -14px rgba(42,31,22,0.3); }
-  .btn-light{ box-shadow:0 10px 24px -12px rgba(42,31,22,0.35); }
-  .hero-visual .frame{ border-radius:10px; }
-  .hero-badge{ border-radius:4px; }
-  .cat-card{ border-radius:10px; box-shadow:0 26px 50px -26px rgba(42,31,22,0.55); }
-  .style-card{ border-radius:10px; box-shadow:0 20px 40px -22px rgba(42,31,22,0.45); }
-  .testi-card{ border-radius:8px; box-shadow:0 18px 40px -26px rgba(42,31,22,0.3); transition:transform .3s ease, box-shadow .3s ease; }
-  .testi-card:hover{ transform:translateY(-5px); box-shadow:0 24px 46px -22px rgba(42,31,22,0.38); }
-  .blog-card img{ border-radius:8px; box-shadow:0 16px 34px -20px rgba(42,31,22,0.4); }
-  .mat-card, .offer-card{ border-radius:8px; }
-  .stats-strip{ background:linear-gradient(135deg, var(--sage), #47543b); position:relative; overflow:hidden; }
-  .stats-strip::before{ content:''; position:absolute; inset:0; background-image:repeating-linear-gradient(135deg, rgba(251,248,242,0.05) 0px, rgba(251,248,242,0.05) 1px, transparent 1px, transparent 34px); pointer-events:none; }
-  .stats-strip .container{ position:relative; z-index:2; }
-  .cta-strip{ background:linear-gradient(135deg, var(--clay), #7a3f24); position:relative; overflow:hidden; }
-  .cta-strip::before{ content:''; position:absolute; top:-110px; left:-90px; width:360px; height:360px; background:radial-gradient(circle, rgba(251,248,242,0.14), transparent 70%); pointer-events:none; }
-  .cta-strip .container{ position:relative; z-index:2; }
-  .calc-banner{ background:linear-gradient(155deg, var(--ink), #1c130c); border-radius:8px; }
-  .swatch-strip{ box-shadow:inset 0 12px 24px -18px rgba(0,0,0,0.5); }
+  /* SCROLL REVEAL ANIMATIONS */
+  .reveal{
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.is-visible{ opacity: 1; transform: translateY(0); }
 
-  /* ===== SCROLL REVEAL ===== */
-  .reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
-  .reveal.is-visible{ opacity:1; transform:translateY(0); }
-  .cat-grid > .reveal:nth-child(2), .layout-grid > .reveal:nth-child(2), .style-grid > .reveal:nth-child(2),
-  .mat-grid > .reveal:nth-child(2), .testi-grid > .reveal:nth-child(2), .blog-grid > .reveal:nth-child(2),
-  .offer-grid > .reveal:nth-child(2), .stats-grid > .reveal:nth-child(2), .process-row > .reveal:nth-child(2){ transition-delay:.1s; }
-  .cat-grid > .reveal:nth-child(3), .layout-grid > .reveal:nth-child(3), .style-grid > .reveal:nth-child(3),
-  .mat-grid > .reveal:nth-child(3), .testi-grid > .reveal:nth-child(3), .blog-grid > .reveal:nth-child(3),
-  .offer-grid > .reveal:nth-child(3), .stats-grid > .reveal:nth-child(3), .process-row > .reveal:nth-child(3){ transition-delay:.2s; }
-  .style-grid > .reveal:nth-child(4), .stats-grid > .reveal:nth-child(4), .process-row > .reveal:nth-child(4){ transition-delay:.3s; }
-  .process-row > .reveal:nth-child(5){ transition-delay:.4s; }
-  .mat-grid > .reveal:nth-child(4){ transition-delay:.3s; }
-  .mat-grid > .reveal:nth-child(5){ transition-delay:.36s; }
-  .mat-grid > .reveal:nth-child(6){ transition-delay:.42s; }
-
-  @media (max-width: 980px){
-    nav.main-links{ display:none; }
-    .burger{ display:flex; }
-    .hero { padding-top: 24px; }
-    .hero .container { grid-template-columns: 1fr; gap: 40px; }
-    .hero-visual-wrapper { order: -1; padding: 0; }
-    .visual-frame video { height: 380px; }
-    .glass-card-bottom { left: 10px; bottom: 10px; }
-    .glass-card-top { display: none; }
-    .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .cat-grid{ grid-template-columns:1fr; grid-template-rows:auto; height:auto; }
-    .cat-card{ height:320px; }
-    .cat-card:first-child{ grid-row:auto; }
-    .process-row{ grid-template-columns:1fr 1fr; gap:30px; }
-    .process-row::before{ display:none; }
-    .calc-banner{ grid-template-columns:1fr; padding:40px 26px; }
-    .style-grid{ grid-template-columns:1fr 1fr; }
-    .testi-grid{ grid-template-columns:1fr; }
-    .offer-grid{ grid-template-columns:1fr; }
-    .reward-ladder{ flex-direction:column; gap:26px; align-items:flex-start; margin-bottom:40px; }
-    .reward-ladder::before{ display:none; }
-    .ladder-node{ width:100%; flex-direction:row; justify-content:flex-start; gap:16px; text-align:left; }
-    .ladder-dot{ margin-bottom:0; flex-shrink:0; }
-    .stats-grid{ grid-template-columns:1fr 1fr; }
-    .stat{ border-bottom:1px solid rgba(251,248,242,0.18); }
-    .blog-grid{ grid-template-columns:1fr; }
-    .why-grid{ grid-template-columns:1fr; }
-    .loc-grid{ grid-template-columns:1fr; }
-    .footer-top{ grid-template-columns:1fr 1fr; }
-    .section{ padding:64px 0; }
-    .topbar-links{ display:none; }
+  /* RESPONSIVE BREAKPOINTS */
+  @media (max-width: 1024px){
+    .hero-grid{ grid-template-columns: 1fr; gap: 40px; }
+    .hero-visual{ order: -1; }
+    .calc-wrapper{ grid-template-columns: 1fr; padding: 40px 30px; }
+    .style-grid{ grid-template-columns: repeat(2, 1fr); }
+    .footer-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px){
+    nav.main-links, .topbar-links, .nav-cta .btn-primary{ display: none; }
+    .burger{ display: flex; }
+    .hero-stats{ grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .cat-grid{ grid-template-columns: 1fr; grid-template-rows: auto; }
+    .cat-card{ height: 320px; }
+    .cat-card:first-child{ grid-row: auto; }
+    .process-grid{ grid-template-columns: 1fr; gap: 26px; }
+    .process-grid::before{ display: none; }
+    .stats-grid{ grid-template-columns: repeat(2, 1fr); }
+    .stat-block{ border-bottom: 1px solid rgba(255,255,255,0.16); }
+    .why-grid, .testi-grid, .offer-grid, .loc-grid{ grid-template-columns: 1fr; }
+    .glass-card-top{ display: none; }
+    .glass-card-bottom{ left: 10px; bottom: 10px; }
+    .section{ padding: 64px 0; }
   }
 </style>
 </head>
 <body>
 
+<!-- TOP ANNOUNCEMENT BAR -->
 <div class="topbar">
   <div class="container">
-    <span>Free in-home consultation across the city · Mon–Sat, 10am–7pm</span>
+    <span>Free in-home design consultation across Mumbai &amp; Tamil Nadu · Mon–Sat, 10am–7pm</span>
     <div class="topbar-links">
       <a href="tel:+918108301261">+91 81083 01261</a>
       <a href="#studio-locations">Find a Studio</a>
@@ -845,102 +691,129 @@
   </div>
 </div>
 
+<!-- STICKY SITE HEADER -->
 <header class="site">
   <div class="container nav-row">
-    <a href="#" class="logo"><img src="logo-mark.jpg" alt="Living Style Wardrobe & Kitchen Studio logo" class="logo-mark"><span class="logo-text">Living&nbsp;Style<span class="logo-sub">WARDROBE &amp; KITCHEN STUDIO</span></span></a>
+    <a href="#" class="logo">
+      <img src="logo-mark.jpg" alt="Living Style logo" class="logo-mark">
+      <span class="logo-text">Living&nbsp;Style<span class="logo-sub">WARDROBE &amp; KITCHEN STUDIO</span></span>
+    </a>
     <nav class="main-links">
       <a href="kitchens.html">Kitchens</a>
       <a href="wardrobes.html">Wardrobes</a>
       <a href="#process">Our Process</a>
+      <a href="#estimator">Cost Calculator</a>
       <a href="#styles">Design Ideas</a>
       <a href="#stories">Stories</a>
     </nav>
     <div class="nav-cta">
       <a href="tel:+918108301261" class="phone">📞 +91 81083 01261</a>
-      <a href="#estimate" class="btn btn-primary">Get Free Estimate</a>
+      <a href="#estimator" class="btn btn-primary">Get Free Estimate</a>
     </div>
-    <div class="burger"><span></span><span></span><span></span></div>
+    <div class="burger" id="burgerBtn" aria-label="Open Navigation">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </header>
 
+<!-- MOBILE SLIDE OVER DRAWER -->
+<div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div>
+    <div class="drawer-head">
+      <span class="eyebrow">Menu</span>
+      <button class="drawer-close" id="drawerClose">&times;</button>
+    </div>
+    <nav class="drawer-links">
+      <a href="kitchens.html">Modular Kitchens</a>
+      <a href="wardrobes.html">Modular Wardrobes</a>
+      <a href="#process">Our 5-Stage Process</a>
+      <a href="#estimator">Cost Estimator</a>
+      <a href="#styles">Design Ideas</a>
+      <a href="#stories">Client Stories</a>
+      <a href="#studio-locations">Studio Locations</a>
+    </nav>
+  </div>
+  <div>
+    <a href="tel:+918108301261" class="btn btn-outline" style="width:100%; margin-bottom:12px;">Call +91 81083 01261</a>
+    <a href="https://wa.me/918108301261?text=Hi%20Living%20Style%20Studio,%20I%20am%20interested%20in%20modular%20interiors." target="_blank" rel="noopener" class="btn btn-whatsapp" style="width:100%;">WhatsApp Us</a>
+  </div>
+</div>
+
+<!-- HERO SECTION -->
 <section class="hero">
-  <div class="container">
+  <div class="container hero-grid">
     <div class="hero-copy">
-      <!-- Live Factory Pill -->
       <div class="hero-pill">
         <span class="pulse-dot"></span>
         <span>Factory Direct · Mumbai &amp; Tamil Nadu</span>
       </div>
-
       <h1>Spaces built around <em>how you actually live</em></h1>
-      
       <p class="hero-subtitle">
-        Living Style designs and crafts bespoke modular kitchens and wardrobes tailored precisely to your daily routines — engineered with 100% Master Ply in our own Mumbai factory.
+        Living Style crafts bespoke modular kitchens and wardrobe systems tailored precisely to your daily cooking and storage routines — manufactured directly with 100% Master Ply in our Mumbai factory.
       </p>
 
       <div class="hero-actions">
-        <a href="#estimate" class="btn btn-primary">
-          <span>Book Free Consultation</span>
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <a href="#estimator" class="btn btn-primary">
+          <span>Calculate Project Cost</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="https://wa.me/918108301261?text=Hi%20Living%20Style%20Studio,%20I%20am%20interested%20in%20modular%20kitchens%20and%20wardrobes." target="_blank" rel="noopener" class="btn btn-whatsapp">
+        <a href="https://wa.me/918108301261?text=Hi%20Living%20Style%20Studio,%20I%20would%20like%20to%20discuss%20a%20modular%20interior%20layout." target="_blank" rel="noopener" class="btn btn-whatsapp">
           <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.46 0 .1 5.36.1 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.94-5.36 11.94-11.94 0-3.19-1.24-6.19-3.47-8.4zm-8.48 18.3h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.75.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.19c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.48-4.46 9.94-9.96 9.94zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.25-.6-.5-.52-.68-.53l-.58-.01c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.12-.27-.2-.57-.35z"/></svg>
-          <span>Share Layout</span>
+          <span>Share Floor Plan</span>
         </a>
       </div>
 
       <div class="hero-guarantee">
-        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 3D Layout Review Before Build</span>
-        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 0% Hidden Charges</span>
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 3D Visual Walkthrough</span>
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 100% Calibrated Master Ply</span>
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Zero Middlemen</span>
       </div>
 
       <div class="hero-stats">
-        <div class="stat-card">
+        <div class="stat-item">
           <strong>12+ Yrs</strong>
           <span>Experience</span>
         </div>
-        <div class="stat-card">
+        <div class="stat-item">
           <strong>4,200+</strong>
           <span>Homes Fitted</span>
         </div>
-        <div class="stat-card">
+        <div class="stat-item">
           <strong>10 Yrs</strong>
           <span>Warranty</span>
         </div>
-        <div class="stat-card">
-          <strong>100%</strong>
-          <span>Master Ply</span>
+        <div class="stat-item">
+          <strong>16+</strong>
+          <span>Finishes</span>
         </div>
       </div>
     </div>
 
-    <!-- Visual Showcase with Ambient Video Reel -->
-    <div class="hero-visual-wrapper">
-      <div class="glass-card glass-card-top">
-        <div class="card-icon-wrap">✦</div>
+    <!-- VIDEO REEL CONTAINER -->
+    <div class="hero-visual">
+      <div class="floating-glass-card glass-card-top">
+        <div class="glass-icon">✦</div>
         <div>
-          <strong>16+ Finishes</strong>
+          <strong>16+ Premium Finishes</strong>
           <span>PU Lacquer, Fluted, Acrylic</span>
         </div>
       </div>
 
-      <div class="visual-frame">
+      <div class="video-container">
         <video id="heroVideo" autoplay muted loop playsinline poster="kitchen-wide-shelving.jpg">
-          <!-- Direct High-Resolution Interior Modular Kitchen Loop (replaceable with your own hero-video.mp4) -->
           <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-kitchen-interior-design-41484-large.mp4" type="video/mp4">
         </video>
         <div class="video-ambient-overlay"></div>
-        <div class="visual-factory-tag">Factory-Direct · Mumbai</div>
-
-        <!-- Micro-Interaction Video Play/Pause -->
-        <button class="video-ctrl-btn" id="videoToggleBtn" aria-label="Toggle Video Playback" title="Pause / Play Video">
+        <div class="factory-badge">Own Factory · Mumbai</div>
+        <button class="video-toggle-btn" id="videoToggleBtn" aria-label="Toggle Video Playback">
           <svg id="pauseIcon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
           <svg id="playIcon" viewBox="0 0 24 24" style="display:none;"><path d="M8 5v14l11-7z"/></svg>
         </button>
       </div>
 
-      <div class="glass-card glass-card-bottom">
-        <div class="card-icon-wrap">⚡</div>
+      <div class="floating-glass-card glass-card-bottom">
+        <div class="glass-icon">⚡</div>
         <div>
           <strong>Handover in 6–8 Wks</strong>
           <span>From final site measurement</span>
@@ -949,363 +822,370 @@
     </div>
   </div>
 
+  <!-- FINISH SWATCH STRIP -->
   <div class="swatch-strip">
     <div class="swatch-track" id="swatchTrack"></div>
   </div>
 </section>
 
+<!-- CATEGORY SHOWCASE (BENTO GRID) -->
 <section class="section" id="kitchens">
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="eyebrow">What We Build</span>
+        <span class="eyebrow">Studio Specialities</span>
         <h2>Every corner of storage, considered</h2>
       </div>
-      <p>Three studio specialities, each engineered for durability first, styled second.</p>
+      <p>Bespoke interior architectural solutions designed for lifetime durability first, refined aesthetic second.</p>
     </div>
     <div class="cat-grid">
       <div class="cat-card reveal">
-        <img src="kitchen-navy-fluted.jpg" alt="Living Style navy fluted modular kitchen with built-in ovens">
+        <img src="kitchen-navy-fluted.jpg" alt="Navy fluted luxury modular kitchen">
         <div class="cat-overlay">
           <span class="eyebrow">01 — Kitchens</span>
           <h3>Modular Kitchens</h3>
-          <p>L-shaped, parallel and island layouts built to your cooking habits, not a showroom floor plan.</p>
-          <a href="kitchens.html" class="cat-link">Explore Kitchens →</a>
+          <p>L-shaped, parallel, and island layouts planned around your actual cooking routines, not standard catalogue templates.</p>
+          <a href="kitchens.html" class="cat-link">Explore Kitchens &rarr;</a>
         </div>
       </div>
       <div class="cat-card reveal" id="wardrobes">
-        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=900&auto=format&fit=crop" alt="Modular wardrobe interior">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=900&auto=format&fit=crop" alt="Bespoke modular wardrobe">
         <div class="cat-overlay">
           <span class="eyebrow">02 — Wardrobes</span>
           <h3>Modular Wardrobes</h3>
-          <p>Sliding, hinged and walk-in systems with internal layouts planned around what you actually own.</p>
-          <a href="wardrobes.html" class="cat-link">Explore Wardrobes →</a>
+          <p>Sliding, hinged, and walk-in wardrobe storage systems precision-partitioned for what you actually own.</p>
+          <a href="wardrobes.html" class="cat-link">Explore Wardrobes &rarr;</a>
         </div>
       </div>
       <div class="cat-card reveal">
-        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=900&auto=format&fit=crop" alt="Full home interior living room">
+        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=900&auto=format&fit=crop" alt="Full home interior design">
         <div class="cat-overlay">
           <span class="eyebrow">03 — Full Home</span>
           <h3>Full Home Interiors</h3>
-          <p>One studio, one timeline — kitchen, wardrobes, and living spaces designed as a single story.</p>
-          <a href="#" class="cat-link">Explore Full Home →</a>
+          <p>One direct factory studio, one predictable timeline — unified kitchens, wardrobes, and living consoles.</p>
+          <a href="#estimator" class="cat-link">Calculate Estimate &rarr;</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 5-STAGE PROCESS -->
 <section class="section process" id="process">
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="eyebrow">How It Works</span>
-        <h2>From first call to final handover</h2>
+        <span class="eyebrow">Our Methodology</span>
+        <h2>From first consultation to final key handover</h2>
       </div>
-      <p>Five stages, the same for every project — so you always know what's next.</p>
+      <p>A rigorous five-stage delivery workflow ensuring zero site surprises and punctual project completion.</p>
     </div>
-    <div class="process-row">
-      <div class="process-step reveal">
-        <div class="process-num">01</div>
+    <div class="process-grid">
+      <div class="process-node reveal">
+        <div class="process-badge">01</div>
         <h4>Consult</h4>
-        <p>A designer visits your home to understand your routines, storage habits and budget.</p>
+        <p>A senior designer visits your space to evaluate layout needs, storage routines, and budget parameters.</p>
       </div>
-      <div class="process-step reveal">
-        <div class="process-num">02</div>
+      <div class="process-node reveal">
+        <div class="process-badge">02</div>
         <h4>Measure</h4>
-        <p>Precise on-site measurements so every panel is cut for your actual space, not an average one.</p>
+        <p>Laser millimeter precision measurements so every carcass fits your walls, preventing fillers or gaps.</p>
       </div>
-      <div class="process-step reveal">
-        <div class="process-num">03</div>
-        <h4>Design</h4>
-        <p>A 3D layout and finish palette you can review and revise before anything is manufactured.</p>
+      <div class="process-node reveal">
+        <div class="process-badge">03</div>
+        <h4>3D Design</h4>
+        <p>Realistic photorealistic walkthroughs and finish pairings approved by you before a single board is cut.</p>
       </div>
-      <div class="process-step reveal">
-        <div class="process-num">04</div>
+      <div class="process-node reveal">
+        <div class="process-badge">04</div>
         <h4>Craft</h4>
-        <p>Factory-made carcasses and shutters, checked for fit before they ever leave the workshop.</p>
+        <p>Manufactured on German CNC machinery in our Mumbai factory, pre-assembled and quality checked.</p>
       </div>
-      <div class="process-step reveal">
-        <div class="process-num">05</div>
-        <h4>Install</h4>
-        <p>Clean, dust-managed installation with a walkthrough before we call the project done.</p>
+      <div class="process-node reveal">
+        <div class="process-badge">05</div>
+        <h4>Handover</h4>
+        <p>Dust-controlled clean installation with joint inspection walkthrough before final signoff.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="calculator">
+<!-- LIVE DYNAMIC COST ESTIMATOR -->
+<section class="section" id="estimator">
   <div class="container">
-    <div class="calc-banner">
-      <div>
-        <span class="eyebrow">Instant Estimate</span>
-        <h2>Know your budget before you commit to anything</h2>
-        <p>Tell us your kitchen or wardrobe size and finish preference — get a realistic price range in under a minute, no phone call required.</p>
+    <div class="calc-wrapper reveal">
+      <div class="calc-info">
+        <span class="eyebrow">Interactive Estimator</span>
+        <h2>Know your realistic budget upfront</h2>
+        <p>Select your space dimensions and preferred finish grade to generate an instant ballpark estimate based on factory-direct pricing.</p>
+        <div style="display:flex; flex-direction:column; gap:12px; font-size:0.86rem; color:rgba(255,255,255,0.7);">
+          <div>✓ Includes 100% BWP/Calibrated Master Ply</div>
+          <div>✓ Includes soft-close hinges &amp; telescopic channels</div>
+          <div>✓ Full 10-year comprehensive warranty</div>
+        </div>
       </div>
-      <div class="calc-fields">
-        <label>Project Type</label>
-        <select>
-          <option>Modular Kitchen</option>
-          <option>Modular Wardrobe</option>
-          <option>Full Home Interior</option>
-        </select>
-        <label>Approx. Size (sq ft)</label>
-        <input type="number" placeholder="e.g. 120">
-        <label>Preferred Finish</label>
-        <select>
-          <option>Laminate</option>
-          <option>Acrylic</option>
-          <option>PU / Duco</option>
-          <option>Veneer</option>
-        </select>
-        <a href="#estimate" class="btn btn-light">Calculate Now</a>
+
+      <div class="calc-ui">
+        <div class="calc-control-group">
+          <label>Space Type</label>
+          <select id="calcType" class="calc-select">
+            <option value="kitchen" data-base="1450">Modular Kitchen (L-Shape / Parallel)</option>
+            <option value="wardrobe" data-base="1250">Modular Wardrobe (Sliding / Hinged)</option>
+            <option value="fullhome" data-base="1100">Full Home Interiors (Kitchen + 2 Wardrobes)</option>
+          </select>
+        </div>
+
+        <div class="calc-control-group">
+          <label>
+            <span>Estimated Area (Sq Ft)</span>
+            <b id="areaDisplay" style="color:var(--brass);">120 sq ft</b>
+          </label>
+          <input type="range" id="calcArea" min="50" max="450" step="10" value="120" class="calc-range">
+        </div>
+
+        <div class="calc-control-group">
+          <label>Shutter Finish Preference</label>
+          <select id="calcFinish" class="calc-select">
+            <option value="1.0">Premium Matte / Gloss Laminate (1.0mm)</option>
+            <option value="1.25">Seamless Acrylic Shutters (Anti-Scratch)</option>
+            <option value="1.45">PU Lacquer Matt / Gloss Finish</option>
+            <option value="1.65">Natural Wood Veneer with Melamine Coat</option>
+          </select>
+        </div>
+
+        <div class="calc-output-box">
+          <div class="calc-price-row">
+            <span>Estimated Investment:</span>
+            <strong id="priceOutput">₹2,08,000 – ₹2,45,000</strong>
+          </div>
+          <a id="calcWhatsAppBtn" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width:100%; justify-content:center; margin-top:8px;">
+            <span>Get Detailed Quotation on WhatsApp &rarr;</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FILTERABLE DESIGN STYLES -->
 <section class="section" id="styles">
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="eyebrow">Design Ideas</span>
-        <h2>Find the style that speaks to you</h2>
+        <span class="eyebrow">Inspiration Gallery</span>
+        <h2>Curated interior expressions</h2>
       </div>
-      <p>Every project starts with a direction — pick the one closest to yours and we'll shape it from there.</p>
+      <p>Explore aesthetics engineered by our team — filter by design style to find what matches your personal vision.</p>
     </div>
+
+    <div class="style-filter-nav reveal">
+      <button class="filter-pill is-active" data-filter="all">All Styles</button>
+      <button class="filter-pill" data-filter="contempo">Contemporary</button>
+      <button class="filter-pill" data-filter="heritage">Heritage Wood</button>
+      <button class="filter-pill" data-filter="minimal">Minimal White</button>
+      <button class="filter-pill" data-filter="vibrant">Fluted &amp; Glass</button>
+    </div>
+
     <div class="style-grid">
-      <div class="style-card reveal">
-        <img src="kitchen-island-front.jpg" alt="Contemporary style modular kitchen island">
-        <div class="style-tag"><span class="eyebrow">Style</span><h4>Contempo</h4></div>
+      <div class="style-card reveal" data-category="contempo">
+        <img src="kitchen-island-front.jpg" alt="Contemporary kitchen island">
+        <div class="style-card-overlay">
+          <span class="eyebrow">Contemporary</span>
+          <h4>Monolith Island</h4>
+        </div>
       </div>
-      <div class="style-card reveal">
-        <img src="kitchen-wood-display.jpg" alt="Heritage style warm wood-tone kitchen display">
-        <div class="style-tag"><span class="eyebrow">Style</span><h4>Heritage</h4></div>
+      <div class="style-card reveal" data-category="heritage">
+        <img src="kitchen-wood-display.jpg" alt="Warm wood kitchen">
+        <div class="style-card-overlay">
+          <span class="eyebrow">Heritage</span>
+          <h4>Rich Walnut Grain</h4>
+        </div>
       </div>
-      <div class="style-card reveal">
-        <img src="kitchen-white-gloss.jpg" alt="Minimal style white gloss modular kitchen">
-        <div class="style-tag"><span class="eyebrow">Style</span><h4>Minimal</h4></div>
+      <div class="style-card reveal" data-category="minimal">
+        <img src="kitchen-white-gloss.jpg" alt="Minimal white gloss kitchen">
+        <div class="style-card-overlay">
+          <span class="eyebrow">Minimalist</span>
+          <h4>Pure Gloss Horizon</h4>
+        </div>
       </div>
-      <div class="style-card reveal">
-        <img src="kitchen-glass-cabinet.jpg" alt="Vibrant style kitchen with glass display cabinet">
-        <div class="style-tag"><span class="eyebrow">Style</span><h4>Vibrant</h4></div>
+      <div class="style-card reveal" data-category="vibrant">
+        <img src="kitchen-glass-cabinet.jpg" alt="Fluted glass cabinet kitchen">
+        <div class="style-card-overlay">
+          <span class="eyebrow">Vibrant Luxe</span>
+          <h4>Fluted Vitrine</h4>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section stats-strip">
+<!-- STATS STRIP -->
+<section class="stats-banner">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat reveal"><strong>4,200+</strong><span>Homes Designed</span></div>
-      <div class="stat reveal"><strong>12</strong><span>Years of Service</span></div>
-      <div class="stat reveal"><strong>16</strong><span>Finishes</span></div>
-      <div class="stat reveal"><strong>10-yr</strong><span>Warranty</span></div>
+      <div class="stat-block reveal"><strong>4,200+</strong><span>Homes Transformed</span></div>
+      <div class="stat-block reveal"><strong>12+</strong><span>Years in Business</span></div>
+      <div class="stat-block reveal"><strong>100%</strong><span>Master Ply Carcasses</span></div>
+      <div class="stat-block reveal"><strong>10-Yr</strong><span>Complete Warranty</span></div>
     </div>
   </div>
 </section>
 
+<!-- WHY CHOOSE US -->
 <section class="section why-choose">
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="eyebrow">Why Choose Us</span>
-        <h2>Why Choose Living Style?</h2>
+        <span class="eyebrow">Direct Factory Difference</span>
+        <h2>Why discerning homeowners build with us</h2>
       </div>
-      <p>What sets a Living Style kitchen or wardrobe apart, in plain terms.</p>
+      <p>Precision craftsmanship delivered directly from workshop floor to your apartment.</p>
     </div>
     <div class="why-grid reveal">
       <div class="why-card">
-        <div class="why-icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg></div>
-        <h4>Design Excellence</h4>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg>
+        </div>
+        <h4>Ergonomic Design</h4>
         <ul>
-          <li>Kitchens planned around the classic work triangle for effortless movement</li>
-          <li>Space-smart layouts engineered around what you actually own</li>
-          <li>European-style kitchen aesthetics with a modern finish</li>
+          <li>Optimized around the classical culinary work triangle</li>
+          <li>Custom countertop heights configured to Indian habits</li>
+          <li>Full-extension Blum &amp; Hettich soft-close drawer hardware</li>
         </ul>
       </div>
+
       <div class="why-card">
-        <div class="why-icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h4>Built to Last</h4>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.7"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h4>Master Ply Engineering</h4>
         <ul>
-          <li>Superior-grade Master Ply on every single carcass</li>
-          <li>Flawless finishes, quality-checked before they leave our factory</li>
-          <li>A full range of premium hardware and accessories</li>
+          <li>Calibrated Boiling Water Proof (BWP) plywood core</li>
+          <li>Zero bubbling or warping, engineered for humid coastal climates</li>
+          <li>Edge-banded with zero-joint polyurethane hot melt</li>
         </ul>
       </div>
+
       <div class="why-card">
-        <div class="why-icon"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
-        <h4>Service You Can Trust</h4>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.7"><circle cx="12" cy="7" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <h4>Factory Direct Transparency</h4>
         <ul>
-          <li>Fast turnaround, from measurement to installation</li>
-          <li>Specialists in modular kitchen design and execution</li>
-          <li>Designs built to fit your budget, not stretch it</li>
+          <li>No distributor markups or hidden subcontractor margins</li>
+          <li>Direct factory tracking and scheduled site inspections</li>
+          <li>6–8 week guaranteed handover commitment</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section testi-wrap" id="stories">
+<!-- CLIENT TESTIMONIALS -->
+<section class="section" id="stories">
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="eyebrow">Client Stories</span>
-        <h2>What it's like working with us</h2>
+        <span class="eyebrow">Client Realities</span>
+        <h2>What our clients say</h2>
       </div>
     </div>
     <div class="testi-grid">
       <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"They measured everything twice before the design was final — no surprises on installation day. Our kitchen fits like it was built for the space, because it was."</p>
-        <div class="testi-person">
+        <div class="testi-stars">★★★★★</div>
+        <p>"They measured our kitchen twice before commencing factory production. Everything aligned millimeter-perfect on installation day without dust or wall rework."</p>
+        <div class="testi-profile">
           <div class="testi-avatar">R</div>
-          <div><strong>Rhea Kapoor</strong><span>Wardrobe &amp; Kitchen, 3BHK</span></div>
+          <div><strong>Rhea Kapoor</strong><span style="font-size:0.75rem; color:var(--ink-soft); display:block;">3BHK Modular Kitchen &amp; Wardrobes</span></div>
         </div>
       </div>
       <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"We changed our finish choice twice mid-project and the team just adjusted the quote and timeline — no drama, no extra charges hidden later."</p>
-        <div class="testi-person">
+        <div class="testi-stars">★★★★★</div>
+        <p>"We altered our acrylic finish midway. Living Style modified the quote immediately without inflated change-order fees. Exceptional honesty."</p>
+        <div class="testi-profile">
           <div class="testi-avatar">A</div>
-          <div><strong>Arjun Mehta</strong><span>Full Home Interior</span></div>
+          <div><strong>Arjun Mehta</strong><span style="font-size:0.75rem; color:var(--ink-soft); display:block;">Full Home Interior, Mumbai</span></div>
         </div>
       </div>
       <div class="testi-card reveal">
-        <div class="stars">★★★★★</div>
-        <p>"The 3D design review saved us from a layout mistake we wouldn't have caught until it was built. Worth doing the walkthrough before you sign off."</p>
-        <div class="testi-person">
+        <div class="testi-stars">★★★★★</div>
+        <p>"The 3D design review caught a corner blind-spot layout flaw that would have frustrated us daily. Worth every rupee for their design foresight."</p>
+        <div class="testi-profile">
           <div class="testi-avatar">S</div>
-          <div><strong>Sana Iyer</strong><span>Modular Kitchen</span></div>
+          <div><strong>Sana Iyer</strong><span style="font-size:0.75rem; color:var(--ink-soft); display:block;">Parallel Island Kitchen</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- PURCHASE OFFERS & REWARD TIERS -->
+<section class="section offers-section">
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="eyebrow">From the Studio Journal</span>
-        <h2>Ideas &amp; guides worth reading</h2>
+        <span class="eyebrow">Purchase Benefits</span>
+        <h2>Booking rewards &amp; appliances</h2>
       </div>
-      <a href="#" class="btn btn-outline">View All Stories</a>
+      <p>Direct factory rewards applied transparently upon order finalization.</p>
     </div>
-    <div class="blog-grid">
-      <div class="blog-card reveal">
-        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=700&auto=format&fit=crop" alt="White kitchen design">
-        <span class="eyebrow">Kitchens</span>
-        <h4>Choosing between laminate, acrylic and PU finishes</h4>
-        <p>A practical breakdown of cost, upkeep and how each finish actually wears over five years.</p>
-      </div>
-      <div class="blog-card reveal">
-        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=700&auto=format&fit=crop" alt="Wardrobe interior storage">
-        <span class="eyebrow">Wardrobes</span>
-        <h4>Planning wardrobe storage for a small bedroom</h4>
-        <p>How to fit real storage capacity into a compact footprint without it feeling cramped.</p>
-      </div>
-      <div class="blog-card reveal">
-        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=700&auto=format&fit=crop" alt="Modular kitchen island layout">
-        <span class="eyebrow">Kitchens</span>
-        <h4>Parallel vs. island layouts: what actually suits Indian kitchens</h4>
-        <p>Workflow, ventilation and space math for two of the most requested kitchen layouts.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section offers">
-  <div class="container">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow">Purchase Offers</span>
-        <h2>The more you build with us, the more you get back</h2>
-      </div>
-      <p>Live offers on every kitchen &amp; wardrobe order, valid at the time of booking.</p>
-    </div>
-
-    <div class="reward-ladder">
-      <div class="ladder-node">
-        <div class="ladder-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1.2a1.6 1.6 0 0 0 0 3.2V13.6a1.6 1.6 0 0 0 0 3.2V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1.2a1.6 1.6 0 0 0 0-3.2v-1.2a1.6 1.6 0 0 0 0-3.2V8z"/><line x1="9" y1="7" x2="9" y2="17" stroke-dasharray="1.5 2.2"/></svg></div>
-        <span class="ladder-value">Every Order</span>
-        <span class="ladder-tag">Free Coupon</span>
-      </div>
-      <div class="ladder-node">
-        <div class="ladder-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><path d="M12 8.2v7.6M10.3 9.6h3.2M10.3 14.4h3.2"/></svg></div>
-        <span class="ladder-value">₹5 Lakh+</span>
-        <span class="ladder-tag">Free Gold Coin</span>
-      </div>
-      <div class="ladder-node">
-        <div class="ladder-dot ladder-dot-highlight"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="10" rx="1"/><line x1="4" y1="13" x2="20" y2="13"/><line x1="12" y1="9" x2="12" y2="19"/><path d="M12 9c-1.5 0-3-1-3-2.5S10 4 12 6c0-2 1.5-3.5 3-2.5S13.5 9 12 9z"/></svg></div>
-        <span class="ladder-value">₹7 Lakh+</span>
-        <span class="ladder-tag">Free Appliance</span>
-      </div>
-    </div>
-
     <div class="offer-grid">
       <div class="offer-card reveal">
-        <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1.2a1.6 1.6 0 0 0 0 3.2V13.6a1.6 1.6 0 0 0 0 3.2V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1.2a1.6 1.6 0 0 0 0-3.2v-1.2a1.6 1.6 0 0 0 0-3.2V8z"/><line x1="9" y1="7" x2="9" y2="17" stroke-dasharray="1.5 2.2"/></svg></div>
-        <span class="offer-tier">Every Order</span>
-        <h4>Free Shopping Coupon</h4>
+        <span class="offer-tier-tag">Every Order</span>
+        <h4>Shopping Voucher</h4>
         <ul>
-          <li>Redeemable on your next purchase or accessory add-on</li>
-          <li>Included with every kitchen &amp; wardrobe order</li>
+          <li>Redeemable toward interior accessory additions</li>
+          <li>Included with every confirmed kitchen &amp; wardrobe package</li>
         </ul>
       </div>
       <div class="offer-card reveal">
-        <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><path d="M12 8.2v7.6M10.3 9.6h3.2M10.3 14.4h3.2"/></svg></div>
-        <span class="offer-tier">Orders ₹5 Lakh+</span>
-        <h4>Free Gold Coin</h4>
+        <span class="offer-tier-tag">Orders ₹5 Lakh+</span>
+        <h4>Complimentary Gold Coin</h4>
         <ul>
-          <li>On confirmed orders of ₹5 lakh and above</li>
-          <li>Applies to combined kitchen + wardrobe orders</li>
+          <li>Commemorative gold coin upon final installation handover</li>
+          <li>Applies across full home and combined orders</li>
         </ul>
       </div>
       <div class="offer-card highlight reveal">
-        <span class="ribbon">Best Value</span>
-        <div class="offer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="10" rx="1"/><line x1="4" y1="13" x2="20" y2="13"/><line x1="12" y1="9" x2="12" y2="19"/><path d="M12 9c-1.5 0-3-1-3-2.5S10 4 12 6c0-2 1.5-3.5 3-2.5S13.5 9 12 9z"/></svg></div>
-        <span class="offer-tier">Orders ₹7 Lakh+</span>
-        <h4>Choose a Free Appliance</h4>
+        <span class="offer-tier-tag">Orders ₹7 Lakh+ · Best Value</span>
+        <h4>Free Built-In Appliance</h4>
         <ul>
           <li>Siemens Dishwasher</li>
-          <li>Built-in Microwave Oven</li>
-          <li>Voltas 1.5-Ton AC</li>
+          <li>Built-in Microwave &amp; Convection Oven</li>
+          <li>Voltas 1.5-Ton Inverter AC</li>
           <li>Godrej 200L Refrigerator</li>
         </ul>
       </div>
     </div>
-    <p class="offer-note">Offers are indicative and subject to final confirmation at booking. <strong>Ask your design consultant for current terms.</strong></p>
   </div>
 </section>
 
-<section class="cta-strip" id="estimate">
-  <div class="container">
-    <span class="eyebrow">Ready When You Are</span>
-    <h2>Let's plan your space, no obligation.</h2>
-    <a href="tel:+918108301261" class="btn btn-light">Book a Free Consultation</a>
-  </div>
-</section>
-
+<!-- LOCATIONS & WORKSHOPS -->
 <section class="section locations" id="studio-locations">
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="eyebrow">Find Us</span>
-        <h2>Our Locations</h2>
+        <span class="eyebrow">Studio Network</span>
+        <h2>Corporate, factory &amp; branch</h2>
       </div>
-      <p>Corporate office, manufacturing unit, and branch — all under one studio.</p>
+      <p>Corporate office, manufacturing facility, and regional consultation branches under unified studio leadership.</p>
     </div>
     <div class="loc-grid reveal">
       <div class="loc-card">
         <span class="eyebrow">Mumbai — Corporate Office</span>
         <h4>Founder: S. Annadurai</h4>
         <p>Flat No. 104, Gaurav City E-3, Gaurav City Complex, Bheverly Park, Mira Road East, Mumbai</p>
+        <div class="loc-contacts">
+          <div>Inquiries: <a href="tel:+918108301261">+91 81083 01261</a></div>
+        </div>
       </div>
       <div class="loc-card">
         <span class="eyebrow">Mumbai — Manufacturing Unit</span>
         <h4>Our Own Factory</h4>
         <p>Vasai East, Valive Fatta, Near Gujarat National Highway, Palghar District, Mumbai</p>
+        <div class="loc-contacts">
+          <div>Visit by prior appointment: <a href="tel:+918108301261">+91 81083 01261</a></div>
+        </div>
       </div>
       <div class="loc-card">
         <span class="eyebrow">Tamil Nadu — Branch</span>
@@ -1320,25 +1200,32 @@
   </div>
 </section>
 
-<footer id="studio">
+<!-- CALL TO ACTION BANNER -->
+<section class="cta-strip">
   <div class="container">
-    <div class="footer-top">
+    <span class="eyebrow" style="color:rgba(255,255,255,0.75);">Ready When You Are</span>
+    <h2>Let's build your space with zero obligation.</h2>
+    <a href="tel:+918108301261" class="btn btn-light">Schedule a Free In-Home Consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
       <div>
-        <a href="#" class="footer-logo-link"><img src="logo-full.jpg" alt="Living Style Wardrobe & Kitchen Studio" class="footer-logo-full"></a>
-        <p class="about">Bespoke modular kitchens and wardrobes, designed around your daily routines and built to a 10-year warranty.</p>
-        <div class="foot-social">
-          <a href="#">IG</a>
-          <a href="#">FB</a>
-          <a href="#">IN</a>
-        </div>
+        <a href="#"><img src="logo-full.jpg" alt="Living Style full logo" class="footer-logo-full"></a>
+        <p style="font-size:0.86rem; line-height:1.6; margin-bottom:16px;">
+          Bespoke modular kitchens and wardrobes engineered around how you live, backed by a 10-year factory warranty.
+        </p>
       </div>
       <div>
         <h5>Studio</h5>
         <ul>
-          <li><a href="#">About Us</a></li>
           <li><a href="#process">Our Process</a></li>
-          <li><a href="#studio-locations">Find a Studio</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="#estimator">Cost Estimator</a></li>
+          <li><a href="#styles">Design Ideas</a></li>
+          <li><a href="#studio-locations">Studio Network</a></li>
         </ul>
       </div>
       <div>
@@ -1346,96 +1233,148 @@
         <ul>
           <li><a href="kitchens.html">Modular Kitchens</a></li>
           <li><a href="wardrobes.html">Modular Wardrobes</a></li>
-          <li><a href="#">Full Home Interiors</a></li>
-          <li><a href="#calculator">Cost Calculator</a></li>
+          <li><a href="#estimator">Full Home Packages</a></li>
         </ul>
       </div>
       <div>
-        <h5>Support</h5>
+        <h5>Contact</h5>
         <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Warranty</a></li>
-          <li><a href="#">Order Tracking</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="tel:+918108301261">+91 81083 01261</a></li>
+          <li><a href="https://wa.me/918108301261">WhatsApp Chat</a></li>
+          <li><a href="#studio-locations">Find Locations</a></li>
         </ul>
       </div>
       <div>
-        <h5>Stay Updated</h5>
-        <div class="foot-newsletter">
-          <input type="email" placeholder="Your email address">
-          <a href="#" class="btn btn-light" style="width:100%; justify-content:center;">Subscribe</a>
+        <h5>Stay Informed</h5>
+        <p style="font-size:0.82rem; margin-bottom:12px;">Receive design guides and layout tips.</p>
+        <div style="display:flex; gap:8px;">
+          <input type="email" placeholder="Your email" style="padding:10px; border-radius:4px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.08); color:#fff; width:100%; font-size:0.85rem;">
+          <button class="btn btn-primary" style="padding:10px 16px;">Join</button>
         </div>
       </div>
     </div>
-    <div class="foot-bottom">
+
+    <div class="footer-bottom">
       <span>© 2026 Living Style Wardrobe &amp; Kitchen Studio. All rights reserved.</span>
-      <div>
-        <a href="#">Terms of Service</a>
+      <div style="display:flex; gap:20px;">
         <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script>
-  // Build the finish-swatch signature strip
-  const finishes = [
-    {name:"Acrylic Shutters", spec:"High-gloss finish", color:"#302823"},
-    {name:"Glass Shutters", spec:"Reflective panels", color:"#8FA3A6"},
-    {name:"Ceramic Shutters", spec:"Scratch-resistant", color:"#DACBA9"},
-    {name:"PU Lacquer Shutters", spec:"Matte or gloss coat", color:"#EFE7D6"},
-    {name:"Veneer Shutters", spec:"Polished wood grain", color:"#5A3A22"},
-    {name:"Fluted Glass Shutters", spec:"Ribbed, textured", color:"#B9C4C6"},
-    {name:"Leather Shutters", spec:"Upholstered look", color:"#5B3A2A"},
-    {name:"Fluted Veneer Shutters", spec:"Textured wood grain", color:"#3C2B1E"},
-    {name:"Master Craft Finish", spec:"Hand-finished detail", color:"#A9793A"},
-  ];
-  const track = document.getElementById('swatchTrack');
-  const renderSet = () => finishes.map(f => `
-    <div class="swatch">
-      <div class="chip" style="background:${f.color}"></div>
-      <div class="label"><b>${f.name}</b><small>${f.spec}</small></div>
-    </div>`).join('');
-  track.innerHTML = renderSet() + renderSet();
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/918108301261?text=Hi%20Living%20Style%20Studio,%20I%20would%20like%20to%20consult%20about%20modular%20interiors." target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.46 0 .1 5.36.1 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.94-5.36 11.94-11.94 0-3.19-1.24-6.19-3.47-8.4zm-8.48 18.3h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.75.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.19c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.48-4.46 9.94-9.96 9.94zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.25-.6-.5-.52-.68-.53l-.58-.01c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.12-.27-.2-.57-.35z"/></svg>
+</a>
 
-  // Mobile burger toggle
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.main-links');
-  burger.addEventListener('click', () => {
-    const open = nav.style.display === 'flex';
-    nav.style.display = open ? 'none' : 'flex';
-    nav.style.flexDirection = 'column';
-    nav.style.position = 'absolute';
-    nav.style.top = '72px';
-    nav.style.left = '0';
-    nav.style.right = '0';
-    nav.style.background = 'var(--cream)';
-    nav.style.padding = '24px 32px';
-    nav.style.borderBottom = '1px solid var(--panel-line)';
-    nav.style.gap = '18px';
+<!-- JAVASCRIPT CONTROLLERS -->
+<script>
+  // 1. FINISH SWATCH STRIP GENERATOR
+  const finishes = [
+    {name:"Acrylic Shutters", spec:"High-gloss anti-scratch", color:"#2B221E"},
+    {name:"Fluted Vitrine", spec:"Ribbed frosted glass", color:"#B9C4C6"},
+    {name:"Ceramic Stone", spec:"Scratch-proof matte", color:"#DACBA9"},
+    {name:"PU Duco Lacquer", spec:"Ultra-smooth satin coat", color:"#EFE7D6"},
+    {name:"American Walnut", spec:"Quarter-cut wood grain", color:"#5A3A22"},
+    {name:"Tinted Reflective", spec:"Bronze mirror glass", color:"#8FA3A6"},
+    {name:"Leather Finish", spec:"Tactile padded texture", color:"#5B3A2A"},
+    {name:"Master Craft Gold", spec:"Hand-brushed brass inlay", color:"#B68541"}
+  ];
+  const swatchTrack = document.getElementById('swatchTrack');
+  if(swatchTrack){
+    const renderCards = () => finishes.map(f => `
+      <div class="swatch-item">
+        <div class="chip" style="background:${f.color}"></div>
+        <div class="label"><b>${f.name}</b><small>${f.spec}</small></div>
+      </div>`).join('');
+    swatchTrack.innerHTML = renderCards() + renderCards();
+  }
+
+  // 2. LIVE DYNAMIC COST CALCULATOR
+  const calcType = document.getElementById('calcType');
+  const calcArea = document.getElementById('calcArea');
+  const calcFinish = document.getElementById('calcFinish');
+  const areaDisplay = document.getElementById('areaDisplay');
+  const priceOutput = document.getElementById('priceOutput');
+  const calcWhatsAppBtn = document.getElementById('calcWhatsAppBtn');
+
+  function calculateCost(){
+    if(!calcType || !calcArea || !calcFinish) return;
+    const baseRate = parseFloat(calcType.options[calcType.selectedIndex].dataset.base);
+    const sqft = parseFloat(calcArea.value);
+    const finishMultiplier = parseFloat(calcFinish.value);
+    
+    areaDisplay.textContent = `${sqft} sq ft`;
+    
+    const lowEst = Math.round(sqft * baseRate * finishMultiplier);
+    const highEst = Math.round(lowEst * 1.18);
+    
+    const formatINR = (val) => "₹" + val.toLocaleString('en-IN');
+    priceOutput.textContent = `${formatINR(lowEst)} – ${formatINR(highEst)}`;
+
+    // Prepare custom WhatsApp message link
+    const typeLabel = calcType.options[calcType.selectedIndex].text;
+    const finishLabel = calcFinish.options[calcFinish.selectedIndex].text;
+    const text = encodeURIComponent(`Hi Living Style Studio, I calculated an estimate on your website:\n- Space: ${typeLabel}\n- Area: ${sqft} sq ft\n- Finish: ${finishLabel}\n- Ballpark: ${formatINR(lowEst)} – ${formatINR(highEst)}\nCan you share a detailed drawing breakdown?`);
+    calcWhatsAppBtn.href = `https://wa.me/918108301261?text=${text}`;
+  }
+
+  if(calcType && calcArea && calcFinish){
+    calcType.addEventListener('change', calculateCost);
+    calcArea.addEventListener('input', calculateCost);
+    calcFinish.addEventListener('change', calculateCost);
+    calculateCost();
+  }
+
+  // 3. STYLE GALLERY FILTER PILLS
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const styleCards = document.querySelectorAll('.style-card');
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => p.classList.remove('is-active'));
+      pill.classList.add('is-active');
+      const cat = pill.dataset.filter;
+      styleCards.forEach(card => {
+        if(cat === 'all' || card.dataset.category === cat){
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
   });
 
-  // Scroll-reveal animation
-  const revealEls = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-  revealEls.forEach(el => revealObserver.observe(el));
+  // 4. MOBILE DRAWER NAVIGATION
+  const burgerBtn = document.getElementById('burgerBtn');
+  const drawerClose = document.getElementById('drawerClose');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const drawerOverlay = document.getElementById('drawerOverlay');
 
-  // Video Play/Pause Micro-Interaction
+  function openDrawer(){
+    mobileDrawer.classList.add('is-open');
+    drawerOverlay.classList.add('is-open');
+  }
+  function closeDrawer(){
+    mobileDrawer.classList.remove('is-open');
+    drawerOverlay.classList.remove('is-open');
+  }
+
+  if(burgerBtn) burgerBtn.addEventListener('click', openDrawer);
+  if(drawerClose) drawerClose.addEventListener('click', closeDrawer);
+  if(drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-links a').forEach(a => a.addEventListener('click', closeDrawer));
+
+  // 5. VIDEO REEL CONTROLLER
   const heroVideo = document.getElementById('heroVideo');
   const videoToggleBtn = document.getElementById('videoToggleBtn');
   const pauseIcon = document.getElementById('pauseIcon');
   const playIcon = document.getElementById('playIcon');
 
-  if (videoToggleBtn && heroVideo) {
+  if(videoToggleBtn && heroVideo){
     videoToggleBtn.addEventListener('click', () => {
-      if (heroVideo.paused) {
+      if(heroVideo.paused){
         heroVideo.play();
         pauseIcon.style.display = 'block';
         playIcon.style.display = 'none';
@@ -1446,6 +1385,18 @@
       }
     });
   }
+
+  // 6. SCROLL REVEAL OBSERVER
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
 </script>
 
 </body>
