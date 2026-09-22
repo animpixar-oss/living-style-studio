@@ -138,69 +138,257 @@
   .burger{ display:none; flex-direction:column; gap:5px; cursor:pointer; }
   .burger span{ width:24px; height:2px; background:var(--ink); }
 
-  /* ===== HERO ===== */
-  .hero{
-    position:relative;
-    padding:64px 0 0;
-    overflow:hidden;
+  /* ===== HERO (MODERN ARCHITECTURAL EDITION) ===== */
+  .hero {
+    position: relative;
+    padding: 48px 0 0;
+    overflow: hidden;
   }
-  .hero::before{ content:''; position:absolute; top:-140px; left:-160px; width:440px; height:440px; background:radial-gradient(circle, rgba(169,121,58,0.16), transparent 70%); pointer-events:none; z-index:0; }
-  .hero::after{ content:''; position:absolute; bottom:60px; right:-180px; width:420px; height:420px; background:radial-gradient(circle, rgba(89,104,75,0.14), transparent 70%); pointer-events:none; z-index:0; }
-  .hero .container{ position:relative; z-index:1; }
-  .hero .container{
-    display:grid;
-    grid-template-columns:1.05fr 0.95fr;
-    gap:56px;
-    align-items:center;
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -160px;
+    left: -120px;
+    width: 580px;
+    height: 580px;
+    background: radial-gradient(circle, rgba(169, 121, 58, 0.18), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
   }
-  .hero-copy h1{
-    font-size:clamp(2.5rem, 4.3vw, 3.85rem);
-    margin:18px 0 22px;
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: -150px;
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(89, 104, 75, 0.12), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
   }
-  .hero-copy h1 em{
-    font-style:italic;
-    color:var(--clay);
+  .hero .container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 64px;
+    align-items: center;
   }
-  .hero-copy p{
-    font-size:1.08rem;
-    color:var(--ink-soft);
-    max-width:480px;
-    margin-bottom:32px;
-  }
-  .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:36px;}
-  .hero-trust{
-    display:flex; gap:28px; flex-wrap:wrap;
-    padding-top:26px; border-top:1px solid var(--panel-line);
-  }
-  .hero-trust div{ display:flex; flex-direction:column; }
-  .hero-trust strong{ font-family:'Fraunces', serif; font-size:1.5rem; font-weight:600; }
-  .hero-trust span{ font-size:0.76rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; }
 
-  .hero-visual{ position:relative; }
-  .hero-visual .frame{
-    position:relative;
-    border-radius:var(--radius);
-    overflow:hidden;
-    box-shadow:var(--shadow);
+  .hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: rgba(169, 121, 58, 0.1);
+    border: 1px solid rgba(169, 121, 58, 0.28);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--brass-deep);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
   }
-  .hero-visual img{ width:100%; height:560px; object-fit:cover; }
-  .hero-badge{
-    position:absolute;
-    left:-28px; bottom:34px;
-    background:var(--cream-white);
-    padding:20px 24px;
-    box-shadow:var(--shadow);
-    max-width:220px;
-    border-left:3px solid var(--brass);
+  .pulse-dot {
+    width: 7px;
+    height: 7px;
+    background: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    animation: pulse 2s infinite;
   }
-  .hero-badge strong{ font-family:'Fraunces', serif; font-size:1.15rem; display:block; margin-bottom:4px; }
-  .hero-badge span{ font-size:0.8rem; color:var(--ink-soft); }
-  .hero-tag{
-    position:absolute; top:26px; right:-18px;
-    background:var(--ink); color:var(--cream-white);
-    font-family:'Space Mono',monospace; font-size:0.7rem;
-    letter-spacing:0.08em; text-transform:uppercase;
-    padding:10px 16px;
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.6rem, 4.4vw, 4.1rem);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    margin-bottom: 22px;
+    color: var(--ink);
+  }
+  .hero-copy h1 em {
+    font-style: italic;
+    color: var(--clay);
+    font-weight: 400;
+  }
+  .hero-copy p.hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin-bottom: 34px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .btn-whatsapp {
+    background: rgba(37, 211, 102, 0.12);
+    border: 1px solid rgba(37, 211, 102, 0.4);
+    color: #128C7E;
+  }
+  .btn-whatsapp:hover {
+    background: #25D366;
+    color: #ffffff;
+    border-color: #25D366;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -10px rgba(37, 211, 102, 0.5);
+  }
+  .btn-whatsapp svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+  .hero-guarantee {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-bottom: 38px;
+    font-weight: 500;
+  }
+  .hero-guarantee span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-guarantee svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--brass-deep);
+    stroke-width: 2.5;
+    fill: none;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 22px 0 0;
+    border-top: 1px solid var(--panel-line);
+  }
+  .stat-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-card strong {
+    font-family: 'Fraunces', serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+  .stat-card span {
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+
+  .hero-visual-wrapper {
+    position: relative;
+    padding: 18px;
+  }
+  .visual-frame {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 28px 60px -20px rgba(42, 31, 22, 0.4);
+    border: 1px solid rgba(169, 121, 58, 0.2);
+  }
+  .visual-frame img {
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .visual-frame:hover img {
+    transform: scale(1.03);
+  }
+  .visual-factory-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(42, 31, 22, 0.88);
+    backdrop-filter: blur(10px);
+    color: var(--cream-white);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(251, 248, 242, 0.15);
+  }
+
+  .glass-card {
+    position: absolute;
+    background: rgba(251, 248, 242, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 20px 40px -15px rgba(42, 31, 22, 0.28);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 3;
+    animation: floatCard 6s ease-in-out infinite alternate;
+  }
+  .glass-card-bottom {
+    bottom: -15px;
+    left: -18px;
+    max-width: 270px;
+  }
+  .glass-card-top {
+    top: 40px;
+    left: -28px;
+    animation-delay: -3s;
+  }
+  @keyframes floatCard {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-8px); }
+  }
+
+  .card-icon-wrap {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: var(--ink);
+    color: var(--cream-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .glass-card strong {
+    display: block;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .glass-card span {
+    display: block;
+    font-size: 0.74rem;
+    color: var(--ink-soft);
+    margin-top: 3px;
+    line-height: 1.35;
   }
 
   /* ===== FINISH SWATCH STRIP ===== */
@@ -577,10 +765,13 @@
   @media (max-width: 980px){
     nav.main-links{ display:none; }
     .burger{ display:flex; }
-    .hero .container{ grid-template-columns:1fr; }
-    .hero-visual{ order:-1; }
-    .hero-badge{ left:14px; }
-    .hero-tag{ right:14px; }
+    .hero { padding-top: 24px; }
+    .hero .container { grid-template-columns: 1fr; gap: 40px; }
+    .hero-visual-wrapper { order: -1; padding: 0; }
+    .visual-frame img { height: 380px; }
+    .glass-card-bottom { left: 10px; bottom: 10px; }
+    .glass-card-top { display: none; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 18px; }
     .cat-grid{ grid-template-columns:1fr; grid-template-rows:auto; height:auto; }
     .cat-card{ height:320px; }
     .cat-card:first-child{ grid-row:auto; }
@@ -638,28 +829,73 @@
 <section class="hero">
   <div class="container">
     <div class="hero-copy">
-      <span class="eyebrow">Own Factory, Mumbai · Modular Kitchens &amp; Wardrobes</span>
-      <h1>Spaces built around <em>how you actually live</em></h1>
-      <p>Living Style designs and builds modular kitchens and wardrobes tailored to your routines, not just your room dimensions — manufactured in our own Mumbai factory, from first sketch to final handover.</p>
-      <div class="hero-actions">
-        <a href="#estimate" class="btn btn-primary">Book a Free Consultation</a>
-        <a href="#calculator" class="btn btn-outline">Calculate Your Cost</a>
+      <div class="hero-pill">
+        <span class="pulse-dot"></span>
+        <span>Factory Direct · Mumbai &amp; Tamil Nadu</span>
       </div>
-      <div class="hero-trust">
-        <div><strong>12+ yrs</strong><span>In business</span></div>
-        <div><strong>4,200+</strong><span>Homes designed</span></div>
-        <div><strong>10-yr</strong><span>Warranty</span></div>
-        <div><strong>9</strong><span>Premium finishes</span></div>
+
+      <h1>Spaces built around <em>how you actually live</em></h1>
+      
+      <p class="hero-subtitle">
+        Living Style designs and crafts bespoke modular kitchens and wardrobes tailored precisely to your daily routines — engineered with 100% Master Ply in our own Mumbai factory.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#estimate" class="btn btn-primary">
+          <span>Book Free Consultation</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://wa.me/918108301261?text=Hi%20Living%20Style%20Studio,%20I%20am%20interested%20in%20modular%20kitchens%20and%20wardrobes." target="_blank" rel="noopener" class="btn btn-whatsapp">
+          <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.04 0C5.46 0 .1 5.36.1 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.94-5.36 11.94-11.94 0-3.19-1.24-6.19-3.47-8.4zm-8.48 18.3h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.75.98 1-3.65-.24-.38a9.92 9.92 0 0 1-1.52-5.19c0-5.48 4.46-9.94 9.94-9.94 2.65 0 5.15 1.03 7.03 2.91a9.88 9.88 0 0 1 2.91 7.03c0 5.48-4.46 9.94-9.96 9.94zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.25-.6-.5-.52-.68-.53l-.58-.01c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.51s1.08 2.91 1.23 3.11c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.08-.12-.27-.2-.57-.35z"/></svg>
+          <span>Share Layout</span>
+        </a>
+      </div>
+
+      <div class="hero-guarantee">
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 3D Layout Review Before Build</span>
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 0% Hidden Charges</span>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <strong>12+ Yrs</strong>
+          <span>Experience</span>
+        </div>
+        <div class="stat-card">
+          <strong>4,200+</strong>
+          <span>Homes Fitted</span>
+        </div>
+        <div class="stat-card">
+          <strong>10 Yrs</strong>
+          <span>Warranty</span>
+        </div>
+        <div class="stat-card">
+          <strong>100%</strong>
+          <span>Master Ply</span>
+        </div>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="frame">
-        <img src="kitchen-wide-shelving.jpg" alt="Living Style modular kitchen showroom with open display shelving">
+
+    <div class="hero-visual-wrapper">
+      <div class="glass-card glass-card-top">
+        <div class="card-icon-wrap">✦</div>
+        <div>
+          <strong>16+ Finishes</strong>
+          <span>PU Lacquer, Fluted, Acrylic</span>
+        </div>
       </div>
-      <div class="hero-tag">Made in Our Mumbai Factory</div>
-      <div class="hero-badge">
-        <strong>Handover in 6–8 wks</strong>
-        <span>From final measurement to move-in ready.</span>
+
+      <div class="visual-frame">
+        <img src="kitchen-wide-shelving.jpg" alt="Living Style luxury modular kitchen showroom">
+        <div class="visual-factory-tag">Factory-Direct · Mumbai</div>
+      </div>
+
+      <div class="glass-card glass-card-bottom">
+        <div class="card-icon-wrap">⚡</div>
+        <div>
+          <strong>Handover in 6–8 Wks</strong>
+          <span>From final site measurement</span>
+        </div>
       </div>
     </div>
   </div>
