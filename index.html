@@ -297,6 +297,7 @@
     margin-top: 4px;
   }
 
+  /* Video Stage Wrapper */
   .hero-visual-wrapper {
     position: relative;
     padding: 18px;
@@ -307,16 +308,23 @@
     overflow: hidden;
     box-shadow: 0 28px 60px -20px rgba(42, 31, 22, 0.4);
     border: 1px solid rgba(169, 121, 58, 0.2);
+    background: var(--ink);
   }
-  .visual-frame img {
+  .visual-frame video {
     width: 100%;
     height: 570px;
     object-fit: cover;
     display: block;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .visual-frame:hover img {
-    transform: scale(1.03);
+  .visual-frame:hover video {
+    transform: scale(1.02);
+  }
+  .video-ambient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(42,31,22,0.2) 0%, rgba(42,31,22,0.05) 50%, rgba(42,31,22,0.65) 100%);
+    pointer-events: none;
   }
   .visual-factory-tag {
     position: absolute;
@@ -332,8 +340,37 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     border: 1px solid rgba(251, 248, 242, 0.15);
+    z-index: 2;
+  }
+  .video-ctrl-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    background: rgba(42, 31, 22, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(251, 248, 242, 0.2);
+    color: var(--cream-white);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .video-ctrl-btn:hover {
+    background: var(--brass);
+    transform: scale(1.08);
+  }
+  .video-ctrl-btn svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
   }
 
+  /* Floating Frosted Cards */
   .glass-card {
     position: absolute;
     background: rgba(251, 248, 242, 0.92);
@@ -346,7 +383,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    z-index: 3;
+    z-index: 4;
     animation: floatCard 6s ease-in-out infinite alternate;
   }
   .glass-card-bottom {
@@ -768,7 +805,7 @@
     .hero { padding-top: 24px; }
     .hero .container { grid-template-columns: 1fr; gap: 40px; }
     .hero-visual-wrapper { order: -1; padding: 0; }
-    .visual-frame img { height: 380px; }
+    .visual-frame video { height: 380px; }
     .glass-card-bottom { left: 10px; bottom: 10px; }
     .glass-card-top { display: none; }
     .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 18px; }
@@ -829,6 +866,7 @@
 <section class="hero">
   <div class="container">
     <div class="hero-copy">
+      <!-- Live Factory Pill -->
       <div class="hero-pill">
         <span class="pulse-dot"></span>
         <span>Factory Direct · Mumbai &amp; Tamil Nadu</span>
@@ -876,6 +914,7 @@
       </div>
     </div>
 
+    <!-- Visual Showcase with Ambient Video Reel -->
     <div class="hero-visual-wrapper">
       <div class="glass-card glass-card-top">
         <div class="card-icon-wrap">✦</div>
@@ -886,8 +925,18 @@
       </div>
 
       <div class="visual-frame">
-        <img src="kitchen-wide-shelving.jpg" alt="Living Style luxury modular kitchen showroom">
+        <video id="heroVideo" autoplay muted loop playsinline poster="kitchen-wide-shelving.jpg">
+          <!-- Direct High-Resolution Interior Modular Kitchen Loop (replaceable with your own hero-video.mp4) -->
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-kitchen-interior-design-41484-large.mp4" type="video/mp4">
+        </video>
+        <div class="video-ambient-overlay"></div>
         <div class="visual-factory-tag">Factory-Direct · Mumbai</div>
+
+        <!-- Micro-Interaction Video Play/Pause -->
+        <button class="video-ctrl-btn" id="videoToggleBtn" aria-label="Toggle Video Playback" title="Pause / Play Video">
+          <svg id="pauseIcon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+          <svg id="playIcon" viewBox="0 0 24 24" style="display:none;"><path d="M8 5v14l11-7z"/></svg>
+        </button>
       </div>
 
       <div class="glass-card glass-card-bottom">
@@ -1377,6 +1426,26 @@
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
   revealEls.forEach(el => revealObserver.observe(el));
+
+  // Video Play/Pause Micro-Interaction
+  const heroVideo = document.getElementById('heroVideo');
+  const videoToggleBtn = document.getElementById('videoToggleBtn');
+  const pauseIcon = document.getElementById('pauseIcon');
+  const playIcon = document.getElementById('playIcon');
+
+  if (videoToggleBtn && heroVideo) {
+    videoToggleBtn.addEventListener('click', () => {
+      if (heroVideo.paused) {
+        heroVideo.play();
+        pauseIcon.style.display = 'block';
+        playIcon.style.display = 'none';
+      } else {
+        heroVideo.pause();
+        pauseIcon.style.display = 'none';
+        playIcon.style.display = 'block';
+      }
+    });
+  }
 </script>
 
 </body>
